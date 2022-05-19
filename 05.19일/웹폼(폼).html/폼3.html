@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <!-- 
+             tr 테이블 내부의 행 태그
+            th 행 내부의 제목 셀 태그
+            td 행 내부의 일반 셀 태크
+            thead 제목 행 그룹화
+            tbdoy 본문 행 그룹화
+            tfoot 바닥 행 그룹화
+            rowspan  셀의 높이지정
+            colspan 셀의 너비 지정
+         -->
+    </head>
+    <body>
+
+        <h3>회원가입</h3>
+        <hr>
+        <br>
+
+        <form>
+            <fieldset>
+                <legend>회원가입</legend>
+
+                <table>
+                    <caption>
+                        <h3>회원가입 서식을 작성해 주세요</h3>
+                    </caption>
+                    <colgroup>
+                        <col width="30%">
+                        <col width="70%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><label for="name">이름</label></th>
+                            <td><input type="text" id="name"></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><label for="id">아이디</label></th>
+                            <td><input type="text" id="id"></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><label for="pw">패스워드</label></th>
+                            <td><input type="text" id="pw"></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><label for="r_pw">비번확인</label></th>
+                            <td><input type="text" id="r_pw"></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><label for="id_number">주민번호</label></th>
+                            <td><input type="text" id="id_number">-<input type="text"></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><label for="email">이메일</label></th>
+                            <td><input type="text" id="email">@<input type="text"></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><label for="pn">연락처</label></th>
+                            <td><input type="text" id="pn">-<input type="text">-<input type="text"></td>
+                        </tr>
+
+                        
+
+
+                    </tbody>
+                </table>
+
+            </fieldset>
+
+        </form>
+
+    </body>
+</html>

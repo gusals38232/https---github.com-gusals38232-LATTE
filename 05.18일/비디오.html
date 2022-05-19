@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+            비디오종류
+        -mp4    H.264비디오와 ACC오디오 코덱으로 인코딩된 파일
+        -webm   VP8/VP9 비디오와 Vorbis 오디오 코덱으로 인코딩된 webm파일
+        -ogg    theora 비디오와 vorvis오디오 코덱으로 인코딩된 ogg파일
+
+
+
+ -->
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                <h3>비디오(mp4) 삽입</h3>
+                <hr>
+
+                <video src="../이미지파일/KakaoTalk_20220518_095620130.mp4" width="600" height="300" controls type="video.mp4">
+                    브라우저가 video 파일을 지원하지 않습니다.
+                </video>
+
+                <pre>
+                    width,height : 재생될 브라우저의 너비와 높이(생략되면 원본크기)
+                    controls     : 재생, 재생시간, 중단, 음소거등 제어창 출력
+                    autoplay     : 비디오 로딩시 즉시 재생
+                    loop         : 반복재생
+                    muted        : 오디오를 끌때 사용
+                </pre>
+    
+</body>
+</html>

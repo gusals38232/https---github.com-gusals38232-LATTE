@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <!-- 
+            textarea
+                rows = 수치 : 텍스트영역 높이,행의수
+                cols = 수치 : 텍스트영역의 너비. 가로로 보여지는 글자수
+                name = 이름 : 이름
+                wrap = "값" : 자동줄바꿈을 지정
+                                -off 줄바꿈안됨
+                                -virtual:자동 줄바꿈 수행 - 전송시 한줄로 취급
+                                -physical:자동 줄바꿈 수행- 전송시에도 여러줄 취급
+                placeholder : 초기값 설정                
+                        
+
+         -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+                        <form>
+                                텍스트영역1(rows/cols 미지정)<br><br><br>
+                                <textarea name="ta1" wrap="virtual" placeholder="초기값">
+                                    
+                                </textarea>
+                                <br><br><br>
+
+                                텍스트영역2<br>
+                                <textarea name="ta2" rows="7" cols="40" wrap="virtual" part="초기값">
+
+
+                                </textarea>
+                                <br><br><br>
+
+                                <input type="submit" value="전송">
+                        </form>
+    
+</body>
+</html>
