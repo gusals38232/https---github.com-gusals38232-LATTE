@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!-- 
+    미디어쿼리
+        -미디어의 조건을 설정하게 함으로써 특정 미디어에 적용하는 스타일을 좀 더 상세히 지정
+        -미디어의 타입, 특성, 연산자 이용하여 대상이 되는 미디어의 디자인 조건을 설정한다
+        -대소문자를 구분하지 않는다
+        -미디어쿼리에 사용하는 연산자
+                and : 여러 미디어의 특징을 하나로 결합.
+                        >> 새로운 미디어 특징을 추가할 때마다 사용
+                        >> @media screen and (min-width:400px) and (max-width:700px) {}
+                or(,쉼표) : 쉼표로 분리된 각 목록은 각각의 개별 미디어 쿼리이다.        
+                not : 설정해 놓은 미디어의 특징이..아니라면
+                only : 해당 미디어특징을 지정
+        -문법
+                @media 미디어대상 and (미디어속성: 값) and (미디어속성: 값) {
+                    적용할css
+                }        
+                ex) @media (min-width:400px) {background-color: yellow}
+                와  @media all and (min-width:400px) {background-color: yellow} 와 같다
+                @media not screen and~~{}
+                @media only screen and~~{}
+        -미디어특성
+            -width : 창의넓이
+            -height: 창의높이
+            -device-width : 디스플레이의 너비
+            -device-height: 디스플레이의 높이
+            -orientation  : 디바이스의 방향
+            -aspect-ratio : 창의 가로세로비율
+            -color         :컬러
+            -monochrome    :흑백
+            -resulution   :해상도
+
+
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{text-align: center;}
+        div{
+            margin: 10px;
+            padding: 10px;
+            color: yellow;
+            font-family: Impact, sans-serif;
+            font-size: 50vh;
+            /* vh 고정된값 아니고 비율에따라.. */
+        }
+
+            @media screen and (max-width:300px)
+             {body{
+                 background-color: blue;
+             }
+                
+            }
+            @media not screen and (max-width:300px)
+             {body{
+                 background-color: rgb(32, 136, 66);
+             }
+            }
+            
+            @media all and (orientation: portrait){
+             #sample{color: rgb(94, 29, 168);
+                text-shadow: white 20px 10px;
+             }
+            }
+
+            @media all and (orientation: landscape){
+             #sample{color: tan;
+                text-shadow: rgb(68, 6, 6) 10px 10px;
+             }
+            }
+
+    </style>
+
+</head>
+<body>
+        <div id="sample">WIDTH  </div>
+               
+</body>
+</html>

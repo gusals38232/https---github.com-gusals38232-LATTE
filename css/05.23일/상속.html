@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+                상속(inheritance)
+                -부모요소의 스타일을 자식이 물려받아 적용하는 것.
+
+                -상속되는 속성과 상속되지 않는 속성으로 분류된다
+
+                    상속된다          상속안되는것
+                    -------------------------------------------------
+            color.font-family       background-color
+            font-size,font-weight   background-image
+            text-align              background-repeat
+                                    display 등       
+
+
+                -3가지 속성값을 지정할 수 있다.
+                    inherit : 강제상속- 상속받지 않는 스타일 규칙을 강제로 상속시킬때
+                    initial : 초기화- 브라우저의 기본 스타일 시트에서 설정된 값과 동일하게 설정
+                    unset   : 
+
+
+
+
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style type="text/css">
+            div{
+
+                display: flex;
+                justify-content: center;
+                width: 800px;
+
+                color: rgb(201, 46, 46);
+                font-size: 20px;
+                border: 5px dashed blue;
+            }
+
+            #a{
+
+                color: blue;
+                border: inherit;
+            }
+
+            #b{
+                    color: initial;
+            }
+
+            #b{
+                color: unset;
+            }
+            
+            #c{
+                border: inherit;
+                color: unset;
+                border: unset;
+            }
+        </style>
+        
+</head>
+<body>
+                    <div>
+                        <p id="a">css에 온거 환영</p>
+                        <p id="b">css에 온거 환영</p>
+                        <p id="c">css에 온거 환영</p>
+
+                    </div>
+
+    
+</body>
+</html>
