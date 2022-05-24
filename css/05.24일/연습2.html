@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        /* 안쪽여백 padding
+        바깥쪽 여백 margin
+        -------보더 기준으로? */
+
+           /* 공통스타일 */
+           
+                header,footer,section,article,hgroup,figure,figcaption,nav,menu{
+                    display: block;
+                }
+                body{
+                    margin:0;
+                    padding: 30px;
+                    background-color: #8b84a0;
+                    color: #454545;
+
+                }
+
+                h1{
+                 margin: 0 0 10px 0; 
+                 padding: 5px 10px;
+                 background-color: rgb(131, 16, 16);
+                 color: #666;
+                 font-size: 120%;
+                 text-shadow: 1px 1px 0 #fff;
+                 line-height: 1;
+                }
+                /* margin 상 우 하 좌 시계방향 
+                    padding 상하 좌우*/
+
+                    .catecory{
+                        margin-bottom: 30px;
+                        padding: 15px;
+                        border: #ccc 1px solid;
+                    }
+
+
+    </style>
+
+
+</head>
+<body>
+
+                    <h1>CSS3 Selector</h1>
+                    <section class="category attr">
+                        <h3>attribute selector[속성 선택자]</h3>
+
+                        <section>
+                            <h3>class 속성이 <em>"~로 시작된다"</em>요소를 선택</h3>
+                            <ul class="sample">
+                                <li class="STARTxx">class="STARTxx"</li>
+                                <li class="xxSTART">class="xxSTART"</li>
+                                <li class="xxSTARTxx">class="xxSTARTxx"</li>
+
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>class 속성이 <em>"~로 시작된다"</em>요소를 선택</h3>
+                            <ul class="sample">
+                                <li class="ENDxx">class="ENDxx"</li>
+                                <li class="xxEND">class="xxENDxx"</li>
+                                <li class="xxENDxx">class="xxENDxx"</li>
+
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>class 속성이 <em>"~로 시작된다"</em>요소를 선택</h3>
+                            <ul class="sample">
+                                <li class="CNTxx">class="CNTxx"</li>
+                                <li class="xxCNTxx">class="xxCNTxx"</li>
+                                <li class="xxCNTxx">class="xxCNTxx"</li>
+
+                            </ul>
+                        </section>
+                        <section>
+                            <h3 >속성연습</h3>
+                            <ul class="sample">
+                                <li><a href="http://www.naver.com">속성연습1</a></li>
+                                <li><a href="img/file.pdf">속성연습</a></li>
+
+                               
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3 class="practive">링크 종류별로 아이콘을 표시</h3>
+                            <ul class="sample">
+                                <li><a href="index.html">일반링크</a></li>
+                                <li><a href="http://www.google.com>외부사이트 링크연습</a></li>
+                                <li><a href="img/file01.pdf">pdf파일 링크</a></li>
+
+                               
+                            </ul>
+                        </section>
+
+                        <section class="category pseudo">
+                            <h2 >Pseudo class selector[유사클래스]</h2>
+                            <section>
+                                <h3>모든 자식요소를 카운트하는 <em>"~child"</em>계 유사클래스/h3>
+                                    <ul class="sample child">
+                                        <li>child1(first)</li>
+                                        <li>child2</li>
+                                        <li>child3</li>
+                                        <li>child4</li>
+                                        <li>child5</li>
+                                        <li>child6</li>
+                                        <li>child7(last)</li>
+
+                                    </ul>
+                            </section>
+
+                               
+                            
+                        </section>
+
+                        <section>
+                            <h3>같은 요소만 카운트 하는 <em>"~of~type"</em>계 유사 클래스</h3>
+                            <div class="sample of type">
+                                <h4>heading1(h4)</h4>
+                                <p>heading1(h4)</p>
+                                <h4>heading1(h4)</h4>
+                                <p>heading1(h4)</p>
+                                <h5>heading1(h4)</h5>
+                                <p>heading1(h4)</p>
+
+                            </div>
+                        </section>
+
+                            <section>
+                                <h3>줄무늬 테이블을 만든다</h3>
+                                <table>
+                                    <tr><td>white</td><td>white</td></tr>
+                                    <tr><td>gray</td><td>gray</td></tr>
+                                    <tr><td>white</td><td>white</td></tr>
+                                    <tr><td>gray</td><td>gray</td></tr>
+                                    
+                                </table>
+
+                                <h3 class="practice no2">마지막 1행만 빨간색 글자로 강조</h3>
+                                <dl class="lastred">
+                                    <dt>item1</dt>
+                                    <dd>xxxxxxxxxxx</dd>
+                                    <dt>item2</dt>
+                                    <dd>xxxxxxxxxxx</dd>
+                                    <dt>item3</dt>
+                                    <dd>xxxxxxxxxxx</dd>
+                                </dl>
+
+                            </section>
+
+                    </section>
+
+                    <section class="category other">
+                        <h2>other pseudo class selector[기타 유사 클래스]</h2>
+                        <section>
+                            <h3>마지막 1행 이외의 모두를 선택</h3>
+                            <ul class="sample nots">
+                                <li>list1</li>
+                                <li>list2</li>
+                                <li>list3</li>
+                                <li>list4</li>
+                                <li>list5</li>
+
+                            </ul>
+
+                        </section>
+
+                        <section>
+                            <h3>링크처를 연다</h3>
+                            <dl class="sample target">
+                                <dt><a href="#panel1">menu1</a></dt>
+                                
+                                <dd id="panel1"> panel1 panel1 panel1 panel1 panel1 panel1 panel1
+                                    panel1 panel1 panel1
+                                </dd>
+                                <dd id="panel1"> panel1 panel1 panel1 panel1 panel1 panel1 panel1
+                                    panel1 panel1 panel1
+                                </dd>
+
+                            </dl>
+                        </section>
+
+                        <section>
+                            <h3>폼의 상태에 맞춰 레이블의 스타일을 바꾼다</h3>
+                            <form class="ui">
+                                <input type="radio" name="radio" id="radio1" value="1" disabled>
+                                <label for="radio1">선택지1</label> 
+                                <input type="radio" name="radio" id="radio2" value="2">
+                                <label for="radio2">선택지2</label> 
+                                <input type="radio" name="radio" id="radio3" value="3">
+                                <label for="radio3">선택지3</label> 
+                            </form>
+                        </section>
+
+                    </section>
+    
+</body>
+</html>

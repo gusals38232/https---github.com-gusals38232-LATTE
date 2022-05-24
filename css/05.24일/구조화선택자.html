@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+            :first-letter 첫번째글자
+            :firts-line
+            :nth-child
+            :before
+            :after 뒤에
+
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <style type="text/css">
+            p:first-letter{font-size: 300%;}
+            p{border-bottom: 3px dashed #e096c5;}
+            p:last-child{border: none;}
+
+            .box>p:nth-child(even){background-color: tomato;}
+
+            .box::after{content: "항목을 채워주세요"; color: blue;}
+
+        </style>
+</head>
+<body>
+    
+            <div class="box">
+                <p>COMPANY</p>
+                <p>PRODUCT</p>
+                <p>SERVICE</p>
+                <p>OTHER</p>
+            </div>
+
+            <div>
+                <p>COMPANY</p>
+                <p>PRODUCT</p>
+                
+            </div>
+
+</body>
+</html>

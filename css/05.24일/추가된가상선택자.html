@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+        선택자[class^="member"] : member로 시작되는
+        선택자[class$="mem"] : mem으로 끝나는것
+        선택자[class*="mem"]: mem이 포함되어있는것
+
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+            
+            *{font-size: 50px;}
+            li[class^="mem"]{color: darkred;}
+            li[class$="intro"]{ color: darkgreen;}
+            li[class*="mem"]{color: tomato;}
+
+            a[href^="http"]{color: chartreuse;}
+            
+    </style>
+
+</head>
+<body>
+            <ul>
+                <li class="intro_member">class="intro_member"</li>
+                <li class="member_intro">class="member_intro"</li>
+                <li class="intro_mem_intro">class="intro_mem_intro"</li>
+            </ul>
+
+            <ul>
+                <li><a href="#">일반링크</a></li>
+                <li><a href="http://www.google.com">외부사이트</a></li>
+            </ul>
+
+    
+</body>
+</html>
