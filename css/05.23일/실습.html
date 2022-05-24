@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <style type="text/css">
+            #list{
+                background-color:mistyrose;}
+
+            ul>li+ul>li+ul>li{color: blue;}    
+            /* 자식> , 인접 + */
+
+
+
+            p{color: brown; font-size: 40px;}
+
+            ul+li{color:green}
+
+        </style>
+
+</head>
+<body>
+    
+
+                 <ul id="list">
+                     <li>html</li>
+
+                     <ul >
+                        <li>첫번째 리스트 안에 리스트</li>
+                        <ul>
+                            <li>제일 안쪽 리스트</li>
+                                <p>p태그입니다.</p>
+                        </ul>
+                        <li>두번째 리스트 안에 리스트</li>
+                        <p>안녕~</p>
+
+                     </ul>
+
+                     <li>css</li>
+                     <li>javascript</li>
+                 </ul>
+
+
+</body>
+</html>

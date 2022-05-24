@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 p{
-    font-size: 100px;
-    color: rgb(14, 192, 147);
+    font-size: 100px; max-width: 300px;
+    
+    background-color: black;
 
 }

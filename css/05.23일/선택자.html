@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<!-- 
+
+    선택자{속성명: 속성값;}
+
+    선택자의 종류 
+                -타입선택자  : 태그{}
+                선택자 그룹화: 태그,태그,태그
+                id선택자    : #id명{}
+                class선택자 :.class명{}
+                애스터리스크 선택자 : *{}
+                자식 선택자 >선택자> 자식{}
+                인접    :선택자+인접{}
+                문맥(자손): 선택자 자손선택자{}
+                속성선택자 :  태그[속성] {} -> h1[class], imag[alt], *[title]
+                가상클래스선택자 : css에서 제공되는 40여종의 가상클래스 선택자
+                 - 마우스 .  선택자:hover 마우스가 올라갈때의 스타일 적용
+                             선택자:activie 마우스를 누르고 있는 상황에서의 스타일 적용
+                 - 폼 요소.  선택자:focus  폼요소가 키보드나 마우스 클릭으로 포커스를 받을때 스타일 적용
+                 -링크       선택자:link  방문하지 않는 링크에 스타일 적용
+                            선택자 :visited 방문한후의 링크에 스타일 적용(color,background-color,border-color
+                            색 관련만 가능)
+                -블록  : first-letter 블록형태그에서 첫글자에만 스타일 적용    
+                        first-line  블록형태그의 첫번째 라인에 스타일 적용
+                
+                -구조   선택자:nth-child(even) 짝수번째 모든 자식태그에 스타일적용
+                        선택자:nth-child(n)    n번째 자식태그에 스타일 적용
+                        선택자:first-child
+                        선택자:last-child
+                        선택자:before          요소의 맨앞에 배치하는 마크업에 없는 가상요소
+                        선택자: after           요소의 맨뒤에 배치하는 마크업에 없는 가상요소
+
+
+
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+            #style1{font-size: 15px; }
+            #style2{font-size: 30px; color: yellow;}
+            font#style3{font-size: 25px; color:blue}
+
+            a:link{color: rgb(116, 32, 211);}
+
+            div span{color: teal;font-size: 30px;}
+
+            .a{
+                font-size: 100px;
+                font-weight: bolder;
+                
+            }
+            .b{
+                font-size: 30px;
+                color:rgb(41, 170, 202);
+
+            }
+
+    </style>
+
+</head>
+<body>
+               <div>
+                   <p id="style1" class="a b">화날때 <span>대답 않기</span></p>
+                   <p id="style2">기쁠때 대답하기</p>
+                   <p id="style3">슬플때는 <span>결심</span>하지 않기</p>
+                   <font id="style3">항상 마음에 새기며 사시길</font>
+                   <a href="#">연결..</a>
+               </div>
+</body>
+</html>
