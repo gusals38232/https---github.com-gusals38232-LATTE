@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font1</title>
+
+    <style type="text/css">
+ 
+        header,footer,section,article,hgroup,
+        figure,ficaption,nav,menu{
+           display: block;
+        }
+         
+        body{
+           margin:0px;
+           padding:30px;
+           background:#f6f6f6;
+           color:#454545
+        }
+        h1{
+           margin: 0 0 10px 0;    /* 상 우 하 좌 */
+           padding:5px 10px;       /* 상하  좌우 */
+           background: #ccc;
+           color:#666;
+           font-size:120%;
+           text-shadow:1px 1px 0 #fff;
+           line-height:1;
+        }
+     
+        .category{
+           margin-bottom:30px;
+           padding:15px;
+           border:#ccc 1px solid;
+        }
+        
+        /* class="category"의 자식 section */
+        .category > section {
+           margin:10px 0;
+           padding:10px 30px;
+           background: #fff;
+           border: #ddd 1px solid;
+        }
+        
+        .category > h2{
+           border-bottom:1px #ccc solid;
+        }
+        
+        /* h3태그의  class="practice" 요소의 맨 앞에 배치하는 마크업에는 없는  "가상요소"의 공통디자인 */   
+        h3.practice:before{       
+           content: "実用例";  /* 실용예 */
+           display:inline-block;
+           margin:-3px 5px 0 0;
+           padding:2px 3px 0 3px;
+           background: #00C4AB;
+           color:#fff;
+           border-radius: 3px;
+           font-size:70%;
+           vertical-align: middle; 
+        }
+     
+        h3.practice.no1:before{
+           content: "実用例1"
+        }
+        
+        h3.practice.no2:before{
+           content: "実用例2"
+        }
+     
+        /* class="sample" 의 자손들의 공통 설정 */
+        .sample li,    
+        .sample h4,
+        .sample h5,
+        .sample p{
+           margin: 5px 0;
+           padding: 5px;
+           border: #ccc 1px solid;
+           background: #eee;
+           list-style-type: none;
+        }
+     
+     
+        /* class="sample ofType"의 뒤에 있는 유사클래스명도 클래스와 같이 dot(.)으로 접근한다 */
+        .ofType{
+           padding-left: 40px;
+        }
+        
+        /* ofType유사클래스의 하부 세부 디자인 */
+        .ofType h5,
+        .ofType h5+p{
+           margin-left: 30px;
+        }
+        
+        /* class="stripe" 공통디자인 */
+        .stripe{
+           width: 100%;
+           border-collapse: collapse;
+           border: #ccc 1px solid;
+        }
+        /* 세부 디자인 */
+        .stripe td{
+           padding: 5px;
+           text-align:center;
+           border: red 1px solid;
+        }
+        
+        
+        .lastRed dt{
+           clear:left;
+           float:left;    /* 속성의 순서는 의미없다.  왼쪽에 놓고, 클리어시키고 */
+           width: 60px;
+        }
+        
+        .target a{
+           display: block;
+           margin: 0 0 -1px 40px;
+           padding:5px;
+           color:#666;
+           border:#ccc 1px solid;
+           background:#eee;
+           list-style-type: none;
+           text-decoration: none;      
+        }
+        
+        .target a:hover{
+           background: #f7f7f7;
+           color: #000;
+           font-weight: bold;
+        }
+        
+        .target dd{
+           padding: 10px;
+           display: none;
+        }
+        
+        .ui{
+           margin: 0 0 10px 40px;
+           padding: 15px;
+           border: #ccc 1px solid;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /* 특정스타일 :  style.css */
+        
+        /* 신규추가된 속성선택자 */
+        li[class^="START"]{     /* class속성의 값이   START로 시작하는 속성값 */
+           border-color:#f00;
+           background-color: yellow;
+        } 
+        
+        li[class$="END"]{      /* class속성의 값이   END로 끝나는 속성값 */
+           border-color: #f00; 
+           background-color: yellow;
+        }
+        
+        li[class*="CNT"]{     /* class속성의 값에   CNT 속성값이 존재하는 선택자 */
+           border-color: #f00;
+           background-color: yellow;
+        }
+        
+        
+        /* 선택자 연습 */
+        a[href^="http"]{
+           padding-right: 20px;
+           background: url("img/icon_blank.gif") right center no-repeat;
+        }
+        /*PDF 파일에 링크*/
+        a[href$=".pdf"]{
+           padding-left:20px;
+           background:url("img/icon_pdf.gif") no-repeat;   
+        }
+        
+        
+        /* 유사 클래스 학습 */
+        /* ~child계 */
+        /* 마지막 요소  - 선택자뒤에 공백둬야 적용된다!*/
+        .child :last-child{   
+           border-color:#f00;
+           background-color: orange;
+        }
+        
+        /* 세번째 자식요소 - 선택자뒤에 공백둬야 적용된다! */
+        .child :nth-child(3) {
+           color: #f00;
+           font-weight: bolder;
+        }
+        
+        /*짝수 번째 자식 요소 - 선택자뒤에 공백둬야 적용된다! */
+        .child :nth-child(even){
+           background-color:green;
+           color: white;
+        }
+        
+        /*두 번째를 선두로 3개 건너뛴 자식 요소 - 선두인 두번째가 뒤에 있어야 한다. 선택자뒤에 공백둬야 적용된다!*/
+        .child :nth-child(3n+2){
+           border:#000 5px solid;
+        }
+        
+        /* 〜of-type계 =========== */
+        /*여러타입이 있을때...같은 타입중에 맨 처음 나오는 타입요소*/
+        .ofType :first-of-type{
+           border-color:blue;
+        }
+        
+        /*여러타입이 있을때...같은 타입중에 짝수번째 나오는 타입요소*/
+        .ofType :nth-of-type(even){
+           border-color:#00f;
+           background-color: yellow;
+        }
+        
+        /* 가상선택자 활용연습 */
+        /*줄무늬 테이블*/
+        .stripe tr:nth-child(even){
+           background-color:fuchsia;
+        }
+        
+        /*마지막 1행만 빨간색 글자로 - dt,dd 동일반복중에 마지막에 있는 dt,dd만 선택*/
+        .lastRed :last-of-type{
+           color:#f00;
+        }
+        
+        /* 기타 유사 클래스*/
+        /*마지막 1행 이외의 모두를 선택*/
+        .nots li:not(:last-child){
+           border-color:green;
+           border-width:3px;
+           font-style: italic;
+        }
+        
+        /*링크처를 연다 - target은 클릭했을때 스타일을 적용하는것. dt가 아니라 dd에 붙임에 주의 */
+        .target dd:target{
+           display: block;
+        }
+        
+        /*유효한 선택지의 레이블 스타일*/
+        .ui input:enabled+label{
+           cursor:pointer;
+        }
+        /*유효한 선택지의 레이블에 마우스가 올라갔을때 스타일*/
+        .ui input:enabled+label:hover{
+           color:red;
+        }
+        
+        /*무효한 선택지의 레이블 스타일*/
+        .ui input:disabled+label{
+           color:orange;
+        }
+        
+        /*체크된 선택지의 레이블 스타일*/
+        .ui input:checked+label{
+           background:#cceebb;
+        }
+     }
+        
+     </style>
+     
+     
+     <!--[if lt IE 9]>
+     <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+     <![endif]-->
+     
+     </head>
+     <body>
+        <h1>CSS3 Selector</h1>
+        
+        <section  class="category attr">
+           <h2>Attribute Selector［속성 선택자］</h2>
+           
+           <section>
+              <h3>class 속성이 <em>「〜로 시작된다」</em>요소를 선택</h3>
+              <ul class="sample">
+                 <li class="STARTxx">class="STARTxx"</li>
+                 <li class="xxSTART">class="xxSTART"</li>
+                 <li class="xxSTARTxx">class="xxSTARTxx"</li>
+              </ul>
+           </section>
+           <section>
+              <h3>class 속성이 <em>「〜로 끝난다」</em>요소를 선택</h3>
+              <ul class="sample">
+                 <li class="ENDxx">class="ENDxx"</li>
+                 <li class="xxEND">class="xxEND"</li>
+                 <li class="xxENDxx">class="xxENDxx"</li>
+              </ul>
+           </section>
+        
+           <section>
+              <h3>class 속성이 <em>「〜를 포함한다」</em>요소를 선택</h3>
+              <ul class="sample">
+                 <li class="CNTxx">class="CNTxx"</li>
+                 <li class="xxCNT">class="xxCNT"</li>
+                 <li class="xxCNTxx">class="xxCNTxx"</li>
+              </ul>
+           </section>
+           
+           <section>
+              <h3>class 속성 연습</h3>
+              <ul class="sample">
+                 <li><a href="http://www.naver.com">속성연습1</a></li>
+                 <li><a href="img/file.pdf">속성연습2</a></li>
+                 <li></li>
+              </ul>
+           </section>
+        
+           <section>
+              <h3 class="practice">링크 종류별로 아이콘을 표시</h3>
+              <ul class="sample">
+                 <li><a href="index.html">일반 링크</a></li>
+                 <li><a href="http://www.google.com/">외부 사이트로의 링크</a></li>
+                 <li><a href="img/file01.pdf">PDF 파일 링크</a></li>
+              </ul>
+           </section>
+        
+        
+           <section class="category pseudo">
+              <h2>Pseudo Class Selector[유사클래스]</h2>
+           
+              <section>
+                 <h3>모든 자식 요소를 카운트하는<em>「~child」</em>계  유사클래스</h3>
+                 <ul class="sample child">
+                    <li>child1 (first)</li>
+                    <li>child2</li>
+                    <li>child3</li>
+                    <li>child4</li>
+                    <li>child5</li>
+                    <li>child6</li>
+                    <li>child7 (last)</li>
+                 </ul>
+              </section>
+        
+           </section>
+        
+        
+           <section>
+              <h3>같은 요소만 카운트하는<em>「~of-type」</em>계 유사 클래스</h3>
+              
+              <div class="sample ofType">
+                 <h4>heading1(h4)</h4>
+                 <p>paragraph1(p)</p>
+                 <h4>heading2(h4)</h4>
+                 <p>paragraph2(p)</p>
+                 <h5>heading3(h5)</h5>
+                 <p>paragraph3(p)</p>
+              </div>
+           </section>
+        
+           <section>
+              <h3 class="practice no1">줄무틔 테이블을 만든다</h3>
+              <table class="stripe">
+                 <tr><td>White</td><td>White</td></tr>
+                 <tr><td>Gray</td><td>Gray</td></tr>
+                 <tr><td>White</td><td>White</td></tr>
+                 <tr><td>Gray</td><td>Gray</td></tr>
+              </table>
+              
+              <h3 class="practice no2">마지막 1행만 빨간색 글자로 해서 강조한다</h3>
+              <dl class="lastRed">
+                 <dt>Item1</dt>
+                 <dd>XXXXXXXXXX</dd>
+                 <dt>Item2</dt>
+                 <dd>XXXXXXXXXX</dd>
+                 <dt>Item3</dt>
+                 <dd>XXXXXXXXXX</dd>
+              </dl>
+           </section>
+        </section>
+        
+        <section class="category other">
+           <h2>Other Pseudo Class Selector [기타 유사 클래스]</h2>
+           
+           <section>
+              <h3>마지막 1행 이외의 모두를 선택</h3>
+              <ul class="sample nots">
+                 <li>list1</li>
+                 <li>list2</li>
+                 <li>list3</li>
+                 <li>list4</li>
+                 <li>list5</li>
+              </ul>
+           </section>
+           
+           
+           <section>
+              <h3>링크처를 연다</h3>
+              <dl class="sample target">
+                 <dt><a href="#panel1">MENU1</a></dt>
+                 <dd id="panel1">panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1</dd>
+                 <dt><a href="#panel2">MENU2</a></dt>
+                 <dd id="panel2">panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2</dd>
+                 <dt><a href="#panel3">MENU3</a></dt>
+                 <dd id="panel3">panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3</dd>
+              </dl>
+           </section>
+        
+           <section>
+              <h3>폼의 상태에 맞춰 레이블의 스타일을 바꾼다.</h3>
+              <form class="ui">
+                 <input type="radio" name="radio" id="radio1" value="1" disabled>
+                 <label for="radio1">선택지 1</label>
+                 <input type="radio" name="radio" id="radio2" value="2">
+                 <label for="radio2">선택지 2</label>
+                 <input type="radio" name="radio" id="radio3" value="3">
+                 <label for="radio3">선택지 3</label>
+              </form>
+           
+           </section>
+           
+        </section>
+     </body>
+     </html>
