@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+            배경이미지를 출력하는 위치기준
+                .background-orign:   padding-box:패딩왼쪽 위를 기준으로 출력
+                                     border-box: border선부터 출력
+                                     content-bow:콘텐트박스 왼쪽위부터 출력                   
+     -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+            div{
+                    margin: 10px;
+                    padding: 20px;
+                    border: 15px solid rgba(red, green, blue, 0.5);
+                    width: 350px;
+                    height: 50px;
+                    background-image: url(/포켓몬/001이상해씨.png) ;
+            }
+
+            code{
+                    font-family: sans-serif;
+                    font-weight: bold;
+                    font-size:18px;
+
+            }
+
+            #sample1{background-clip: border-box;}
+            #sample2{background-clip: padding-box;}
+            #sample3{background-clip: content-box;}
+            
+
+    </style>
+</head>
+<body>
+
+            <div>
+                
+                    sasasa
+            </div>
+    
+</body>
+</html>

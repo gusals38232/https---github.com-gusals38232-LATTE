@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+            배경이미지
+                background-size:
+                    contain - 너비와 높이의 비율을 유지한 채 이미지 전체가 표시
+                    cover   - 너비와 높이의 비율을 유지한 채, 해당 이미지 하나만으로 전체영역을 덮는다.
+                    auto    - 너비와 높이의 비율을 유지한채로 이미지의 크기가 변경된다
+                    실수값,%- 너비 높이: 지정한 너비와 높이로 출력
+     -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+            <style type="text/css">
+                    div{
+                        margin: 20px;
+                        padding: 20px;
+                        border : 15px  solid ;
+                         
+                        width: 350px;
+                        height: 50px;
+                        background-image: url(/포켓몬/001이상해씨.png);
+                        background-repeat: no-repeat;
+                        
+                    }
+
+                    code{
+                        color:rgb(202, 186, 184);
+                        font-family: Helvetica, sans-serif;
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+
+                    #sample1{background-size:contain ;}
+                    #sample2{background-size: cover;}
+                    #sample3{background-size:auto ;}
+                    #sample4{background-size:100% 100% ;}
+
+            </style>
+</head>
+<body>
+            <div id="sample1"><code>contain</code></div>
+            <div id="sample2"><code>cover</code></div>
+            <div id="sample3"><code>auto 90%</code></div>
+            <div id="sample4"><code>100% 100%</code></div>
+</body>
+</html>
