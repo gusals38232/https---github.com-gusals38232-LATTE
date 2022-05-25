@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+
+            박스box
+                컨텐츠가 차지하는 영역이다.
+
+                -width/height : content 의 영역
+                -padding: 안쪽여백
+                -border: 선
+                -margin: 바깥여백
+
+                margin: 10px     - 상하좌우 모두 10px
+                margin : 10px 5px - 상/하 10px, 좌/우 5px
+                margin : 5px 10px 3px - 상5px  좌우 10px 하3px
+                margin : 5px 6px 7px 8px - 상 4px, 우5px, 하 6px, 좌7px
+
+                박스가 상하로 있을떄.. 마진은 큰쪽으로 선택된다
+                박스가 옆으로 있을때.. 합산된다.
+     -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style type="text/css">
+
+                body{
+                    background-image: url(/css/05.25일/KakaoTalk_20220525_151628752.gif);
+                    border: 10px solid mistyrose;
+                    margin: 50px; padding: 10px;
+                }
+
+                div{
+                    margin: 0;  padding: 30px; border-width: 0px;
+                   
+                    background-color: rgb(79, 114, 10);
+                    opacity:0.7;
+                    width:500px; height: 500px;
+
+                    box-shadow: 10px 10px 1px yellow;
+                    overflow: hidden;
+                    /* overflow div에 줘서 넘어간거 잘라버림(숨김) */
+                }
+
+                #p1{
+                    color: white; font-size: 300%; text-align: center;
+                    width: 400px; height: 60px;
+                    background-color: #abc;
+                    margin: 0%; padding: 0%;
+                    margin-bottom: 20px;
+                }
+
+                #p2{
+                    color:white; font-size: 300%;
+                    text-align: center; width: 400px;
+                    height: 60px; background-color: #abc;
+                    margin: 100px;  padding: 50px;
+                    margin-top: 30px;
+                    
+
+                    outline-color: tomato;
+                    outline-style: solid;
+                    outline-width: 10px;
+                }
+
+
+    </style>
+</head>
+<body>
+
+            <div>
+                <p id="p1">BOX1</p>
+                <p id="p2">BOX2</p>
+            </div>
+
+
+
+    
+</body>
+</html>

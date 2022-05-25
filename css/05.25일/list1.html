@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- 
+
+                목록지정하기
+
+                    .ul, ol
+                    . css에서의 스타일 속성: 타입, 위치, 이미지 지정
+
+                        list-style : 일괄지정
+                        list-style-type : 모양지정
+                        list-style-position: 위치(inside, outside)
+                        list-style-image: url(""), none
+
+
+ -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+            .none{list-style-type: none;}
+            .ul1{list-style-type: disc;}
+            .ul2{list-style-type: circle;}
+            .ul3{list-style-type: square;}
+
+            .ol1{list-style-type:decimal ;}
+            .ol2{list-style-type:lower-roman ;}
+            .ol3{list-style-type: upper-roman;}
+            .ol4{list-style-type: lower-alpha;}
+
+    </style>
+</head>
+<body>
+
+                <h3>순서없는 목록</h3>
+                <ul>
+                    <li class="none">목록 표시마크 없음</li>
+                    <li class="ul1">디스크</li>
+                    <li class="ul2">원</li>
+                    <li class="ul3">사각형</li>
+                </ul>
+
+                <ol>
+                    <li class="ol1">10진수 마크</li>
+                    <li class="ol2">소문자 로마숫자 마크</li>
+                    <li class="ol3">대문자 로마숫자 마크</li>
+                    <li class="ol4">소문자 알파벳 마크</li>
+
+                </ol>
+    
+</body>
+</html>

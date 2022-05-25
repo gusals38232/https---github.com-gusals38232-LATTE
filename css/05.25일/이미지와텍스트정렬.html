@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+
+            <!-- 
+                    ⊙ font 속성
+                    
+                    font-style   font-variant  font-weight font-size/line-height  font-family
+                    (스타일)                    (굵기)          (크기) (줄간격)        (글자체)
+
+                    -font-style : i(이탤릭체 등등)
+                    -font-weight: 글꼴의 두께
+                    -font-size  : px,em,,,,%
+                    -font-family
+                        :글꼴의 이름이 한 단어 이상으로 이루어졌다면 반드시 따옴표로 묶어서 사용.
+                        : 여러개의 글꼴을 나열할 경우는, (컴마)로 구분 짓는다.
+                            >> font-family : Arial,등등
+
+
+                    ⊙세로정렬: vertical-align
+                            -이미지,폼요소를 위, 가운데, 하단 등으로 세로로 정렬시켜줍니다.
+                            -top, middle, bottom
+                            -주로 img, input, select, th, td등에서 함께 사용된다.
+             -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style type="text/css">
+
+                    span{font-weight: bolder;
+                        text-shadow: 10px 20px 20px rgb(29, 43, 3);    
+                    }
+
+                    body span.t1{vertical-align: baseline;}
+                    body span.t2{vertical-align: super;}
+                    body span.t3{vertical-align: sub;}
+
+                    body div img.t4{vertical-align: top;}
+                    body div img.t5{vertical-align: middle;}
+                    body div img.t6{vertical-align: bottom;}
+
+                    
+
+
+    </style>
+
+</head>
+<body style="font-size:15px">
+
+                        <p>수직정렬&nbsp; :<span class="t1" style="background-color:yellow;">기본선</span>으로하기</p>
+                        <p>수직정렬&nbsp; :<span class="t2" style="background-color:rgb(86, 31, 107);">위첨자</span>으로하기</p>
+                        <p>수직정렬&nbsp; :<span class="t3" style="background-color:rgb(66, 76, 172);">위첨자</span>으로하기</p>
+
+            <div>수직정렬&nbsp; : <img class="t4" src="/포켓몬/133이브이.png" width="200px" height="200px"> </div>
+            <div>수직정렬&nbsp; : <img class="t5" src="/포켓몬/086쥬쥬.png" width="200px" height="200px"> </div>
+            <div>수직정렬&nbsp; : <img class="t6" src="/포켓몬/147미뇽.png" width="200px" height="200px"> </div>
+    
+</body>
+</html>
