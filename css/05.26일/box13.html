@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+
+        크기정하기-width, height
+            -html에서는 표,이미지의 속성에 적용
+            -css는 다양한 태그에 width와 height를 적용가능
+            ex) 버튼, 문단, 표, 
+            
+        OVERFLOW 
+            -내용이 영역안에 범위에서 넘쳐서 벗어날떄
+                    .visible: 넘치는 내용을 보이기설정
+                    .hidden : 넘치는 내용을 안보이게
+                    .scroll : 스크롤되게 설정
+                    .auto   : 브라우저의 기본값으로 설정
+        wihte-space
+            -공백을 어떻게 처리할 것인지의 속성, 공백-탭문자,띄어쓰기, 줄바꿈문자
+            .normal : 연속된 공백과 줄바꿈은 공백1개로 대체된 다        
+            .nowrap : 자동줄바꿈 처리를 하지 않게 할때, 연속된 공백과 줄바꿈은 공백1개로 처리
+            .pre    : 자동줄바꿈 처리는 하지 않는데 연속된 공백과 줄바꿈을 그대로 표현
+            .pre-wrap: 자동 줄바꿈    
+
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+            
+            div{
+                margin: 20px;
+                border: solid 1px darkblue;
+                background-color: rgb(224, 179, 174) ;
+                box-shadow: 2px 3px 4px black;
+                opacity: 0.7;
+                width: 500px;
+                height: 120px;
+
+                white-space: nowrap;
+                overflow-x: scroll;
+                overflow-y: scroll;
+                resize: both;
+            }
+
+    </style>
+</head>
+<body>
+            <div>
+                <h3>문서의 레이아웃</h3>
+                <p>문서의 레이아웃이나 디자인을 정의하는 스타일 시트중, html문서나 xhtml등에서
+                    이용되는 사양이 css(cascading style sheet) 입니다. <br>
+                    이전의 html문서에서는 "문서의 구조를 나타내는 부분"과 "모양을 나타내는 부분이"
+                    둘다 html의 요소로 지정되어 같이 섞어서 사용하였습니다.
+                </p>
+            </div>
+    
+</body>
+</html>

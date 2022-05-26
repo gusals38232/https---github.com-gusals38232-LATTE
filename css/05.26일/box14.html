@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- 
+            box의 width를 설정하는 방법
+
+            box-sizing
+                . content-box : 기존 알고있는 width
+                . border- box : border를 포함하는 width
+
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+
+    <style type="text/css">
+ /* 초기화 */
+ *{margin: 0; padding: 0;}
+
+                div{
+                    width: 200px; height: 200px;
+                    margin: 10px; padding: 10px;
+                    text-align: center;
+                    vertical-align: middle;
+                    
+                }
+
+                .content-box{
+                    background-color: rgb(23, 149, 190);
+                    box-sizing: content-box;
+                    border: 5px solid black;
+                }
+                .border-box{
+                    background-color:red ;
+                    box-sizing: border-box;
+                    border: 5px solid black;
+                }
+
+    </style>
+</head>
+<body>
+        <div class="content-box">기본박스(content박스)</div>
+        <div class="border-box">border박스</div>
+    
+</body>
+</html>

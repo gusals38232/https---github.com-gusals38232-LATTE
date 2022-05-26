@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+        border-width 전체굵기
+        border-left
+        border-right
+        border-top
+        border-bottom
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+                /* 초기화 */
+                   dl,dt,dd,p{
+
+                        margin: 0%; padding: 0;
+                   } 
+
+                body{
+                        font: 12px "궁서체";
+                        font-size: medium;
+                }
+
+                dl.box{width: 550px;
+                        border: 3px coral dotted;}
+                        /* 순서 상관 없다 border */
+                
+                dt{
+                    background-color: mistyrose;
+                    color: darkolivegreen;
+                    text-align: center;
+                    font-size: 25px;
+                    letter-spacing: 100px;
+                    padding: 20px;
+                    border-bottom: 3px solid darkblue;
+                    
+                }        
+
+                dd{
+                    background-color: tomato;
+                    border: 3px olive double;
+                    padding: 10px;
+                }
+                
+                dd.line{
+                    border-bottom: 5px rgb(94, 168, 104) double;
+                    border-radius: 30px;
+                }
+
+    </style>
+</head>
+<body>
+        <dl class="box">
+            <dt>속담풀이</dt>
+            <dd class="line">
+                <h2>말 한마디에 천 냥 빛진다</h2>
+                <p>생각해 보지 않고 나오는 대로 말하다가
+                    상대방에게 상처를 준다
+                </p>
+
+
+            </dd>
+            <h2>웃는 얼굴 침 못뱉어</h2>
+            <p>호의적인 의사소통 방법은 자기 말만 하는 것보단
+                들어주는 것이 좋은 결과로 이어진다
+            </p>
+        </dl>
+    
+</body>
+</html>

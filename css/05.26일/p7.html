@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!-- 
+            display:flex   - float 하지만 더 깔끔하다.
+
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <style type="text/css">
+
+            div[class]{
+                    margin: 10px;padding: 10px;width: 600px;height: 400px;background: lightblue;
+                    background-image: url(/포켓몬/라이츄.png);
+
+            }
+            div{width: 150px;height: 100px;margin: 2px;background: mistyrose;
+            border-radius: 5px; text-align: center; box-shadow: 1px 1px 2px black;
+                    
+        }
+
+            div.fr{
+                display: flex;  flex-direction: row;
+            }
+            div.frc{display: flex; flex-direction: row-reverse;}
+
+            div.fc{
+                display: flex; flex-direction: column;
+            }
+            div.fcr{
+                display: flex; flex-direction: column-reverse;
+            }
+        </style>
+</head>
+<body>
+    
+
+                <h3>flex-firection:row</h3>
+                 <div class="fr">
+                     <div>1</div>
+                     <div>2</div>
+                     <div>3</div>
+
+                 </div>
+                 <br><br>
+
+                 <h3>flex-firection:row-reverse</h3>
+                 <div class="frc">
+                     <div>1</div>
+                     <div>2</div>
+                     <div>3</div>
+
+                 </div>
+                 <br><br>
+
+                 
+                 <h3>flex-firection:column</h3>
+                 <div class="fc">
+                     <div>1</div>
+                     <div>2</div>
+                     <div>3</div>
+
+                 </div>
+                 <br><br>
+
+                    
+                 <h3>flex-firection:column-reverse</h3>
+                 <div class="fcr">
+                     <div>1</div>
+                     <div>2</div>
+                     <div>3</div>
+
+                 </div>
+                 <br><br>
+</body>
+</html>
