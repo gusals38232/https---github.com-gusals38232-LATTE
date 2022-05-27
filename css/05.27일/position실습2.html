@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <style type="text/css">
+
+                    *{margin: 0; padding: 0;}
+
+                    body{
+                        margin: 10px; padding: 10px;
+                        
+                    }
+                    p{
+                width: 200px; height: 50px;
+                padding: 10px;
+                text-align: center;
+               
+                font-weight: bolder;
+                font-size: large;}
+
+                    .box1{
+                            background: gray;
+                            position: relative; 
+                    }
+                    .box2{
+                        background: green;
+                        position: absolute;
+                    }
+                    .box3{
+                        background: red;
+                        
+                    position: relative; left: 20px;
+                    bottom: 30px;
+                        
+                    }
+                
+                    .box4{
+                        background: rgb(187, 118, 14);
+                        position: relative; left: 40px;
+                    }
+                    .box5{
+                        background: gray;
+                    }
+
+                    div div{
+                        border: 5px dotted black;
+                        width: 500px; height: 300px;
+                        left: 20px;
+                        position: relative;
+                        
+                    }
+        </style>
+</head>
+<body>
+
+
+         <div id="box">
+             <p class="box1">박스1</p>
+             <div>
+             <p class="box2">박스2</p>
+             <p class="box3">박스3 (절대배치)</p>
+             <p class="box4">박스4</p>
+            </div>
+             <p class="box5">박스5</p>
+         </div>
+    
+</body>
+</html>

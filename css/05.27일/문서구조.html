@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<!-- 
+
+                    header
+             ---------------------
+                    nav
+                    ----------------
+                    ------------
+         nav    article  aside           
+                    
+                    -----------
+                    -----------
+                    footer
+                    -----------
+
+               .float+ position 방식     
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+                *{margin: 0%;padding: 0;}
+                body{
+                    width: 100%;height: 700px;
+                    font:bolder 20px white;
+                    border: 1px solid black;
+                } 
+                header{
+                    width: 99%; height: 70px;margin: 4px;
+                    padding: 0;
+                    background-color: gray; text-align: center;
+                }
+                .container{
+                    width: 99%; height: 565px;
+                    margin: 4px;    padding: 0; 
+                    border: 1px solid black;
+                    background: gray; text-align: center;
+                }
+                .sidemenu{
+                    width: 70%; height: 520px; margin: 10px;
+                    padding: 0; border: 1px solid black;    
+                    background-color: mistyrose; float: right;
+                }
+
+                .content{
+                    width: 99%; height: 40px;margin: 4px;
+                    padding: 0; border: 1px solid black;
+                    background-color: blueviolet; text-align: center;
+                    float: right;
+                }
+
+                .footer{
+                    width: auto;
+                    height: auto;
+                    clear: both;
+                    background: wheat;
+                }
+
+    </style>
+</head>
+<body>
+            <header><h3>HEADER</h3></header>
+            <div class="container">
+                <h3>CONTAINER</h3>
+                <nav class="sidemenu">SIDE MENU</nav>
+                <section class="content">content</section>
+
+
+            </div>
+            <footer class="footer"> FOOTER</footer>
+    
+</body>
+</html>

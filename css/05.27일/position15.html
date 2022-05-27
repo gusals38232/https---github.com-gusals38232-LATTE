@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+                *{margin: 0%;padding: 0%;}
+                li{list-style: none;}
+
+
+                /* 공통스타일 */
+        #container{
+            background: yellowgreen;
+            float: left;
+            overflow: scroll; 
+            width: 560px; border: 2px dotted rgb(2, 63, 83);
+        }
+
+            /* 개별스타일 */
+
+            .menu{
+                float: left; width: 130px; padding: 10px;
+
+            }
+            .content{
+                float: right; width: 350px;
+                padding: 10px;
+                border-left: 1px solid brown;
+            }
+
+            #footer{
+                clear:both
+            }
+
+            address{
+                font-size: small;
+                padding: 10px;
+            }
+
+    </style>
+
+</head>
+<body>
+            <div id="container">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">제품안내</a></li>
+                        <li><a href="#">커뮤니티</a></li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <p>
+                        이 제품은 어댑터와 본체와 분리되어있는 대부분의 제품들이 갖는 불편함을
+                        해소하는 데 큰 기여를 하고 있다. 가장 많은 불편함은 어댑터 분실인데 이 제품은
+                        usb크기의 잭만 꽃으면 센서로 자동충전되어 휴대도 간편한 복덩어리 노트북이다.
+                    </p>
+                </div>
+            </div>
+
+            <div id="footer">
+                <address> &Copy;2022 Copyright All right reserved </address>
+            </div>
+
+    
+    
+</body>
+</html>
