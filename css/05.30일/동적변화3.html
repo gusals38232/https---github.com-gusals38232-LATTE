@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <!-- 
+        속성전환(transition)
+        ;   Transition은
+            -background
+            -color
+            -width,height 등 변환
+
+        구현방법
+            1) transition 형식
+                . property: 애니메이션 시킬 속성
+                . duration: 시작해서 끝날때 까지 시간을 초단위로 지정
+                . timmingfuction
+                    -linear : 등속실행
+                    -ease   : 느리게 시작했다가 빨라졌다가 다시 느려짐
+                    -ease -in: 점점 빨라짐
+                    -ease -out: 점점 느려짐
+                    -처음과 끝이 느림
+                    -cubic-bezier(n,n,n,n) 값을 입력해서 가속/감소를 조작    
+     -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+         span{
+             transition: font-size 5s;
+         }
+         span:hover{
+             font-size: 800%;
+             font-weight: bolder;
+             color: rgb(121, 32, 16);
+             
+         }
+
+    </style>
+</head>
+<body>
+                <h3>font size에 대한 전환</h3>
+                <hr>
+                <p><span>Boom!</span> !!</p>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- 
+        <그리드 레이아웃>
+            .글자와 이미지, 단등의 요소를 일정 규칙에 의해 격자 모양으로 레이아웃 하는 기법
+            .다단 레이아웃과 잘 맞아서 기업 사이트나 정보사이트에 많이 사용된다.
+
+        <프리레이아웃>
+            .자유자재로 그림을 그리듯이 배치하는 기법
+            .포스터나 광고처럼 그래픽이 중시되는 웹 사이트에서 주로 사용
+            .position, 유동형이 아닌 고정형에 적합하다    
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+            html,body{background-color: lightgray; width: 1965px; height: 900px; margin: 0; padding: 0;}
+            #container{background-color: rgb(236, 209, 177); width: 1845px; height: 900px; margin: 6px 10px 10px 10px;
+            padding:0; float: left; text-align: center;}
+
+.header{ background-color: rgb(99, 83, 60); width: 1825px; height: 100px; margin: 5px 10px 15px 10px; padding: 0;}
+.content{ background-image: url(/포켓몬/팬텀.gif); width: 1825px; height: 500px; margin:5px 10px 15px 10px; padding: 0;}
+.aside1{ background-color: blue; width: 350px; height: 150px; float: left; padding: 0; margin:0px 10px 0px 10px;}            
+.aside2{background-color: rgb(85, 130, 212); width: 350px; height: 150px; float: left; margin:0px 10px 0px 10px; padding: 0;}            
+.aside3{background-color: rgb(69, 69, 124); width: 350px; height: 150px; float: left; margin:0px 10px 0px 10px; padding: 0;}            
+.aside4{background-color: rgb(20, 98, 161); width: 350px; height: 150px; float: left; margin:0px 10px 0px 10px; padding: 0;}            
+.aside5{background-color: rgb(7, 7, 71); width: 350px; height: 150px; float: right; margin:0px 10px 10px 0px; padding: 0;}
+.footer{ background-color: brown; width: 1845px;  height: 50px; clear: both; padding: 10px;
+    }            
+
+    </style>
+</head>
+<body>
+        <div id="container">
+            <div class="header" align="center"><h1>그리드 레이아웃은 다단 레이아웃입니다.</h1></div>
+            <div class="content"></div>
+            <div class="aside1"></div>
+            <div class="aside2"></div>
+            <div class="aside3"></div>
+            <div class="aside4"></div>
+            <div class="aside5"></div>
+            <div class="footer"></div>
+        </div>
+    
+</body>
+</html>

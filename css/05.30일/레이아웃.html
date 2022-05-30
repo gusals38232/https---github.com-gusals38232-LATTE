@@ -1,0 +1,112 @@
+<!-- 
+
+    ★레이아웃시 고려사항
+            .정보량에 따라 단과수, 가변 또는 고정, 그리드인가 프리인가를 결정해야 한다.
+            .다단 레이아웃은 float으로 처리
+            . 프리스타일의 경우 position을 이용
+
+
+        <단 레이아웃>
+            .단의 수의 따라 1단, 2단, 3단 ...구분되는 레이아웃
+            .PC용은 거의 1단이 대다수고.. 2단, 3단 정도가 일반적이다.
+            
+            <1단 레이아웃>
+                -위에서 아래로 정보를 배치하는 레이아웃
+                -하나의 주제에 깊이 있게 다룰때 주로 사용
+                -판촉사이트, 모바일의 가로폭이 좁은 경우에 주로 사용
+
+            <2단/3단 레이아웃>
+                -화면영역이 넓고 정보량이 많은 사이트에서 활용
+                -사용자의 편리성을 위해서 내비게이션을 설계함이 좋다.    
+ -->
+
+
+ <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style type="text/css">
+       html,body{
+       background-color:#f0f0f0;
+       width: 100%;
+       height: 754px;
+       margin: 0px;
+       padding: 0px;
+       }
+       #container{
+       background: light gray;
+       display: inline-block;
+       margin: 50px 150px;
+       }
+       #container1{
+       background-color: #fffff0;
+       border: 1px solid  black;
+       width: 470px;
+       height: 700px;
+       margin: 15px auto;
+       padding: 10px;
+       float: left;
+       }
+       
+       .head1 {
+       background-color: #ffdead;
+       width: 370px;
+       height: 12%;
+       margin: 15px auto;
+       padding-left: 15px;
+       }
+       .article1{
+       background-color: #87cefa;
+       width: 15%;
+       height: 400px;
+       margin: 15px auto;
+       padding-right: 25px;
+       float: left;
+       }
+       .aside1{
+       background-color:#8fbc8f;
+       width: 45%;
+       height: 400px;
+       margin: 15px auto;
+       padding: 15px; 
+       float: right;
+       }
+       .footer1{ background-color: #ffdead; width: 370px; height: 10%; margin: 15px auto; padding: 15px;
+    clear: both;}
+       
+    </style>
+    </head>
+    <body>
+    
+       <div id="container">
+          <div id="container1" bgcolor="#BEBEBE">
+             <div class="head1" align="center">
+                <h3 align="center">1단 레이아웃</h3>
+             </div>
+             <div class="article1"></div>
+             <div class="aside1"></div>
+             <div class="footer1"></div>
+          </div>
+          
+          
+          <div id="container2">
+             <div class="head2" align="center">
+                <h3 align="center">2단 레이아웃</h3>
+             </div>
+             <div class="article2"></div>
+             <div class="aside2"></div>
+             <div class="footer2"></div>
+          </div>
+          
+          
+          <div id="container3">
+             <div class="head3" align="center">
+                <h3 align="center">3단 레이아웃</h3>
+             </div>
+             <div class="article3"></div>
+             <div class="aside3"></div>
+             <div class="footer3"></div>
+          </div>
+       </div>
+    </body>
+    </html>

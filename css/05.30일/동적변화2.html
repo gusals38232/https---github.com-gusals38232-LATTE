@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+     img.infinite_rotating_Logo{
+            animation:rotate_image 20s linear infinite;
+            transform-origin: 50% 50%; 
+            
+     }
+
+     @keyframes rotate_image{
+            100%{
+                  transform: rotate(360deg);
+            }
+     }
+     .logo-area{ display: table; table-layout: fixed; width: 100%; height: 100%;}
+     .logo-area img{display: table-cell;}
+</style>
+</head>
+<body>
+       <div class="logo-area">
+            <img class="infinite_rotating_Logo" src="/포켓몬/고오스진화.gif">
+            <img class="infinite_rotating_Logo" src="/포켓몬/고오스진화.gif">
+            <img class="infinite_rotating_Logo" src="/포켓몬/고오스진화.gif">
+            <img class="infinite_rotating_Logo" src="/포켓몬/고오스진화.gif">
+            
+            
+            
+            
+       </div>
+</body>
+</html>

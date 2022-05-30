@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<!-- 
+    <유동형 레이아웃>
+        - 윈도우 가로폭 변경시 콘텐츠 가로폭도 자동 변경되도록 설계
+        - 고정형이었으나...현재는 유동형이 추세
+        - 리퀴드 레이아웃 : 가로를 %로 설계
+        - 플렉시블 레이아웃: 가로를 px과 %로 혼합해서 설계
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+html,body{
+         background-color: antiquewhite; width: 100%; height: 754px; margin: 0; padding: 0;   
+        }
+
+#nav{background-color: yellowgreen;  width: 20%; height: 754px; margin: 0; padding: 0; float: left;}
+
+#container{
+    position: relative;
+}
+
+#container:after{
+        content: "";
+        display: block;
+        clear: both;
+}
+
+
+#content{ position: absolute;
+        top: 0;
+        left: 210px;
+
+        background-color: skyblue; width: 800%; height: 754px; margin: 0; padding: 0;
+}
+
+    </style>
+</head>
+<body>
+        <section id="container">
+
+            <nav id="nav">
+                <h3>네비게이션</h3>
+                    <ul>
+                        <li>레이아웃 종류</li>
+                        <li>레이아웃의 구현방법</li>
+                        
+                    </ul>
+
+            </nav>
+
+            <article id="content">
+                    <h3>유동형 Liquid 레이아웃</h3>
+                    <p>
+                        - 윈도우의 가로폭이 바뀌어도 그에 맞도록 콘텐츠의 가로폭이 늘거나 줄도록 설계 <br>
+                        - 가로폭은 %단위로 설계
+                    </p>
+
+            </article>
+
+        </section>
+    
+</body>
+</html>
