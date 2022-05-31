@@ -1,0 +1,125 @@
+|<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+            h1{
+                background-color: rgb(235, 200, 137);
+                text-align: center;
+                text-shadow: 2px 2px 3px orange;
+                margin: 0;  padding: 0;
+                font-weight: bolder;
+                font-style: normal;
+                text-decoration: none;
+            }
+
+            li{
+              display: inline; padding: 10px 20px;
+              float: left;
+              
+            }
+
+            li a{padding: 5px 10px; color: aliceblue; text-decoration: none;}
+
+            li a:hover{ background-color: darkgray;}
+            li.dropdown{
+                    display: inline-block;
+            }
+            li.dropdown-content{
+                    display: none;
+                    position: absolute;
+                    background: ghostwhite;
+                    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            }
+            #si{
+                
+                list-style-type: none;
+            }
+
+            .dropdown-content{
+                display: block;
+                padding: 12px 16px;
+                text-decoration: none;
+                text-align: left;
+                color: black;
+            }
+
+            .dropdown-content a:hover{
+                background-color: thistle;
+            }
+
+            .dropdown:hover  .dropdown-content{
+                display: block;
+            }
+            
+            .dropdown{
+                background-color: olivedrab;
+                width: 200px; height: 50px;
+                text-align: center;
+                color: aliceblue;
+                position: relative;
+            }
+
+           
+
+           
+            
+
+
+       
+
+          
+
+    </style>
+</head>
+<body>
+        <h1>우리집Cafe</h1>
+        <ul id="si">
+            <li class="dropdown">
+                <a href="#home">HOME</a>
+                <div class="dropdown-content">
+                    <a href="#">커피이야기</a>
+                    <a href="#">건강과 커피</a>
+                    <a href="#">친구들</a>
+                </div>
+
+
+            </li>
+
+             <li class="dropdown">
+                 <a href="Cappuccino"> Cappuccino</a>
+                <div class="dropdown-content">
+                    <a href="#">wet c</a>
+                    <a href="#">dry c</a>
+
+                </div>
+             </li>
+
+             
+             <li class="dropdown">
+                <a href="Cafe latte"> Cafe latte</a>
+               <div class="dropdown-content">
+                   <a href="#">모</a>
+                   <a href="#">카</a>
+                   <a href="#">라</a>
+                   <a href="#">떼</a>
+                   <a href="#">맛</a>
+                   <a href="#">나</a>
+           </div>
+            </li>
+
+
+        </ul>
+
+        <div style="height:auto">
+            <pre>
+                메뉴내용을 나타내는 부분입니다.
+            </pre>
+        </div>
+    
+</body>
+</html>

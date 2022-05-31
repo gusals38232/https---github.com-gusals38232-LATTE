@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- /* 1단계: 내용구성과 블럭영역의 배경색 지정. */ -->
+    <style type="text/css">
+            *{box-sizing: border-box;}
+            .header{background-color: dimgray; color: wheat;}   
+            .menu{ background-color: rgb(5, 78, 78); color: white;}
+            .content{background-color: ghostwhite;}
+            .side{background-color: yellowgreen;}
+            .footer{background-color: mistyrose;}
+    </style>
+
+<!-- 2단계: position을 설정해서 큰 구도를 잡는다. -->
+<style type="text/css">
+    .menu{float: left; width: 20%;}
+    .content{float: left; width: 60%;}
+    .side{ float: left; width: 20%;}
+
+</style>
+
+<!-- 3단계: 내비게이션을 설정하고 display로 구도를 잡는다. -->
+
+<style type="text/css">
+    .menu{  display: block; color: white;}
+</style>
+
+<!-- 4단계: float 설정된 후속영역에서 float을 해제한다. -->
+<style type="text/css">
+        .footer{ clear: both;}
+</style>
+<!-- 5단계:  -->
+
+<style type="text/css">
+    .container{
+        height: 600px;
+    }
+    .header{height: 15%;}
+    .menu,
+    .content,
+    .side{height: 75%;}
+    .footer{height: 10%;}
+</style>
+
+<!-- 6단계: 내비게이션과 컨텐츠연결 -->
+<style type="text/css">
+    #f1{
+        margin: 0; padding: 0%;
+        border: 0;
+    }
+    .header, .menu, .footer{text-align: center;}
+</style>
+
+<!-- 7단계 : hover설정   -->
+<style type="text/css">
+
+            .menu{
+                background: rgb(165, 79, 69);
+                overflow: hidden;
+                z-index: 0;
+
+            }
+
+            .menu a{
+                color: white;
+                padding: 16px;
+                text-decoration: none;
+            }
+
+            .menu a:hover{
+                background-color: lightgray;
+                color: black;
+                
+            }
+</style>
+
+</head>
+<body>
+
+       
+    <div class="container">
+        <div class="header">header</div>
+        <div class="menu">      <!-- 네비게이션 설정 -->
+            
+            <a href="#">아메리카노</a>
+            <a href="#">카푸치노</a>
+            <a href="#">카페라떼</a>
+            <a href="#">바닐라떼</a>
+            <a href="#">아포가토</a>
+        </div>
+        <div class="content">
+            <iframe src="sample.html" id="f1" width="100%"
+            height="100%">ㅇ</iframe>
+        </div>
+        <div class="side">side</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
