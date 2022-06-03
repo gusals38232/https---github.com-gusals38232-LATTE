@@ -1,0 +1,433 @@
+@charset "UTF-8";
+
+/*-----------------------------
+
+        (기본설정)
+　리셋 CSS + 사이트 공통 설정
+
+------------------------------*/
+
+/* 모든 요소에 대한 여백 초깃값 설정 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, main, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+   margin:0;
+   padding:0;
+
+   border: 0;
+   font-size: 100%;
+}
+
+/* 1. 기본 문자설정 */
+body{
+      color: #666666;
+      font-family: sans-serif;
+      font-size: 87.5%;
+      line-height: 1.5;
+}
+
+
+
+/* 목록 마커 비표시 */
+
+ul,ol{
+    list-style-type: none;      
+}
+
+/* 테이블 셀 테두리 설정*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;       
+}
+
+/* 이미지 및 양식부분의 상하 위치를 텍스트 중간에 */
+img,imput,select, textarea{
+   vertical-align: middle;
+}
+
+
+/* 기본 링크 색 설정 */
+a{
+   color: #00C4AB;
+}
+a:hover{
+   color:#CCE739;      
+}
+
+/* 이미지 링크 설정*/
+a img{
+      opacity: 1;   
+}
+a:hover img{
+   opacity: 0.7;
+}
+
+/* clearfix: float레이아웃에서 가상 clear:both처리 */
+.clearfix:after{
+   content:"";
+   display: block;
+}
+
+/* 헤더의 정렬 레이아웃과 gnav 그리고 footer속의 inner */
+.inner{
+     width: 940px;
+     margin: 0 auto;
+}
+
+body {
+    border-top:#cce739 5px solid;     
+}
+#header{
+   padding: 10px 0;
+   border-top: #00c4ab solid 5px;
+   background: url("img/bg_header.png") #e6e6e6   
+}
+
+#header>.inner{display: table;}
+#logo{
+   margin-right: 20px;
+   display: table-cell;
+   vertical-align: middle;
+   
+   filter: hue-rotate(90deg); /* 색조를 진하게 변경 - fiter 학습 요망*/
+}
+
+#catch{
+    display: table-cell;
+    vertical-align: middle;   
+}
+
+#info{
+   width:20em;
+   padding: 10px;
+   border: 1px solid #ccc;
+   background: #fff;
+   
+   display: table-cell;
+   vertical-align: middle;   
+}
+
+ /* 헤더의 dt를 왼쪽으로 배치하고 여기서 앞에 것을 clear 처리 */
+#info dt{
+     clear: left;
+     float: left;
+     width: 6em;
+}
+
+
+#footer{
+       padding: 10px 0;
+       background: #e6e6e6;
+      
+   
+}
+
+#flink{
+    float: left;   
+}
+
+#flink a{
+   padding: 0 10px;
+   background: url("img/ico_arw01.png") left center no-repeat;
+   color: #666;
+   text-decoration: none;
+}
+
+#flink a:hover{
+   text-decoration: underline;      
+}
+
+#copyright{
+   float:right;
+}
+
+#gnav{
+   background-color: #00c4ab;
+   
+}
+
+#gnav ul{
+    overflow: hidden;
+}
+#gnav li{
+    float: left;
+    width: 156px;
+    border-right: #fff 1px solid;
+}
+
+#gnav li:first-child{ /* 안잡히면 한칸 때어보세요 */
+width: 153px;
+border-left: #fff 1px solid;
+}
+
+#gnav a{
+   display: block;
+   padding: 10px 0;
+   text-align: center;
+   text-decoration: none;
+   color: #fff;
+}
+
+#gnav a:hover{
+   background: #cce739;
+}
+
+
+#contents{
+   
+   width:898px;
+   margin: 0 auto;
+   padding:: 10px 20px 0 20px;
+   border-left:#e6e6e6 1px solid;
+   border-right: #e6e6e6 1px solid;
+   
+}
+
+#breadcrumbs{
+   margin-bottom: 30px;
+   padding-bottom: 10px;
+   border-bottom: #ccc 1px dotted;
+   
+}
+
+#breadcrumbs li{
+   display: inline;
+   font-size: 83%   
+}
+
+#breadcrumbs li{
+   padding-right: 15px;
+   background: url("img/ico_arw01.png") right center no-repeat;
+}
+
+#main{
+    width: 680px;
+    margin-bottom: 40px;
+    float: right;
+   
+}
+
+#side{
+   width: 180px;
+   margin-bottom: 40px;
+   float: left;
+   
+}
+#pagetop{
+    clear:both;
+}
+
+
+/* 메인 콘텐츠 영역의 마진설정
+
+              - 각 요소에 고유의 margin을 설정하는 방법
+              - margin만 설정해서 범용 class 별로 개별 margin을 설정 하는 방법
+*/
+
+/* 페이지별 큰 제목 */
+.ptitle{
+     margin-bottom: 30px;
+}
+
+/* 섹션 스타일 지정 */
+.sec{ 
+   margin-bottom: 30px;
+}
+
+.sec p+p{
+    margin-top: 10px;   
+}
+
+/* 부 제목 설정 */
+.hdg{
+       margin-bottom: 15px;
+       padding: 8px 10px;
+       border: #e6e6e6 1px solid;
+       background: url("img/bg_hdg_grad.png") left bottom repeat-x #f2f2f2;
+       line-height: 1.2 em;
+       border-radius: 3px;
+       box-shadow: 0 0 0 1px #fff inset;    
+}
+
+
+.hdg span{
+   display: block;
+   padding-left: 5px;
+   border-left: #00c4ab 8px solid;   
+}
+
+
+/* 주의사항 설정*/
+.note{
+      padding: 5px;
+      background: #f2f2f2;
+      font-size: 85%;      
+}
+
+/* 링크 아이콘 */
+.icon{
+     text-align: right;   
+}
+.icon a{
+      padding-left: 10px;
+      background: url("img/ico_arw02.png") left center no-repeat;      
+}
+
+/* 문의버튼 설정*/
+.btn_inquiry{
+      margin: 50px 0;
+      text-align: center;      
+}
+
+/* asid박스 설정*/
+.r_box{
+   padding: 15px;
+   border: #cce91d 1px solid;
+   background: #f8ffd1;
+   border-radius: 5px;
+   box-shadow: 0 0 0 2px #fff inset;
+}
+
+
+.r_box_tit{
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #79906f;
+      color: #79906f;
+   
+}
+
+.inner{
+     
+    width: 940px;
+    margin: 0 auto;
+}
+
+
+body{
+    border-top: #cce739 5px solid; 
+}
+
+#catch{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#info{
+    width: 20em;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#info dt{
+    clear: both;
+    float: left;
+    width: 6em;
+}
+
+/* CSS 스프라이트 방식 */
+
+ /* CSS스프라이트 방식
+             ; 여러 화면에, 여러곳에 사용될 이미지를 한곳에 모아서 background-position으로
+                              위치를 바꿔가면서 이미지를 적용하는 기법이다.
+                              
+              . 이미지 불러오기를 한번에 처리할 수 있다.
+              . 출력시간이 빠르다.
+              . 이미지를 만드는 어려움도 있다.
+              
+         CSS 시그니쳐 방식
+               ; body에 class와 id를 부여해서 페이지별 또는 페이지들간의 특별히 디자인을 CSS를 통해서 선택 적용할 수 있다.
+                        - 카테고리 : class
+                        - 페이지 시그니쳐: id
+                 * 이미지 정보
+                          156 157 157 157 156
+                                              40 - 보통
+                                              40 - 롤 오버 (투명색)
+                                              40 - 현재위치 (배경색)
+                                              
+            * 글로벌 메뉴
+                                  ul )  overflow : hidden
+                                  li )  float: left
+                                  a  )  block,  width, height,
+                                                                               글자 처리: text-indext: -9999px
+                                        background-position: left top                                 
+ */
+ 
+ #gnav{
+    background-color: #00c4ab; 
+ }
+ 
+ 
+ #gnav ul{
+    overflow: hidden;
+ }
+ 
+ 
+ #gnav li{
+    float: left;
+ }
+ 
+ 
+ #gnav a{   
+    display: block;   
+    width: 157px;       
+    height: 40px;      
+    background-image: url("img/gnav.png") no-repeat;  
+    text-indent: -9999px;   
+    color: #fff;
+    
+    background-position: 0 0;
+    
+ }
+ 
+ 
+ 
+ #gnav .gnav01 a, 
+ #gnav .gnav06 a{
+    width: 156px;
+ }
+ 
+ 
+ 
+ #gnav .gnav01 a{background-position: 0px 0px;}    
+ #gnav .gnav02 a{background-position: -156px 0px;} 
+ #gnav .gnav03 a{background-position: -313px 0px;}
+ #gnav .gnav04 a{background-position: -470px 0px;}
+ #gnav .gnav05 a{background-position: -627px 0px;}
+ #gnav .gnav06 a{background-position: -784px 0px;}
+ 
+ 
+ /* CSS스프라이트: 롤오버표시) 각 목록별에 따른 롤오버시의  배경이미지의 위치를 지정   */
+ /* 
+ #gnav .gnav01 a:hover{background-position:   0px -40px;}
+ #gnav .gnav02 a:hover{background-position: -156px -40px;}
+ #gnav .gnav03 a:hover{background-position: -313px -40px;}
+ #gnav .gnav04 a:hover{background-position: -470px -40px;}
+ #gnav .gnav05 a:hover{background-position: -627px -40px;}
+ #gnav .gnav06 a:hover{background-position: -784px -40px;}
+ 
+ 
+ /* 맨 아래의 이미지를 적용해 보자. */
+ 
+ #gnav .gnav01 a:hover{background-position: 0 -80px;}      
+ #gnav .gnav02 a:hover{background-position: -156px -80px;} 
+ #gnav .gnav03 a:hover{background-position: -313px -80px;}
+ #gnav .gnav04 a:hover{background-position: -470px -80px;}
+ #gnav .gnav05 a:hover{background-position: -627px -80px;}
+ #gnav .gnav06 a:hover{background-position: -784px -80px;} 
+
+

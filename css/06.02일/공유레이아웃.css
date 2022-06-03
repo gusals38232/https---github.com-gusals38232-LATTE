@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* 
+    메인콘텐츠 영역의 마진설정
+
+        -각 요소에 고유의 margin을 설정하는 방법
+        - margin만 설정해서 범용 class별로 개별margin을 설정하는 방법
+*/
+
+/* 페이지별 큰 제목 */
+.ptitle{
+    margin: bottom 30px; ;
+}
+
+/* 섹션 스타일 지정  */
+.sec{
+    margin-bottom: 30px;
+}
+
+.sec p+p{
+    margin-top: 10px;
+}
+
+/* 부 제목 설정 */
+.hdg{
+    margin-bottom: 15px;
+    padding: 8px 10px;
+    border: mistyrose 1px solid;
+    background: url(/포켓몬/035삐삐.png) left bottom repeat-x wheat;
+    line-height: 1.2em;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px olive inset;
+}
+
+.hdg span{
+    display: block;
+    padding-left: 5px;
+    border-left: lightblue 8px solid;
+}
+
+/* 주의사항 설정 */
+.note{
+    padding: 5px;
+    background: lightgreen;
+    font-size: 85%;
+}
+
+/* 링크 아이콘 */
+.icon{
+    text-align: right;
+}
+
+.icon a{
+    padding-left: 10px;
+    background: url(/포켓몬/102아라리.png) left center no-repeat;
+}
+
+/*  문의버튼 설정 */
+.btn_inquiry{
+    margin: 50px 0;
+    text-align: center;
+}
+
+/* aside박스 설정  */
+.r_box{
+    padding: 15px;
+    border: black 1px solid;
+    background: violet;
+    border-radius: 5px; 
+    box-shadow: 0 0 0 2px #fff inset;
+}
+
+.r_box_tit{
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #992399;
+    color: blue;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- 
+         1. 코딩전에 설계시 검토해둬야 할 사항
+                 . 문서구조의 설계
+                 . 정보그룹의 구조화, 레이아웃 테두리 설계
+                 
+                 
+                 . 파일에 이름을 붙이는 규칙 - 이미지등
+                 . id/class에 이름을 붙이는 규칙
+ 
+                 . 선택자의 설계
+                 . 크기나 색상 단위나 크기값을 지정
+
+         2.  명명규칙
+                              식별자1_식별자2_이름/일련번호.확장자
+                     . bg : 배경이미지 
+                     . btn : 버튼
+                     . icon : 아이콘
+                     . ph : 사진
+                     . img : 이미지 전반
+                     . fg : 예제       
+                     . ill : 일러스트
+                     . bnr : 배너
+                     . text : 텍스트이미지
+                     . hdg : 표제이미지
+                     
+                     
+                     . header/footer
+                     . gnav : 글로벌 내비게이션
+                     . snav : 서브내비게이션 등등...
+                     
+                     
+                     방식: -(하이픈) , _(언더바), 낙타표시법 등등...
+                     #global-nav    #global_nav   #globalNav ...
+             
+             
+             3. 웹 내비게이션 설계원칙
+                    1) 글로벌 내비게이션
+                            . 페이지를 이동해도 항상 고정된 자리에 존재하는 내비게이션
+                            . 동일 사이트에 머무르고 있다는 인식을 준다
+                            . 한번 이해한 내비게이션으로 전체 사이트를 돌아다닐수 있게 한다.
+                    2) 페이지 이름
+                          . 모든 페이지에는 이름이 있어야 한다.
+                          . 이름의 위치는 저절하고 눈에 잘 띄어야 한다.
+                          . 이름은 클릭한 내용과 일치해야한다.
+                    3) 현재의 위치 표시
+                          . 사용자가 자기 위치를 알게 해라.
+                          . 누가봐도 과감하게 눈에 띈다는 느낌을 받을 수 있는 디자인을 적용
+                    4) 빵부스러기(Breadcrumb)
+                          . 내가 어떤 경로를 통해 이 페이지까지 흘러 들어왔는지를 보여준다.
+                          . 잘 만들어두면 쓸데없는 설명할 필요가 없다.
+                               - 공간을 많이 차지하지 않게 한다.
+                               - 상위단계로 올라가기, 홈으로 가기처럼 사용자가 자주 사용하는 행동을 편하게 제공
+                               - 맨 꼭대기에 둬라
+                               - 각 단계 사이에 > 기호를 넣어둬라.
+                               - 마지막 항목의 서체를 볼드체로 표기해라.
+                               
+       4. 선택자 설계
+              - css에서 가장 중요한 것은  '어떤 식으로 선택자를 만들것인가' 이다.
+              
+                           1) 사이트 전체공유인가? 또는 페이지내 공유인가?
+                           2) 특정한 군데에서 사용하는가> 또는 여러 군데에서 사용하는가?
+               
+              
+                        - 공용CSS파일 - 레이아웃 형식  >> id베이스
+                                    . 범용 컴포턴트 >> class 베이스
+                        - 페이지/카테고리별 고유한 CSS - 특정컴포넌트 >> id 베이스
+                                                 - 범용컴포넌트 >> class 베이스
+                                                 
+                                                 - 세세한디자인 >> id + class
+                                                 - 메인 콘텐츠 영역>> class로 붙여서 나중에 유지보수에 대응하도록 한다.
+        5. 이미지 부분설정
+                  - 이미지화 할 영역을 찾는다
+                  - background-image 로  할것인지?    <img>로 할것인지?
+                         (장식용)                       (정보)
+                         
+                      단,  글로벌  내비게이션은  background-image로 한다.
+                      
+                      
+        6. 리셋CSS (reset) :
+        
+                   - 각종 브라우저의 상태를 초기상태로 통일시킨다.
+                   - 모두 같은 규칙이 적용되도록 한다.
+                   
+                   
+                   
+                   - 종류
+                            . 에릭 마이어의 리셋
+                            . HTML5 Doctor Reset CSS
+                   - 외부링크로 처리한다.
+                        
+              
+              
+                                 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="코딩, 전문,FlexCoding">
+<meta name="Description" content="코딩 전문서비스. 웹 표준에 준거한 고품질 핸드코딩을 제공합니다.">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="webpage_4-1.css">
+<link rel="stylesheet" type="text/css" href="webpage_4-2.css">
+</head>
+
+<body id="service">
+   
+   <header id="header">
+      <div class="inner clearfix">
+         <h1 id="logo">
+         <a href="../index.html">
+         <img src="/css/05.31일/logo.png" width="164" height="53" alt="FlexCoding">
+         </a>
+         </h1>
+         
+         <p id="catch">
+             코딩전문 서비스의 FlexCoding<br>
+             ~웹 표준에 준거한 고품질 핸드 코딩을 제공합니다!~
+             </p>
+             
+             <dl id="info">
+                 <dt>TEL:</dt><dd>000-1234-5678</dd>
+                 <dt>영업시간:</dt><dd>평일 10:00 ~ 19:00</dd>
+                 <dt>주소</dt><dd>서울시 강남구 논현동</dd>
+             </dl>
+         
+      </div>
+   </header>
+
+
+   <nav id="gnav">
+      <ul class="inner">
+           <li><a href="#">홈</a></li>
+           <li><a href="#">FlexCoding에 대하여</a></li>
+           <li><a href="#">코딩대행</a></li>
+           <li><a href="#">세미나 . 레슨</a></li>
+           <li><a href="#">흔히 하는 뻔한 질문</a></li>
+           <li><a href="#">문의</a></li>   
+      </ul>
+   </nav>
+   
+<div id="contents">
+   <nav id="breadcrumbs">
+       <ol>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">코딩대행</a></li>
+          <li>서비스의 특징</li>    
+       </ol>
+   </nav>
+
+
+   <main id="main">
+      <section>
+         <h2 class="ptitle"><img src="/css/05.31일/hdg_service.png" width="680" height="80" ></h2>
+
+
+            <section class="sec">
+             <h3>종래의 전용 사이트는 물론 반응형 웹 디자인에도 대응</h3>
+             <p class="hdg">PC나 스마트폰 전용 사이트 코딩은 물론, 반응형 웹 디자인 코딩에도 대응합니다.
+                반응형 웹 디자인의 경우, 대응 브라우저는 IE9이상을 표준으로 하고 있으나
+                원한다면 IE8대응 코딩도 가능합니다. 타깃 브라우저나 사용하는 언어 규격등
+                고객의 희망에 맞춰 유연하게 대응할 수 있습니다. 상담해 주세요.</p>
+             <p class="icon"><a href="#">제작기법</a></p>
+            </section>
+            
+            <section class="sec">
+         <h3>2. 코딩 업무에 특화되어 있어 실현 가능한 놀라운 단가와 고품질</h3>
+         <p class="hdg">저희는 각종 부품 제작을 제외한 디자인이나 프로그램 개발은 취급하지 않습니다.(♨).
+         코딩만을 전문으로 하면서 스태프의 전문성과 생산성을 높이기 위해 노력하고 있습니다.
+         품질과 단가, 납기 등 모든 면에서 고객이 만족할 수 있는 서비스를 제공하겠습니다.</p>
+         <p class="note">기존 플러그인이나 JQuery의 기본 메서드를 이용한 간단한 UI대응은 옵션으로 받겠습니다.</p>
+         <p class="icon"><a href="#">발주에 필요한 데이터 일람</a>
+            </section>
+            
+            <section class="sec">
+         <h3>3. 모든 화면의 디자인 데이터는 필요없습니다.</h3>
+         <p>코딩회사는 대부분 코딩을 하는 데 필요한 모든 화면의 데이터를 준비해줄 것을 요구하고 있습니다.
+         그러나 코딩을 위해 몇십, 몇백 페이지나 되는 데이터를 준비하는 것은 시간과 노력의 낭비입니다.<br>
+         동일 디자인으로 전개할 수 있는 템플릿 화면만 준비해 주시면 나머지 화면은 저희 회사에서 준비하겠습니다.
+         반응형 웹 디자인의 경우는 PC용 디자인 시안을 토대로 스카트폰 용 코딩도 가능합니다.</p>
+         <p class="icon"><a href="#">발주에 필요한 데이터 일람</a></p>
+            </section>
+            
+            <aside class="r_box sec">
+         <h4>4. 단순한 외주 작업이 아니라 파트너로서</h4>
+         <p class="r_box_tit">코딩을 단순한 직업이라 생각하기 쉽습니다. 그러나 코딩은 웹 사이트의 얼굴인 디자인과 숨은 얼굴인
+         소스코드 쌍방의 퀄리티를 담보하는 중요한 공정입니다.<br>
+         디자인과 프로그램 개발 의도를 파악해. 디자이너와 프로그래머가 안심하고 각자의 일에 전념할 수 있도록
+         그 중간 공정을 전담하는 일이 우리 코더의 역할입니다. 코딩 전문가로서 코딩 작업뿐만 아니라 제안이나
+         문제해결을 위한 피드백도 해드립니다. 신뢰 받는 고객의 파트너가 되도록 노력하겠습니다.</p>
+         </aside>
+         
+            <p class="btn_inquiry">
+            <a href="#">
+            <img src="/css/05.31일/btn_inquiry.png" width="360" height="82"
+            alt="코딩의뢰, 문의는 이곳으로 ">                 
+            </a>
+            </p>
+      </section>
+   </main>
+
+
+   <div id="side">
+      <nav id="menu">
+         <ul>
+                 <li class="current"><a href="#">서비스의 특징</a></li>
+                 <li><a href="#">이용의 흐름</a></li>
+                 <li><a href="#">단가표</a></li>
+         </ul>
+      </nav>
+
+      <aside id="banner">
+           <p><a href="#"><img src="/css/05.31일/bnr_mitsumori.png" width="180" height="90"
+           alt="인터넷으로 간단히! 간이 견적은 이쪽"></a></p>             
+           
+           <p><a href="http://www/flexcoding.jp/blog/" target="blank">
+                 <img src="/css/05.31일/bnr_blog.png" width="180" height="50" alt="금단의 스태프 블로그">
+            
+           </a>
+            <p>
+      </aside>
+   </div>
+   
+   
+      <p id="pagetop"><a href="#header">이 페이지의 상단으로</a></p>
+   </div>
+   
+   <footer id="footer">
+   <div class="inner clearfix">
+      <ul id="flink">
+            <li><a href="#">사이트 정책</a></li>
+            <li><a href="#">개인정보보호정책</a></li>
+            <li><a href="#">사이트 맵</a></li>      
+      </ul>
+      <p id="copyrihgt"><small>CopyrightⓒflexCoding All Rights Reserved.</small></p>
+      </div>
+   </footer>
+</body>
+</html>

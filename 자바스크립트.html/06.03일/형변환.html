@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!-- 
+    형 변환 
+        ;문자>>숫자,  숫자>> 문자 등 데이터타입을 변환하는 것을 형변환이라고 한다.
+        ;자바스크립트는 자동으로 형변환이 되어 개발자가 문제가 되기도 한다.
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script type="text/javascript">   
+
+        document.write("자바스크립트 자동형변환");
+
+        document.write('10'+ 5+ '<br>');
+        document.write(10* 5+ '<br>');
+
+        document.write('가' +10+5 );
+        document.write('가' +10+5+ '<br>'); //먼저 문자가 오면 문자로, 숫자가 오면 연산함.
+       document.write(10+5+true+'<br>');
+
+        document.write('10'-'5'+'<br>')
+        document.write('10'-'5'+'<br>')
+        document.write('10'*false+'<br>')
+
+        // +만 자동연산..   - * / 등은 숫자를 문자로 계산해도 연산이된다.
+
+        //let num1 = prompt('숫자 입력 해주세요>>','0');
+        //let num2 = prompt('숫자 입력 해주세요>>','100');
+
+        let num1 = parseInt(prompt('숫자 입력 해주세요>>','0'));
+        let num2 = prompt('숫자 입력 해주세요>>','100');
+
+        let sum = num1 + num2
+
+        // 형변환: 문자 -> 정수(parseInt()) , 문자->실수(parseFloat())
+        sum= parseInt(num1) + parseFloat(num2);
+        document.write('sum ='+sum+'<br>');
+
+        
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

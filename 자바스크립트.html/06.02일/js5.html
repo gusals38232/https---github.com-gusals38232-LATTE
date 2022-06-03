@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<!-- 
+     사용자에게 메시지 출력이나 입력을 받을 수 있는 3가지 다이얼로그를 제공한다.
+
+        -prompt()
+        -confirm()
+        -alert()
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var ret = prompt("이름을 입력해 주세요","홍길동");
+
+        if(ret == null){
+            document.write("취소버튼이나 다이얼 닫기");
+        }else if(ret == "")
+        {
+        document.write("문자열 입력없이 확인누르기");
+        }else{
+            document.write("입력하신 문자열은 <stron>"+ret+"<stron>입니다.");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

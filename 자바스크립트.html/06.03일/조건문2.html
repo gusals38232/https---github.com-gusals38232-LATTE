@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+<script type="text/javascript">   
+        var price = 0;
+        var coffee = prompt ('무슨 커피를 주문하시겠습니까?');
+
+        switch(coffee){
+
+            case 'espresso':
+            case '에스프레소':price =2000; 
+            case  '카푸치노' :price=3000;
+            case  '카페라떼' :price = 3500; break;
+
+            default : document.write(coffee+'는 품절되었습니다.');
+        }
+
+        if(price !=0){
+            document.write('주문하신'+coffee +'는'+ price+ '원 입니다.');
+        }
+</script>
+</head>
+<body>
+    
+</body>
+</html>

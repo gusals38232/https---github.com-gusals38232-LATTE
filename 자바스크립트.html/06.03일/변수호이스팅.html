@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">   
+
+//var,let은 값의 재할당이 가능한 '변수'!  const는 재할당 불가능한 '상수'
+// let, const는 중복선언 불가능
+
+        var a;
+        var a=10;
+        var a=30;
+        
+        document.write('출력 1~~~');
+
+        let c=100;
+        //let c=200;
+        let d= 600;
+        let e=500;
+        let sum=d+e;
+
+        function f() {
+            let c= 500;
+            m= 1500;
+
+            document.write('var로 선언된 전역변수 a의 최종값= '+a+'<br>');
+            document.write('지역변수 c= '+c+'<br>');
+            document.write('지역변수 d= '+d+'<br>');
+            document.write('지역변수 sum= '+sum+'<br>');
+            document.write('함수보다 아래에 있는 전역변수g= '+g+'<br>');
+            
+        }
+        document.write('출력2~~~~~<br>');
+
+        let g= 500;
+
+        f();
+
+    </script>
+</head>
+<body>
+
+    
+
+    
+</body>
+</html>

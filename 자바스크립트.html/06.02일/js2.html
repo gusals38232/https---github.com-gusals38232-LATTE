@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<!--
+        script 작성위치: head, body에 직접 작성가능
+                    -외부파일로 link가능
+                    -태그안에 속성으로 직접 작성할 수도 있다.
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+            function over(obj){
+                obj.src = "/포켓몬/004파이리.png";
+            }
+
+            function out(obj){
+                obj.src = "/포켓몬/파이리진화.gif";
+            }
+    </script>
+</head>
+<body>
+
+
+        <h3>마우스 올려봐</h3>
+        <hr>
+
+        <img src="/포켓몬/004파이리.png" width="200px" height="200px" onmouseover="over(this)" onmouseout="out(this)">
+        
+</body>
+</html>

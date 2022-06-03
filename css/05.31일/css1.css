@@ -76,3 +76,152 @@ a:hover img{
    content:"";
    display: block;
 }
+
+/* 헤더의 정렬 레이아웃과 gnav 그리고 footer속의 inner */
+.inner{
+     width: 940px;
+     margin: 0 auto;
+}
+
+body {
+    border-top:#cce739 5px solid;     
+}
+#header{
+   padding: 10px 0;
+   border-top: #00c4ab solid 5px;
+   background: url("img/bg_header.png") #e6e6e6   
+}
+
+#header>.inner{display: table;}
+#logo{
+   margin-right: 20px;
+   display: table-cell;
+   vertical-align: middle;
+   
+   filter: hue-rotate(90deg); /* 색조를 진하게 변경 - fiter 학습 요망*/
+}
+
+#catch{
+    display: table-cell;
+    vertical-align: middle;   
+}
+
+#info{
+   width:20em;
+   padding: 10px;
+   border: 1px solid #ccc;
+   background: #fff;
+   
+   display: table-cell;
+   vertical-align: middle;   
+}
+
+ /* 헤더의 dt를 왼쪽으로 배치하고 여기서 앞에 것을 clear 처리 */
+#info dt{
+     clear: left;
+     float: left;
+     width: 6em;
+}
+
+
+#footer{
+       padding: 10px 0;
+       background: #e6e6e6;
+      
+   
+}
+
+#flink{
+    float: left;   
+}
+
+#flink a{
+   padding: 0 10px;
+   background: url("img/ico_arw01.png") left center no-repeat;
+   color: #666;
+   text-decoration: none;
+}
+
+#flink a:hover{
+   text-decoration: underline;      
+}
+
+#copyright{
+   float:right;
+}
+
+#gnav{
+   background-color: #00c4ab;
+   
+}
+
+#gnav ul{
+    overflow: hide
+}
+#gnav li{
+    float: left;
+    width: 156px;
+    border-right: #fff 1px solid;
+}
+
+#gnav li:first-child{ /* 안잡히면 한칸 때어보세요 */
+width: 153px;
+border-left: #fff 1px solid;
+}
+
+#gnav a{
+   display: block;
+   padding: 10px 0;
+   text-align: center;
+   text-decoration: none;
+   color: #fff;
+}
+
+#gnav a:hover{
+   background: #cce739;
+}
+
+
+#contents{
+   
+   width:898px;
+   margin: 0 auto;
+   padding: 10px 20px 0 20px;
+   border-left:#e6e6e6 1px solid;
+   border-right: #e6e6e6 1px solid;
+   
+}
+
+#breadcrumbs{
+   margin-bottom: 30px;
+   padding-bottom: 10px;
+   border-bottom: #ccc 1px dotted;
+   
+}
+
+#breadcrumbs li{
+   display: inline;
+   font-size: 83%   
+}
+
+#breadcrumbs li{
+   padding-right: 15px;
+   background: url("img/ico_arw01.png") right center no-repeat;
+}
+
+#main{
+    width: 680px;
+    margin-bottom: 40px;
+    float: right;
+   
+}
+
+#side{
+   width: 180px;
+   margin-bottom: 40px;
+   float: left;
+   
+}
+#pagetop{
+    clear:both;
+}

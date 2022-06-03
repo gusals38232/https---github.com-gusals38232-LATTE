@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+    <!-- 
+        변수의 종류와 특징
+            . 전역변수 : - 함수 밖에서 선언된 변수
+                        - 함수안에서 선언자 없이 선언된 변수
+                        >>함수 안/밖 그리고... 다른 함수안에서도 호출 가능하다.
+            . 지역변수 : -함수 안에서 선언된 변수
+                        >> 함수 안에서 호출 가능하다.
+            . 블록변수 : -if, while, for문등 블록안에서 선언된 변수
+                        >> 해당 블록 안에서만 호출가능
+                        --------------------------------------
+
+            .var num;
+                    -변수, 상수 모두 사용
+                    -함수 안/밖에서는 num, this,num 형식으로 모두 호출가능
+            .let, const
+                    - let 변수, const 상수에 사용
+                    - var과 다르게 this호출은 불가하다.                                
+     -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <h3>변수선언- 지역,전역,블록변수</h3>
+        <hr>
+
+        <script type="text/javascript">
+
+            var x;
+            let a = 50;
+            const c = 60;
+
+            function f1() {
+                let y;
+                let b = 60;
+                const d = 70;
+
+                x=10; //전역변수 값 할당
+                y=20; //지역변수에 값 할당 
+                z=30; //선언자 없는 전역변수
+
+
+                //블록=============================
+
+                if(y==20){
+                    let t =40; 
+                    t++;
+
+                    document.write('블록안쪽 : 블록변수 t= '+t+' <br><br>');
+                    
+                    document.write('블록안쪽 :var선언된 전역변수 x= '+ x +' <br>');
+                    document.write('블록안쪽 :var선언된 전역변수 this.x= '+ this.x +' <br>');
+
+
+                    document.write('블록안쪽 :함수안에서 선언자 없는 전역변수 z= '+ z +' <br>');
+
+                    document.write('블록안쪽 :let선언된전역변수 a= '+ a +' <br>');
+                    document.write('블록안쪽 :let성넌된 전역변수 this.a = '+ this.a +' <br>');
+
+                    document.write('블록안쪽 :let선언된전역변수 b= '+ b +' <br>');
+                    document.write('블록안쪽 :let성넌된 전역변수 this.b = '+ this.b +' <br>');
+
+                    document.write('블록안쪽 :const선언된전역변수 c= '+ c +' <br>');
+                    document.write('블록안쪽 :const성넌된 전역변수 this.c = '+ this.c +' <br>');
+
+                    document.write('블록안쪽 :const선언된전역변수 d= '+ d +' <br>');
+                    document.write('블록안쪽 :const성넌된 전역변수 this.d = '+ this.d +' <br>');
+
+                    document.write('<hr>');
+
+
+                }
+            }
+
+            f1(); //호출
+            
+
+        </script>
+    
+</body>
+</html>
