@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for문으로 table만들기</title>
+<style type="text/css">
+	table{
+		border: 1px solid black;
+		background: pink;
+		width: 300px;
+		height: 100px;
+		text-align: center;
+	}
+	td{
+		border: 1px solid black;
+	}
+
+</style>
+<script type="text/javascript">
+
+	
+	
+	
+</script>
+</head>
+<body>
+	<h1>document.write()로 표 만들기</h1>
+	<hr>
+	<script type="text/javascript">
+		var n = prompt("숫자를 입력하시오");
+	
+		document.write("<h3>document.write로 표 만들기</h3><hr>");
+		
+		document.write("<table border='1'>");
+			document.write("<tr>");
+			document.write("<th>");
+			document.write("n");
+			document.write("</th>");
+			
+			for(j=0;j<=n;j++){
+				document.write("<td>");
+				document.write(j);
+				document.write("</td>");
+			}
+			document.write("</tr>");
+			document.write("<tr>");
+			document.write("<th>");
+			document.write("n<sup>2</sup>");
+			document.write("</th>");
+			
+			for(j=0;j<=n;j++){
+				document.write("<td>");
+				document.write(j*j);
+				document.write("</td>");
+			}
+		document.write("</tr>");
+		document.write("</table>");
+	
+	
+	
+	</script>
+</body>
+</html>

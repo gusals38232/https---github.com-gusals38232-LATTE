@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- 
+	eval(수식) : 수식을 문자열로 받아서 연산 후 리턴해준다
+	
+	
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function innerfunc() {
+		var res = eval("2*3+4*6");
+		document.write("eval(\"2*3+4*6\")는 "+res+"<br>");
+		
+		var m = parseInt("0x32");
+		document.write("parseInt(\"0x32\")는 "+m+"<br>");
+		
+		m = parseInt("응애");
+		if(isNaN(m)){
+			document.write("숫자가 아닙니다");
+		}
+		else{
+			document.write(m);
+		}
+	}
+
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+		innerfunc()
+	
+	
+	</script>
+</body>
+</html>

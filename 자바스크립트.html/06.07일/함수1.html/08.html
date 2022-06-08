@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table{
+		text-align: center;
+		border: 1px solid black;
+		width: 200px;
+		height: 200px;
+		background: yellow;		
+	}
+	td{
+		border: 1px;
+		border-style: dotted;
+		border-color: black;
+	}
+
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var name = prompt("이름을 입력하세요","");
+		var korean = prompt("국어 성적", "");
+		var math = prompt("수학 성적", "");
+		
+		let total = Number(korean) + Number(math);
+		let avg = total/2;
+		
+		document.write("<table>");
+		document.write("<tr><td>이름</td><td>"+name+"</td></td>");
+		document.write("<tr><td>국어</td><td>"+korean+"</td></td>");
+		document.write("<tr><td>수학</td><td>"+math+"</td></td>");
+		document.write("<tr><td>총점</td><td>"+total+"</td></td>");
+		document.write("<tr><td>평균</td><td>"+avg.toFixed(2)+"</td></td>");
+		document.write("</table>");			// .toFixed(2) = 소수점 2자리까지 표기
+	
+	</script>
+</body>
+</html>

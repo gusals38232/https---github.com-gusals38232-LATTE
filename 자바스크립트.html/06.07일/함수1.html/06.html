@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	let answer = confirm("프로그램을 종료할까요?");
+	if(answer == true){
+		document.write("<p>[확인]선택: 프로그램을 종료합니다...</p>");
+		System.exit(0);
+	}
+	else{
+		document.write("<p>[취소]선택: 프로그램 종료를 취소합니다.</p>");
+	}
+	answer = confirm("자료를 입력하시겠습니까? ");
+	if(answer == true){
+		document.write("<p>[확인]선택: 자료를 입력합니다.</p>");
+		// 다음 로직처리
+	}
+	else{
+		document.write("<p>[취소]선택: 자료입력을 취소합니다.</p>");		
+	}
+
+</script>
+</head>
+<body>
+	
+</body>
+</html>

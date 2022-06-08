@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function msgWrite(n) {
+		document.write("<h3>1부터 ",n,"까지의 정수의 합을 계산합니다<br>");
+	}		// <- 일반함수
+	
+	function sum1(num) {
+		let res = 0;
+		for(i=0;i<=num;i++){
+			res += i;
+		}
+		return res;
+	}		// <- 일반함수
+	
+	function sum2(num) {
+		let res = 0;
+		if(num==0){
+			return res;
+		}
+		else{
+			res = parseInt(num)+sum2(num-1);
+		}
+		return res;
+	}		// <- 재귀함수
+	
+	
+
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+		let n = prompt('1부터 100사이의 정수를 입력하세요');
+		// msgWrite(n)이라는 함수호출
+		msgWrite(n);
+		
+		// 함수호출 및 출력
+		let s1 = sum1(n);
+		document.write("일반함수로 1부터 "+n+"까지의 합은 "+s1+"입니다<br>");
+		
+		let s2 = sum2(n);
+		document.write("재귀함수로 1부터 "+n+"까지의 합은 "+s2+"입니다<br>");
+	
+	</script>
+</body>
+</html>

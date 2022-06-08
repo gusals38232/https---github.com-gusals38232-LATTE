@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- 
+	break : break문을 만나면 반복문 하나를 빠져나간다.(반복문을 종료한다)
+	continue : continue를 만나면 뒤에 있는 실행문을 실행하지 않고 
+			다음 반복을 실행하기 위해 반복문의 시작부분으로 간다.
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	let num = prompt("반복할 횟수를 입력> ");
+	
+	for(n=0; n<num; n++){
+		/* if(n%2!=0){
+			document.write("<"+n+">");
+		} */
+		if(n%2 != 0){				// <- if문의 조건이 n값이 홀수를 만족할 때 continue를 실행하는 것이므로
+			continue;				// <- 홀수면(false이면) 다음 실행문을 실행하지 않고 for문으로 돌아간다 
+		}
+		document.write("<"+n+">");		
+		if(n>=10){
+			break;
+		}
+	}
+	document.write("<br>");
+	document.write("작업 완료");
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

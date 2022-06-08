@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function add(a,b) {
+		var sum;
+		sum = a+b;
+		return sum;
+	}
+	function sub(a,b) {
+		var sum;
+		sum = a-b;
+		return sum;
+	}
+	function mul(a,b) {
+		var sum;
+		sum = a*b;
+		return sum;
+	}
+	function div(a,b) {
+		var sum;
+		sum = a/b;
+		return sum;
+	}
+	
+</script>
+</head>
+<body>
+	<h3>사칙연산을 진행해보자</h3>
+	<hr>
+	<script type="text/javascript">
+		// 2개의 수를 입력받자
+		// 4개의 함수를 차례로 호출하여 값을 전달하고
+		// 그 결과를 출력하자
+		var x = parseInt(prompt("첫 번째 수 입력하시오"));
+		var y = parseInt(prompt("두 번째 수 입력하시오"));
+		let n = add(x,y);
+		let m = sub(x,y);
+		let o = mul(x,y);
+		let p = div(x,y); 
+		document.write(x+"+"+y+"="+n+"<br>");
+		document.write(x+"-"+y+"="+m+"<br>");
+		document.write(x+"*"+y+"="+o+"<br>");
+		document.write(x+"/"+y+"="+p+"<br>"); 
+	
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{width: 500px; height:500px; border: 1px solid black; background-color: skyblue;}
+p{font-size: 20px; font-weight: bolder; text-align: center; color: black;}
+a{color:red;}
+h1{text-align: center;}
+
+
+</style>
+<script type="text/javascript">
+	function geet() {
+		document.write("<h1>환영합니다.</h1>");
+	}	// 함수를 만들어놓고, 메모리에 올라와 있다가 필요한 곳에서 호출하면 실행된다.
+
+
+</script>
+</head>
+<body>
+	<div>
+		<p>
+			<script>geet()</script>
+		</p>
+		<hr>
+		<p>
+			저희 홈페이지에 오신것을 <script>geet()</script>
+		</p>
+		<a onclick="geet()">
+			☞ 여기 눌러줘
+		</a>
+	</div>
+</body>
+</html>

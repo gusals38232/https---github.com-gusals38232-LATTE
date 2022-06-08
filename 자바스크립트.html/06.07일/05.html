@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	var num = prompt('몇 개를 출력할까요? ');
+	for(i=1; i<=num; i++){							// 1		2		3		4
+		for(j=1; j<=i; j++){					// 1 		1 2		1 2 3	1 2 3 4
+			document.write("<img src='../img/sans.jpg' width=50px height=50px>");
+		}	//ex) num=10일 때, i<=10을 만족하므로 for문 진입/ 내부 for문에서 j<=9가 false가 될 때 까지 j는 9번 반복
+			//반복이 10번째일 때, 10<=9는 false이므로 for문을 빠져나와 <br>을 입력한 후에 i++가 입력된다(i의 2회차)
+		document.write('<br>');
+	}
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

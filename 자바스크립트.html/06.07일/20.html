@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	document.write('<h3>비트연산자</h3>');
+	
+	let a = 106;									// 1101010(2) 일단 2진수로 표현
+	let b = 77;										// 1001101(2)
+	
+	document.write('a & b = '+(a & b)+'<br>');		// 1001000(2) 두 변수를 비교했을 때, 2진수의 자리수가 같은 수가 둘다 true값을 지니면 true, 하나라도 true가 아니면 false.
+	
+	document.write('a | b = '+(a | b)+'<br>');		// 1101111(2) 두 변수를 비교했을 때, 2진수의 자리수가 같은 수가 둘 중에 하나라도 true면 true.
+	
+	document.write('a ^ b = '+(a ^ b)+'<br>');		// 0100111(2) 두 개의 값이 다를 때는 true, 같을 때는 false
+	
+	//실습
+	let c = 256;								// 100000000
+	let d = 57;									// 000111001
+	
+	document.write('c & d = '+(c & d)+'<br>');	// 100000000 = 0
+	document.write('c | d = '+(c | d)+'<br>');	// 100111001 = 313
+	document.write('c ^ d = '+(c ^ d)+'<br>');  // 100111001 = 313
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

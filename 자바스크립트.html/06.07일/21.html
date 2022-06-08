@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- 
+	증감연산자: ++, --
+		. 전위증감 : 먼저 자신을 증감 시킨 후에 연산한다.
+		. 후위증감 : 먼저 연산 후에 자신을 증감시킨다.
+
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	let a = 9;
+	let b = 10;
+	let c;
+	
+	//전위증감
+	document.write('<h3> 증감연산자 </h3>');
+	c = ++a + b;
+	document.write('전위증감: c = ++a + b >> '+c+'<br>');
+	document.write('연산 후 a값: a = '+a+'<hr>');
+	
+	//후위증감
+	d = a++ + b;
+	document.write('후위증감: d = a++ + b >> ' +d+'<br>');
+	document.write('연산 후 a값: a ='+a+'<hr>');
+	
+	//후위감소
+	document.write('b-- : '+b--+'<br>');
+	document.write('후위감소 연산이 끝난 후의 b : '+b+'<br><hr>');
+	
+	//전위감소
+	document.write('--b: '+--b+'<br>');
+	document.write('b: '+b+'<hr>');
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

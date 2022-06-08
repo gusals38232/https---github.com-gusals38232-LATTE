@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>두 수의 크기 비교</title>
+<script type="text/javascript">
+	function big(a,b) {
+		let x = parseInt(a);
+		let y = parseInt(b);
+		if(x>y){
+			return x;
+		}
+		else{
+			return y;
+		}
+	}
+
+
+
+</script>
+</head>
+<body>
+	<h1>두 수를 입력해라</h1>
+	<script type="text/javascript">
+		var num1 = prompt("첫 번째 수>> ");
+		var num2 = prompt("두 번째 수>> ");	
+		
+		var big = big(num1,num2);
+		document.write("큰 수 = ",big,"<br>");
+	</script>
+</body>
+</html>

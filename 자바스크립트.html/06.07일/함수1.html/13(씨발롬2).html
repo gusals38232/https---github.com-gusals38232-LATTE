@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제한된 횟수 내에서의 암호입력</title>
+</head>
+<body>
+	<h1>암호</h1>
+	<hr>
+	<script type="text/javascript">
+		let pw = "";
+		let count = 0;
+		do{
+			pw = prompt("암호 입력");
+			if(pw=="1234"){
+				break;				
+			}
+			count++;
+		}while(count<3);
+		
+		if(count>2){
+			document.write("암호가 틀렸다");
+		}
+		else{
+			document.write("로그인 되었다");
+		}
+	
+	</script>
+</body>
+</html>

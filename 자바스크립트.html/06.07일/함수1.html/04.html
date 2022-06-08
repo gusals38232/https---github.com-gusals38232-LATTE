@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- 
+	evenAdd() 함수를 정의하고
+	0을 입력하면 종료하고, 그 외의 숫자를 입력하면 1부터 입력한 숫자까지 짝수만 더해서 출력한다
+	
+	함수선언은 헤드
+	함수호출은 바디
+
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* let sum;
+	function add() {
+		sum = 0;
+		n = 0;		// 입력받은 횟수 카운트
+		
+		// 반복연산
+		while((r=prompt("숫자를 입력해주세요","")) != 0){ // <- 0을 입력하기 전까지 반복하여 입력받는다
+			sum = sum + parseInt(r);
+			n++;
+		}
+		// 연산 종료 후 반환처리
+		return sum;
+	} */
+	let sum;
+	function evenAdd(){
+		sum = 0;
+		n = 0;/* 
+		n = tn%2==0;
+		sum = tsum%2==0; */
+		while((r=prompt("원하는 숫자를 입력하고, 0을 입력해 종료하시오",""))!=0){
+			sum = sum + parseInt(r);
+			n++;			
+			}
+		}
+		return sum;
+	}
+	
+	
+</script>
+</head>
+<body>
+	<h3>반복하여 입력한 숫자를 연산합니다.</h3>
+	<hr>
+	<script type="text/javascript">
+		/* document.write("입력숫자의 총합은 "+add()+"입니다.<br>");
+		document.write("입력숫자의 평균은 "+sum/n+"입니다.<br>"); */
+		document.write("짝수숫자의 평균은 "+evenAdd()+"입니다.<br>");/* 
+		document.write("숫자를 입력한 횟수는 "+tn+"번 이며 이 중에 짝수로 입력한 횟수는 "+n+"번 입니다<br>");
+		document.write("짝수숫자의 합계는 "+sum+"입니다.<br>"); */
+	</script>
+</body>
+</html>

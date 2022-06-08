@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	document.write('<h3 style="color: pink;">do while문을 활용한 반복문(구구단)</h3>');
+	
+	var dan = prompt('출력하고 싶은 단을 입력해주세요>> ');
+	var su = 1; 
+	var result = 0;
+	
+	do{
+		result = dan * su;
+		document.write("<h4 style='color: white;'>"+dan+"*"+su+"="+result+"</h4>");
+		su++;
+	}while (su<=9);		//<- while은 한 번도 실행 안 할 수도 있지만, do while문은 한 번은 반드시 실행한다
+					// for문은 반복할 횟수를 개발자가 파악할 수 있을 때 사용
+
+
+
+</script>
+</head>
+<body style="background: url('../img/sans.jpg') 0 0 no-repeat; background-size: 100% 100%;">
+	
+</body>
+</html>

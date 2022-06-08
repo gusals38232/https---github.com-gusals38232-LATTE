@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>월화수목금토일</h1>
+	<hr>
+	<script type="text/javascript">
+		let days = prompt("요일을 입력하시오");
+		switch(days){
+		case "월요일": 
+		case "화요일": 
+		case "수요일": 
+		case "목요일": 
+		case "금요일": 
+			document.write(days+"은 출근날입니다");
+			break;
+
+		case "월": 
+		case "화": 
+		case "수": 
+		case "목": 
+		case "금": 
+			document.write(days+"요일은 출근날입니다");
+			break;	
+		case "토요일": 
+		case "일요일": 
+			document.write(days+"은 휴일입니다"); 
+			break;
+		case "토": 
+		case "일": 
+			document.write(days+"요일은 휴일입니다"); 
+			break;
+		}
+		if(days=="" || days!="String"){
+			document.write("잘못 입력하셨습니다.");
+		}
+	</script>	
+</body>
+</html>

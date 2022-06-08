@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- 
+	함수(function)
+		. 프로그램 내의 논리적으로 연관된 일련의 식이나 문장을 하나의 단위로 묶어놓은 집합
+			(코드블록)
+		. 데이터를 전달 받아서 정해진 작업을 수행하고 그 결과를 리턴한다
+		. 정의된 함수는 페이지 실행시에 메모리에 올라와 있다가 호출하는 곳에서 실행된다
+		. 프로그램을 구조화시킬 수 있고 코드가 짧아지고 유지보수가 용이하다
+		
+		. 문법
+			(정의부분)
+			function 함수 이름(매개변수, 매개변수, 변수...){
+				실행문;
+				실행문;
+				...
+				[return 반환값;] (대괄호문은 생략가능, 함수내의 실행문을 실행한 결과값을 반환한다)
+			}
+			(호출부분)
+			함수이름(인수, 인수, 인수...);
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <script type="text/javascript">
+	function add(a,b) {
+		var sum;
+		sum = a+b;
+		return sum;
+	}
+</script> -->
+</head>
+<body>
+	<h3>함수의 개념</h3>
+	<hr>
+	
+	<script type="text/javascript">
+	function add(a,b) {
+		var sum;
+		sum = a+b;			// <- 함수는 가급적 헤드쪽에서 선언하는 것이 좋다.(호출문보다 먼저)
+		return sum;
+	}
+	</script>
+	
+	<script type="text/javascript">
+		document.write("두개의 수를 입력합니다>> ","<br>");
+		let num1 = parseInt( prompt("첫 번째 수 입력 "));
+		let num2 = parseInt( prompt("두 번째 수 입력 "));
+		
+		let n = add(num1,num2);
+		document.write(+num1+"+"+num2+"="+n+"<br>");
+	</script>
+</body>
+</html>

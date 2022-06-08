@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- 
+
+   evenAdd()함수를 정의해 놓고
+   0을 입력하면 종료하고, 그외의 숫자를 입력하면 1부터 입력숫자까지 짝수만 더해서 출력하시오.
+   
+   함수선언은 헤드
+   
+   함수호출은 바디
+   
+   
+
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   let sum;
+   function evenAdd() {
+      sum = 0;
+      tn = 0;
+      n = 0;
+      
+      
+      while((r=prompt("숫자를 입력해주세요",""))!=0){ //0을 입력하기 전까지 반복하여 입력받는다.
+         tn++;
+      
+         if (parseInt(r) %2 ==0)
+            {sum = sum + parseInt(r);
+            n++;
+            }
+                  
+      }
+      return sum/n;
+   }
+
+</script>
+
+</head>
+<body>
+   <h3>반복하여 입력한 숫자를 연산합니다.</h3>
+   <hr>
+    <script type="text/javascript">
+    document.write("짝수 숫자의 평균은 "+evenAdd()+"입니다.<br>");
+    document.write("총 입력한 숫자의 개수는 "+tn+"개 이고, 이중 짝수로 입력한 숫자는 "+n+"개 입니다.");
+    document.write("짝수 숫자의 합계는 "+sum+"입니다.");
+      
+      
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>논리연산자</title>
+<script type="text/javascript">
+let a = 5;
+
+document.write('<h3>논리연산자</h3>');
+
+document.write('a>1 && a<5: '+(a>1 && a<5)+'<br>'); 	// and	5는 둘다 만족하지 못하기 때문에 false
+document.write('a>1 || a<5: '+(a>1 || a<5)+'<br>');		// or 	5는 둘 중에 하나라도 만족하기 때문에 true
+document.write('!a(>1): '+ !(a>1)+'<br>');				// not  5는 1보다 크지 않지 않기 때문에 false
+
+document.write('a>1 & a<5: '+(a>1 & a<5)+'<br>');		// 비트연산자; a>1성립, true=1, a<5가 아니기 때문에 false=0
+														// &는 모두 성립할때  1(true)을 출력함
+														
+let b = 11;
+let c = 15;
+
+//비교연산자를 활용해서 비교 후 결과값을 출력해보자
+
+document.write('b==c: '+(b==c)+'<br>');
+document.write('b!=c: '+(b!=c)+'<br>');
+document.write('b>=c: '+(b>=c)+'<br>');
+
+
+</script>
+</head>
+<body>
+	
+</body>
+</html>
