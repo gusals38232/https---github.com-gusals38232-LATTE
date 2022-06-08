@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- 
+   
+   Date객체
+      ;   사용자 시스템의 날짜와 시간을 관리해 주는 객체
+      
+      -객체생성 :    객체변수 = new Date();
+      
+      - 메소드(method)
+         getFullYear() : 2022과 같이 년도를 4자리로 반환해준다.
+         getMonth() : 0-1월, 11-12월
+         getDate() : 한달을 31일 표기식으로 날짜변환
+         getDay() : 요일반환(0: 일요일 ~~ 6:토요일)
+         getHourS() : 0시~ 23시
+         getMinutes() : 분
+         getSeconds() : 초
+         getTime() : 1970-1-1 00:00:00 ~~~ 현재까지 경과한 시간을 1/1000초 단위로 표시
+         
+         ~
+         
+         setFullYear(): 년도설정
+         setMonth()
+         setDate()
+         setHours()
+         setMinutes()
+         ...
+         
+         
+   class Date{
+      String Year ;
+      
+      String getFullYear(){
+         return 년도;
+         }
+   
+   }
+   
+ -->
+ <html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   //1.객체를 생성한다.
+   let now = new Date();
+
+   //2. 활용
+   document.write("<p><strong>현재 날짜/시간: ");
+   document.write("["+now.getFullYear()+ "년");
+   document.write((now.getMonth()+1)+"월");
+   document.write(now.getDate()+"일");
+   
+   switch(now.getDay()){
+      case 0: document.write("&nbsp; 일요일 &nbsp;".fontsize(7).fontcolor("red"));break;
+      case 1: document.write("&nbsp; 일요일 &nbsp;".fontsize(7).fontcolor("orange"));break;
+      case 2: document.write("&nbsp; 일요일 &nbsp;".fontsize(7).fontcolor("yellow"));break;
+      case 3: document.write("&nbsp; 일요일 &nbsp;".fontsize(7).fontcolor("green"));break;
+      case 4: document.write("&nbsp; 일요일 &nbsp;".fontsize(7).fontcolor("blue"));break;
+      case 5: document.write("&nbsp; 일요일 &nbsp;".fontsize(7).fontcolor("darkblue"));break;
+      case 6: document.write("&nbsp; 일요일 &nbsp;".fontsize(7).fontcolor("purple"));break;
+   }
+   
+   if(now.getHours() > 12){
+      document.write("오후");
+      document.write((now.getHours()-12)+"시".fontsize(6).fontcolor("red"));
+      
+   }else{
+      document.write("오전");
+      document.write((now.getHours()+"시".fontsize(6).fontcolor("red")));
+      
+   }
+   
+   document.write(now.getMinutes()+"분");
+   document.write(now.getSeconds()+"초");
+   
+   document.write("]</strong</p>");
+   
+</script>
+</head>
+<body>
+
+</body>
+</html>

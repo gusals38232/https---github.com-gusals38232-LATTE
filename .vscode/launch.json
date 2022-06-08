@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch helloworld",
+            "request": "launch",
+            "mainClass": "자바.helloworld",
+            "projectName": "LATTE_bc008b58"
+        },
+        {
+            "type": "java",
+            "name": "Launch ma",
+            "request": "launch",
+            "mainClass": "ma",
+            "projectName": "LATTE_bc008b58"
+        },
+        {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
