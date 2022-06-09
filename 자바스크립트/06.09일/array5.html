@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 문자열 인덱스 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+            var score = new Array(), season = new Array("봄","여름","가을","겨울");
+            var subject = "javascript";
+            
+
+            score["web"] = 75;
+            score["subject"] = 92;
+            score["project"] = 85;
+
+            document.write('score[web] = '+score['web']+'<br>');
+            document.write('score[subject] = '+score['subject']+'<br>');
+            document.write('score[project] = '+score['project']+'<br>');
+
+            document.write("<hr>");
+
+            for(const value in score){
+                document.write(value+"<br>");
+            }
+
+            document.write("<hr>");
+
+            for(value of score){
+                document.write(score[value]+"<br>");
+            }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

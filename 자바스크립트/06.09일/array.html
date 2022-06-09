@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+            document.write("<h3>Array객체의 생성과 length속성</h3>")
+
+            let arr = new Array();
+            arr[0]= 10;
+            arr[1]="JavaScript";
+            arr[2]="Programming";
+
+            arr[5] = "자바스크립트 잼";
+
+            document.write('arr[0] = ' + arr[0] + '<br>');
+            document.write('arr[1] = ' + arr[1] + '<br>');
+            document.write('arr[2] = ' + arr[2] + '<br>');
+            document.write('arr.length = ' + arr.length + '<br>');
+
+            arr[0] = 20;
+            document.write('arr[0] = '+arr[0]+'<br>' );
+
+            for(i=0; i<arr.length; i++){
+               document.write('arr['+i+'] = '+ arr[i]+'<br>');
+            }
+
+            
+            arr.length = 3;
+            document.write('arr배열의 현재 길이는 = '+arr.length+'<br>');
+            for(i=0; i<arr.length; i++){
+               document.write('arr['+i+'] = '+ arr[i]+'<br>');
+            }
+
+            
+            
+            var strArr = new Array('관악산','설악산','지리산','한라산','백두산');
+            for(i=0; i< strArr.length; i++){
+               document.write('strArr['+i+'] = '+ strArr[i]+'<br>');
+            }
+            
+            
+            document.write('<hr>');
+            function name(a,b){
+                  let sum = a + b;
+                  return sum;
+            }
+            
+            let mixArr = ['HTML/CSS',100,3.14,new Date(),adder(3,4) ];
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

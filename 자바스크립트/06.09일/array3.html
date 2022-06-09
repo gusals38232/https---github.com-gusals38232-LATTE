@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script type="text/javascript">
+
+            function f() {
+                return "안녕하세요";
+            }
+            
+            let arr = [1,2,3,"자바스크립트",f() , new Date(), null, true];
+
+            document.write(arr[5]);
+
+            document.write("오늘은" + arr[5].getFullYear()+ "년" +(arr[5].getMonth()+1) +"월"
+            + arr[5].getDate()+"일입니다"
+            );
+
+        </script>
+
+    </head>
+    <body></body>
+</html>

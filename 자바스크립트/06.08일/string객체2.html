@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!-- 
+    String객체
+        .small()
+        .strike()
+        .sup()
+        .sub()
+
+        fontsize()   <font size="">
+        fontcolor()  <font color="">
+            
+            anchor("이름")
+
+            link("url | 이름 | 페이지")
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+            document.write("<h3><p>"+"(1)String객체의 length속성".anchor("list1")
+                +"</p></h3>");
+
+                document.write("<br> [1] 한글 =>", "자바스크립트".length);
+                document.write("<br> [2] 영문 =>", "JavaScript".length);
+
+                document.write("<p>String객체의 위치 이동 메소드 알기".link("객체메소드.html")
+                    +"<p>");
+
+                        let str = "자바스크립트(JavaScript)";
+                        for(i=0; i<str.length;i++){
+                            document.write(i+":" +str[i]+"<br>");
+                        }
+
+    </script>
+    
+</body>
+</html>

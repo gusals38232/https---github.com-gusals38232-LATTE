@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style type="text/css">
+
+        form{
+            margin: 2px; border: none; padding: 5px;
+            text-align: center;
+            line-height: 40px;
+            background-color: mistyrose;
+            width: 300px; height: 200px;
+            box-shadow: 10px 10px 5px pink;
+        }
+        button{
+            font-weight: bolder;
+            text-shadow: 1px 1px 2px blue;
+            border-radius: 10px;
+            box-shadow: 2px 2px 0.7px lightgray;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+
+            function compute() {
+                total = parseInt(form1['kor'].value) + parseInt(form1['math'.value]);
+                avg = total/2;
+                alert((form1['strName'].value)+'학생의 평균은' +avg+ '입니다');
+
+            }
+
+    </script>
+</head>
+<body>
+
+    <h3>문자열 인덱스를 활용학습</h3>
+    <hr>
+
+    <form action="" name="form1">
+        이 름: <input type="text" name="strName" value= ""placeholder="홍길동"><br>
+        국어성적: <input type="text" name="kor" value=""><br>
+        수학성적: <input type="text" name="math" value=""><br><br>
+
+        <button onclick="compute()">성적처리 결과 </button>
+    </form>
+    
+</body>
+</html>

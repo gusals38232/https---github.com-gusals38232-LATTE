@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- 
+   이차원 배열
+      - [[],[],[],[]] <- 배열 안의 배열
+      - 행과 열을 갖는 배열
+      
+
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//생성방법 1
+   let student1 = new Array(
+         ['강민성','컴공',88,76],   // student1[0].length  // [0][0],[0][1],[0][2],[0][3]
+         ['김진효','수학',70,83],   // student1[1].length  // [1][0],[1][1],[1][2],[1][3]
+         ['신은수','행정',92,95],   // student1[2].length  // [2][0],[2][1],[2][2],[2][3]
+         ['이은지','물리',86,79],   // student1[3].length  // [3][0],[3][1],[3][2],[3][3]
+         ['조우진','건축',94,89]   // student1[4].length  // [4][0],[4][1],[4][2],[4][3]
+      );
+
+//생성방법 2
+   let student2 = new Array(
+         new Array('강민성','컴공',88,76),
+         new Array('김진효','수학',70,83),
+         new Array('신은수','행정',92,95),
+         new Array('이은지','물리',86,79),
+         new Array('조우진','건축',94,89)         
+      );
+
+</script>
+<style type="text/css">
+   table{
+      text-align:center; 
+      background: pink;
+      width: 400px;
+   }
+   th{
+      background: grey;
+      height: 50px;
+   }
+   td{
+      height: 75px;
+   }
+
+</style>
+</head>
+<body>
+   <script type="text/javascript">
+      document.write("<table border='1'>");
+      document.write("<caption>성적테이블</caption>");
+         document.write("<tr id=h>");
+            document.write("<th>이름</th>");
+            document.write("<th>전공</th>");
+            document.write("<th>중간점수</th>");
+            document.write("<th>기말점수</th>");
+         document.write("</tr>");
+      
+         // 반복문 + 배열값으로 td처리
+         for(i=0;i<student1.length;i++){            // <- 행
+            document.write("<tr>");
+            for(j=0;j<student1[i].length;j++){      // <- 열
+               document.write("<td>"+student1[i][j]+"</td>"); 
+                              // student1배열의 i번째의 안의 j번째 배열(이차원배열)
+            }
+            document.write("</tr>");
+         }
+      document.write("</table>");
+      document.write("<hr>"+student1[2][1]+"<br>");
+      document.write("<hr>"+student1[2][2]+"<br>");
+      document.write("<hr>"+student1[4][0]+"<br>");
+   
+   
+   </script>
+</body>
+</html>

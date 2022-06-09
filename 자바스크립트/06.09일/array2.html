@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+   //months - 1,2,3,4,5,6,7,8,9,10,11,12 >>배열생성하고 반복문으로 "월"붙여서 출력하시오
+   //days - "sun","mon","tye","wed","thu","fri","sat" >> "요일" 붙여서 출력하시오.
+   //season - "봄","여름","가을","겨울"
+   
+   //images - 이미지1, 이미지2, 이미지3 저장 >> 한장씩 배열로 접근해서 출력 - 경로저장 - > <img src='??'>
+</script>
+</head>
+<body>
+   <script type="text/javascript">
+   let mon = new Array('1','2','3','4','5','6','7','8','9','10','11','12');
+   
+   for (i = 0; i < mon.length; i++) {
+      document.write('mon['+i+'] = '+mon[i]+'월<br>');
+   }
+   document.write('<hr>')
+
+   
+   let days = new Array( "sun","mon","tye","wed","thu","fri","sat");
+   for (i = 0; i < days.length; i++) {
+      document.write('days['+i+'] = '+days[i]+'day<br>');
+   }
+   
+   
+   document.write("<hr>");
+   let sea = new Array( "봄","여름","가을","겨울");
+   for (i = 0; i < sea.length; i++) {
+      document.write('sea['+i+'] = '+sea[i]+'<br>');
+   }
+   
+   document.write("<hr>");
+   let img = new Array( "<img src='img/1.png'>" ,"<img src='img/2.jpg'> ","<img src='img/3.jpg'> ","<img src='img/4.png'> ","<img src='img/5.png'> ");
+   for (i = 0; i < img.length; i++) {
+      document.write('img['+i+'] = '+img[i]+'<br>');
+   }
+</script>
+</body>
+</html>
