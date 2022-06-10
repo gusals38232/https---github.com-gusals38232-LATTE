@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+
+    HTML DOM객체
+
+        속성(프로퍼티)
+
+            id
+            tagName
+            innerHTML
+            style
+            children --- [][][][]
+
+        메소드    
+
+            addEventListener() 새로운 이벤트 리스너
+            removeEventListener()  이벤트 리스너를 제거
+            appendChild()   자식들중에 마지막 뒤에 새로운 자싟을 추가
+            insertBefore()  특정한 태그의 앞에 새로운 자식을 추가
+            removeChild()   자식삭제
+            setAttribute()  속성을 추가
+            setAttribute()  속성을 알아내기
+            querySelector() css셀렉터와 일치하는 태그를 찾아서 해당태그 리턴
+
+
+        .document객체
+
+            .속성(프로퍼티)
+                title
+                body
+                head
+                activeElement
+                documentElement
+
+            .메소드
+
+            write()
+
+            getElementById() 해당 아이디를 가진 태그찾기
+            getElementClassName() 해당 클라스 이름을 가진 태그들 찾기
+            getElementsName() 해당name을 갖는 태그들 찾기
+            getElementsByTagName() 해당 태그들 찾기
+
+            onclick : 사용자가 객체를 클릭할때
+            onload : 문서나 이미지의 로딩이 완료되었을 때
+
+
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+        <p id="t1" style="color:blue">이것은 <span>문장입니다</span></p>
+        <form id="t2">
+
+            <input type="text">
+            <input type="button" value="테스트" onclick=f()>
+
+            <hr>
+        </form>
+
+            <script type="text/javascript">
+
+                    function f() {
+                        let p1 =document.getElementById('t1');
+                        let c1 = p1.firstElementChild;
+                        let c2 = p1.parentElement;
+
+                        document.write("선택한 태그이름: "+p1.tagName+"<br>")
+                        document.write("첫번째 자식객체: "+c1+"<br>")
+                        document.write("부모객체: "+c2+"<br>")
+                    }
+
+            </script>
+
+
+    
+</body>
+</html>

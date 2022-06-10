@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+        <p id="first">잼잼이</p>
+        <p id="second">안녕하세요 <span id="third" style="color:pink;">
+        자바스크립트</span>입니다.</p>
+ -->
+  
+ 
+
+ <p id="first" style="color:green; background-color: yellow;"
+    onclick="this.style.color='teal'">
+    이것은<span style="color: red;">p객체의 태그이름</span></p>
+
+    <p id="second" style="color:green; background-color: mistyrose;"
+    onclick="this.style.color='teal'">
+    이것은<span style="color: rgb(39, 223, 230);">second</span></p>
+        
+<script type="text/javascript">   
+
+let p = document.getElementById('first');
+document.write("f객체의 태그이름: "+p.tagName+"<br>");
+document.write("id값은?: "+p.id+"<br>");
+document.write("p객체의 내용: "+p.innerHTML+"<br>");
+document.write("자식의 개수?: "+p.childElementCount+"<br>"+"<br>");
+document.write("스타일컬러는??:  "+p.style.color+"<br>"+"<br>"+"<hr>");
+p.style.display="block";
+
+
+
+
+        //id가 first인 HTML객체를 가져온다
+        //-태그이름
+        //id값은?
+        //자식의 개수
+
+        let b = document.getElementById('second');
+        document.write("f객체의 태그이름: "+b.tagName+"<br>");
+document.write("id값은?: "+b.id+"<br>");
+document.write("자식의 개수?: "+b.childElementCount+"<br>");
+
+
+</script>
+    
+</body>
+</html>

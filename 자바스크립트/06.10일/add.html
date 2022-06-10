@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">   
+    function add(num1,num2) {
+        result = num1 + num2 ;
+        return result; 
+
+    }
+
+    //빼기함수
+    function sub(num1,num2) {
+        result = num1-num2;
+        return result;
+    }
+
+    //곱하기함수
+    function mul(num1,num2) {
+        result = num1 * num2;
+        return result;
+    }
+
+    function div(num1,num2){
+        result = num1/num2;
+    }
+
+    //생성자 함수
+    function Calculator() {
+        //속성 설정
+        this.num1 = num1;
+        this.num2 = num2;
+
+        //더하기 메소드
+        this.add = function(){
+            result = this.num1 + this.num2;
+            return result;
+        }
+        //빼기 메소드
+        this.sub = function(){
+            result = this.num1 - this.num2;
+            return result;
+        }
+        //곱하기
+        this.mul = function(){
+            result = this.num1 * this.num2;
+            return result;
+        }
+        //나누기
+        this.div = function(){
+            result = this.num1 / this.num2;
+            return result;
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <script type="text/javascript">
+        
+        document.write("<h3>"+add(3,4)+"</h3>");
+        document.write("<h3>"+sub(3,4)+"</h3>");
+        document.write("<h3>"+mul(3,4)+"</h3>");
+        document.write("<h3>"+div(3,4)+"</h3>");
+
+        document.write("**************************");
+
+        let num1 = prompt("첫번째수를 입력해주세요")
+        let num2 = prompt("두번째수를 입력해주세요")
+
+        let cal = new Calculator(3,4);
+        document.write("<h2>"+cal.num1+"</h2>");
+        document.write("<h2>"+cal.num1+"</h2>");
+        document.write("<h2>"+cal.num1+"+"+cal.num2+"="+cal.add()+"</h2>");
+        document.write("<h2>"+cal.num1+"+"+cal.num2+"="+(cal.div()).toFixed(2)+"</h2>");
+        
+        let cal2 = new Calculator(num1, num2);
+        let cal3 = new Calculator(num1, num2);
+        let cal4 = new Calculator(num1, num2);
+
+            let arr = new Array();
+            arr[0] = cal;
+            arr[1] = cal1;
+            arr[2] = cal2;
+            arr[3] = cal3;
+            document.write(arr[1].num1);
+    </script>
+
+
+
+    
+</body>
+</html>
