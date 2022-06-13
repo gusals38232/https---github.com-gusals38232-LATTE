@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+         여행하고 싶은 지역<input id='t1' type="text">
+         <button type="button" onclick="listPlace()">추가</button>
+         <ul id='t2'></ul>
+         
+         <script type="text/javascript">
+         
+                   function listPlace(){
+                      let tag1 = document.getElementById('t1'); // input
+                      let tag2 = document.getElementById('t2'); // 추가할때의 기준
+                      
+                      
+                      let newPlace = document.createElement('li');
+                      
+                      //텍스트노드생성 - innerHTML
+                      let placeNode = document.createTextNode(tag1.value); // input 으로 받은 값을 텍스트노드로 생성
+                      
+                      
+                      //추가하기
+                      newPlace.appendChild(placeNode);
+                      tag2.appendChild(newPlace);
+                      
+                      //input에 입력한 데이터를 지운다.
+                      tag1.value='';
+                  }
+         
+         
+         </script>
+</body>
+</html>

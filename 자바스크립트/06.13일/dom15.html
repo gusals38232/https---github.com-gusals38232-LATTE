@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+
+    1.document.open()
+        - 기존의 내용을 모두 지우고 새로운 객체 준바ㅣ
+        - 새로운 HTML텍스트를 받아들일 준비
+
+        2.documnet.write()
+        -새로운 HTML텍스트를 새로 준비한 document객체에 담는다.
+
+        3.document.close()
+        -HTML 텍스트를 모두 쓴 후 document 객체를 닫는다.
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+            span:hover{cursor: pointer; }
+            span{color:blue}
+    </style>
+
+    <script type="text/javascript">
+
+        function newDoc()  {
+
+            document.open();
+            document.write("<html><head></head>");
+            document.write("<body><h1>현재 창에 새로운 document객체입니다.</h1></body>")
+            document.close();
+
+        }
+
+        function newWin()  {
+
+document.open();
+document.write('<html><head><title></title></head><body><h1>안녕하세요^^새로운 윈도우 창입니다.');
+document.write('......</h1>');
+document.write('</body><html>')
+document.close();
+
+}
+
+    </script>
+</head>
+<body>
+
+        <h3>새로운 document 객체열기와 닫기</h3>
+        <hr>
+        <pre>
+
+            1.document.open()
+            - 기존의 내용을 모두 지우고 새로운 객체 준바ㅣ
+            - 새로운 HTML텍스트를 받아들일 준비
+    
+            2.documnet.write()
+            -새로운 HTML텍스트를 새로 준비한 document객체에 담는다.
+    
+            3.document.close()
+            -HTML 텍스트를 모두 쓴 후 document 객체를 닫는다.
+        </pre>
+
+        <h4>현재의 창에 새로운 document객체를 생성합니다. <span onclick="newDoc()">여기를 클릭해주세요.</span></h4>
+        <h4>새로운 윈도우 창에 새로운 document객체를 생성합니다.</h4>
+    
+</body>
+</html>

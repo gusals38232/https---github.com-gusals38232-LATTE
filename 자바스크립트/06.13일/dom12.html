@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   let checkedItems = [];         // <- 체크된 item들만 저장하는 배열 선언
+
+   // 체크된 것만 배열에 저장하는 함수
+   function f() {
+      let tag = document.getElementsByName('chk_interest'); // <- 체크박스들
+      
+      
+      // 체크박스에 체크가 되었는지... 전체 체크박스를 반복해서 검사 후에 checkedItems배열에 넣는다
+      for(i=0; i<tag.length; i++){
+         if(tag[i].checked){
+            checkedItems.push(tag[i]);   // <- push : stack구조에서 자료를 넣는 명령
+         }
+      }
+   }
+   // 결과보기 클릭했을 때 해야할 일을 정의하는 함수
+   function select() {
+      let result = document.getElementById('selected');
+      
+      let items = "<h3>당신이 선택한 관심품목은 <span style='color:blue'>";
+      for(i=0; i<checkedItems.length; i++){
+         items += checkedItems[i].getAttribute("value")+", ";   // 선택된 품목의 value속성값을 텍스트로 누적시킴
+      }
+      result.innerHTML = items + "</span>입니다.</h3>";      // 결과보기 자리에다가 innerHTML로 값을 넣어주기 
+   }
+   
+   // 속성설정 학습용 함수
+   function setImg(obj) {
+      obj.src = "../img/sans.jpg";
+   }
+
+</script>
+</head>
+<body>
+   <p>관심품목을 선택하시오 : </p>
+   <br>
+      <label>
+         <input type="checkbox" name="chk_interest" value="it">IT/컴퓨터
+         <br>
+      </label>
+      <input id="t" type="checkbox" name="chk_interest" value="entertainment">
+      <label for="t">엔터테인먼트</label>
+      <br>
+      <label>
+         <input type="checkbox" name="chk_interest" value="sports">스포츠
+         <br>
+      </label>
+      <label>
+         <input type="checkbox" name="chk_interest" value="book">도서/책
+         <br>
+      </label>
+      <label>
+         <input type="checkbox" name="chk_interest" value="shopping">쇼핑
+         <br>      
+      </label>
+      
+      <h3 onclick="f()" style="cursor:pointer; text-decoration: underline;">▶선택완료</h3>
+      <h3 id="selected" onclick="select()" style="cursor:pointer; text-decoration: underline;">▶결과보기</h3>
+      <img id="img" src="../img/dog.png" onclick="setImg(this)" width="200px" height="200px">
+</body>
+</html>

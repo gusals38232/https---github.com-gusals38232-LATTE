@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 
+      createElement('태그이름')
+      createTextNode('텍스트 문자열')
+      appendChild('자식노드') : 막내로 추가한다.
+      removeChild() : 막내부터 지워진다.
+      insertBefore(새로운노드,특정노드) : 특정노드앞에 새로운 노드를 추가한다.
+      replaceChild(new,old) : 요소노드(old)를 새로운 노드(new)로 대체
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   div{
+      cursor: pointer;   
+   }
+
+</style>
+<script type="text/javascript">
+
+   // 새롭게 붙이 요소(노드)
+   function createDIV() {
+      let obj = document.getElementById('parent');      // 기준
+      let newDiv = document.createElement('div');         // 추가할 새로운 노드
+      newDiv.innerHTML = "새로 생성된 div입니다";            // 내용
+      newDiv.setAttribute('id','myDIV');               // 속성값 지정
+      newDiv.style.backgroundColor='yellow';            
+      newDiv.style.fontSize='20px';
+      newDiv.style.fontWeight='bolder';
+      newDiv.addEventListener('click',
+            function(){
+               let element = this.parentElement;
+               element.removeChild(this);
+            }
+      );
+      // 붙이기
+      obj.appendChild(newDiv);
+   }
+   
+
+</script>
+</head>
+<body id="parent">
+   <h3>div객체를 동적으로 생성,삽입,삭제해보자</h3>
+   <hr>
+   <p>
+      dom트리에 동적으로 객체를 삽입할 수 있습니다.
+   </p>
+   <a href="javascript:createDIV()">div생성</a>
+</body>
+</html>

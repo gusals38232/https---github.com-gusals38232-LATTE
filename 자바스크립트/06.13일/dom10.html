@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+<script type="text/javascript">   
+        function change() {
+
+             let spanArray = document.getElementsByClassName("c");
+             for(var i=0; i<spanArray.length; i++){
+             spanArray[i].style.color = 'red';
+             spanArray[i].style.fontSize = '30px';
+             }
+
+
+    //         var spanArray = document.getElementsByTagName("span"); // 4개
+    // for(var i=0; i<spanArray.length; i++) {
+    //     var span = spanArray[i];
+    //     span.style.color = "orchid";
+    //     span.style.fontSize = "20px";
+           
+    //     }
+    }
+</script>
+</head>
+<body>
+
+    <h3>내가 제일 좋아하는 과일
+
+        <button type="button" onclick="change()">눌러주세요!</button>
+    </h3>
+    저는 빨간 <span class="c">사과</span>를 좋아해서 아침마다 한개씩 먹어. 운동 중간엔
+    <span class="c">바나나</span>먹어. 또 달콤한 <span class="c">체리</span>    와
+
+</body>
+</html>

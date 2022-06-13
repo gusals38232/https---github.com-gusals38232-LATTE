@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+        p{background-color: green; display: block; width: 500px; height: 700px;}
+        div{background-color: yellow;}
+
+    </style>
+
+
+
+<script type="text/javascript">   
+        function addDOM(){
+
+            let newDiv = document.createElement('div');
+            newDiv.innerHTML = "새로 생성된 DIV입니다"
+            newDiv.setAttribute('id','myDIV');
+            newDiv.style.backgroundColor='yellow';
+
+            let p = document.getElementById('p');
+
+            p.appendChild(newDiv);
+        }
+
+        function removeDOM() {
+                let myDiv = document.getElementById('myDIV'); //때어낼 노드
+                let parent = myDiv.parentElement; //부모
+
+                //부모에서 제거
+                parent.removeChild(myDiv);
+                
+
+        }
+
+</script>
+
+</head>
+<body>
+
+            <p id="p">HTML문서의 동적구성</p>
+            <button type="button" onclick="addDOM()">추가</button>
+            <button type="button" onclick="removeDOM()">추가</button>
+    
+</body>
+</html>

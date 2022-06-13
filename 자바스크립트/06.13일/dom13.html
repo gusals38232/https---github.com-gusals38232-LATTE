@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- 
+            DOM객체
+            let tag = document.getElementById('')
+
+                속성
+                    id : a
+                    lang : kor
+                    style 
+                    title 안녕하세여
+                    tagName h1
+                    innerHTML 이제 점심시간입니다.
+
+            메소드
+                setAttribute()
+                getAttribute()
+
+     -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+    <script type="text/javascript">
+        let span;
+        function setColor() {
+                span = document.getElementById('mySpan');
+                span.style.color = 'red';
+        }
+        function getColor(){
+                span = document.getElementById('mySpan');
+
+                // let value = span.style.color;
+                // let back = span.style.backgroundColor;
+                // document.write("색상값은" + value+"이고 배경색은" + back +"색 입니다.맞나요? <br>");
+
+                let s = window.getComputedStyle(span);
+                let value = s.getPropertyValue('color');
+                let back = s.getPropertyValue('background-color');
+                document.write("색상값은" +value+ "이고 배경색은" +back+ "색 입니다.맞나요? <br>");
+        }
+
+    </script>
+
+</head>
+<body>
+        <p>이것은 <span id=mySpan  onclick='setColor()' >문장</span>입니다</p>
+        <p>여기를 누르면 <span style="background-color: yellow;" onclick='getColor()'>셀렉터로 설정된 스타일
+        프로퍼티 읽기</span>할당</p>
+
+    
+</body>
+</html>
