@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- 
+   애니메이션
+         . 태그내용이나 속성값을 짧은 시간간격으로 계속 변경하여 호출하면
+            애니메이션 효과를 나타낼 수 있다.
+            
+         . window.setInrerval('호출함수()',시간간격);
+
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   #time{
+      width: 250px;
+      background: skyblue;
+      text-align: center;
+      border-radius: 10%;
+      display: inline-block;
+      margin: 300px auto;
+   }
+</style>
+<script type="text/javascript">
+   function time() {
+      let obj = document.getElementById('time');
+      
+      let now = new Date();
+      let h = now.getHours();
+      let m = now.getMinutes();
+      let s = now.getSeconds();
+      
+      if (h>12) {
+         txt = "AM";
+      }else{
+         txt = "PM";
+      }
+      obj.innerHTML = txt+" "+h+" "+m+" : "+s+" ";
+   }
+   window.setInterval('time()',1000);
+</script>
+</head>
+<body>
+   <h2>디지털 시계</h2>
+   <h1 id="time"></h1>
+</body>
+</html>

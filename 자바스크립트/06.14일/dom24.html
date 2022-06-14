@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form name='stuInfo'>
+            학과: <input type="text" name="dept"> &nbsp;&nbsp;&nbsp;
+            이름: <input type="text" name="sName">
+        </form>
+        <form name='q1'>q1. 프로그래밍에서 다루는 내용<br>
+                <input type="radio" name="p1" value="2">CSS3<br>
+                <input type="radio" name="p1" value="3">javascript<br>
+                <input type="radio" name="p1" value="4">PHP<br>
+                
+        이 아닌것은?<br>
+                <input type="radio" name="p1" value="1">HTML
+        </form>
+
+        <form name='q2'>q2.다음중 성격이 다른 프로그램은?<br>
+                <input type="radio" name="p2" value="1">사파리<br>
+                <input type="radio" name="p2" value="1">파워포인트<br>
+                <input type="radio" name="p2" value="1">파이어폭스<br>
+                <input type="radio" name="p2" value="1">크롬<br>
+        </form>
+
+        <button type="button" onclick='computeScore()'>채첨(10점 만점)</button>
+        <span id="result"></span>
+    
+</body>
+</html>

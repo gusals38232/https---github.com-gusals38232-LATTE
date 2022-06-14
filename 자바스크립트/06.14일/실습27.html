@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        function b() {
+
+                    document.write(document.getElementsByTagName('p').length);
+                    alert("<p>태그의 개수는 3");
+        }
+
+        function a() {
+                let c = document.getElementById('c');
+                c.style.borderStyle= 'dotted' ; 
+                
+        }
+
+    </script>
+
+</head>
+<body>
+
+
+    <h3>자바스크립트란?</h3>
+    <button type="button" onclick='a()'>border</button>
+    <button type="button" onclick='b()'>p</button>
+    <hr>
+    <p>자바 스크릅티는 웹 프로그래밍 언어로서 웹 페이지를 동적 변경시킬 수 있다</p>
+    <p> <span id="c" >c언어</span>를 아는 사용자는 빠르게 학습 할 수 있다</p>
+    <p>이벤트 등 gui프로그래밍에 필요한 요소들이 있어 학습에 어려움이 있기도 함</p>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   #sans{
+      position: absolute;      
+   }
+
+</style>
+</head>
+<body>
+   <h1>클릭하면 커짐 ㄷㄷ</h1>
+   <hr>
+   <img id='sans' src='/포켓몬/025피카츄.png' width="100" height="100" onclick="f()">
+   <script type="text/javascript">
+      let img = document.getElementById('sans');
+      function f() {
+         let left = Math.floor(Math.random()*1000)+"px";
+         let top = Math.floor(Math.random()*500)+"px";
+         img.style.left = left
+         img.style.top = top
+
+         w= img.width;
+         h= img.height;
+
+         img.width = w *1.25
+         img.height = h *1.25
+         
+      }
+   
+   
+   </script>
+</body>
+</html>

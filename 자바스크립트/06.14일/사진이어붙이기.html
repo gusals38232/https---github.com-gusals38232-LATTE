@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- 
+   DOM객체의 속성으로 제공되는 컬렉션
+      - images : 문서 내의 모든 <img> 객체들의 컬렉션
+      - links : 문서 내의 herf속성을 가진 모든 링크 객체 <a>의 컬렉션
+      - forms : 문서 내의 모든 폼객체의 컬렉션
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+      function movingImages()
+      {
+         let parent = document.getElementById('pic');
+         
+         let movingImage = document.images[0];
+         movingImage.parentNode.removeChild(movingImage);
+         parent.appendChild(movingImage);
+      }
+
+</script>
+</head>
+<body>
+
+      <div id="pic">
+         <img src='/자바스크립트/06.14일/10.png' width="150" height="150">
+         <img src='/자바스크립트/06.14일/11.png' width="150" height="150">
+         <img src='/자바스크립트/06.14일/12.png' width="150" height="150">
+         <img src='/자바스크립트/06.14일/13.png' width="150" height="150">
+         <img src='/자바스크립트/06.14일/14.png' width="150" height="150">
+         
+      </div>
+      <button type="button" onclick="setInterval(movingImages, 200)">START</button>
+
+</body>
+</html>

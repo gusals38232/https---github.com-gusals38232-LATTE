@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!-- 
+
+        DOM트리 조작관련 메소드
+
+            tag.parentNode  : 부모태그
+            parentElement   : 부모태그
+
+            getElementById(): 기준태그(부)
+            getElementById().parentNode: 기준태그(자식)
+
+            createElemnent() : 새로운 태그생성
+                -setAttribute()
+                -getAttribute()
+                -window.getComputedStyle(), style.getPropertyValue()
+
+            부모.appendChild()  : 막내로 추가
+            부모.removeChild(특정한자식) : 제거
+            부모.insertBefore(new, 기준자식노드) : 기준노드 앞에 추가
+            부모.replaceChild(new,old) : 교체
+
+        1)특정노드를 불러온다
+        2)새로운 노드를 준비한다
+        3)만약 특정노드가 부모가 아니라면...특정노드의 부모노드를 찾아온다
+        4)부모노드에서...추가하든지
+                        중간에 넣든지
+                        제거하든지
+                        교체하든지 한다.    
+
+
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>웹 브라우저</h3>
+    <div id='p1'>
+        <img src="/포켓몬/010캐터피.png" width="60" height="60">
+        <img src="/포켓몬/팬텀.gif" width="60" height="60" id="w1">
+        <img src="/포켓몬/035삐삐.png" width="60" height="60">
+        <img src="/포켓몬/010캐터피.png" width="60" height="60">
+        <img src="/포켓몬/팬텀.gif" width="60" height="60" id="w2">
+        <img src="/포켓몬/035삐삐.png" width="60" height="60">
+
+    </div>
+
+    <hr>
+    <button type="button" onclick='deleteW1()'>두번째 이미지 삭제</button>
+    <button type="button" onclick='replaceW2()'>네번째 이미지 삭제</button>
+    
+    <script type="text/javascript">
+
+        function deleteW1(){
+
+            let deleteTag = document.getElementById('w1');
+            deleteTag.remove();
+
+        }
+
+        function replaceW2(){
+
+            let newTag = document.createElement('img');
+            newTag.setAttribute('width','60px');
+            newTag.setAttribute('height','60px');
+            newTag.setAttribute('src','/포켓몬/035삐삐.png');
+
+            let w2 = document.getElementById('w2');
+            w2.parentElement.replaceChild(newTag,w2);
+        }
+
+    </script>
+
+</body>
+</html>

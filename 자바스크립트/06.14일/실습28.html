@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- id를 똑같은거 여러가지 넣어도 첫번째 1개만 적용된다... 그러니getElementById 말고
+     class나 tagname으로쓴다 .    id.class지정없이 쓰려면 getElementByTagName('span') 이런식으로 하면 된다.  -->
+    <script type="text/javascript">
+
+                    function pe() {
+                     let ad1 =  document.getElementById('ad1').style.display='none';
+                     let ad2 =  document.getElementById('ad2').style.display='none';
+                     let ad3 =  document.getElementById('ad3').style.display='none';
+                        
+                    }
+
+    </script>
+
+
+</head>
+<body>
+
+            <h2>다음 빈 곳에 숨은 단어??</h2>
+            
+            <ul> <button type="button" onclick='pe()'> >>정답보기</button>
+                <hr>
+            <li>i (<span id="ad1">love</span>) you</li>
+            <li>css is cascading (<span id="ad2">style</span>) sheet</li>
+            <li>응답하라 (<span id="ad3">1988</span>)</li>
+            </ul>
+    
+</body>
+</html>

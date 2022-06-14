@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+                #p1:hover{cursor: pointer;}
+    </style>
+
+            <script type="text/javascript">
+
+                function hi() {
+
+                    let text = prompt("HTML 텍스트 혹은 그냥 텍스트를 입력하세요","");
+                let p2 =  document.getElementById('p2');
+
+                if(text == null || text == ''){
+                    return;
+                }  
+
+                        p2.innerHTML = "이번여름에는 " +text+" 로 여행을 가기로 했습니다^^~";
+                        
+                       
+                }
+
+               
+                
+
+            </script>
+
+
+</head>
+<body>
+
+                <h2>innerHTML</h2>
+                <hr>
+                <h3 id="p1" onclick="hi()">이번 여름에는 어디로 여행을 갈까요?</h3>
+                <p id="p2"></p>
+    
+</body>
+</html>

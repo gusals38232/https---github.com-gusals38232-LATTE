@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   div{position: absolute;}
+   img{position: absolute;}
+
+</style>
+</head>
+<body>
+<h1>z-index 스타일 프로퍼티</h1>
+<hr>
+   <div>
+    <img src="/자바스크립트/06.14일/KakaoTalk_20220614_161102604.png" width="200" height="200" alt="스페이드A">
+    <img src="/자바스크립트/06.14일/KakaoTalk_20220614_161102725.png" width="200" height="200" alt="스페이드A">
+    <img src="/자바스크립트/06.14일/KakaoTalk_20220614_161102830.png" width="200" height="200" alt="스페이드A">
+    <img src="/자바스크립트/06.14일/KakaoTalk_20220614_161102936.png" width="200" height="200" alt="스페이드A">
+   </div>
+<script type="text/javascript">
+
+   let imgArray = document.getElementsByTagName('img');
+   for(i=0; i<imgArray.length; i++){
+      let obj = imgArray[i];
+      obj.style.zIndex=i;
+      obj.style.left = "10px";
+      obj.style.top = "20px";
+      
+      obj.onclick = shuffle;
+   }
+   function shuffle() {
+      for(i=0;i<imgArray.length;i++){
+         let obj = imgArray[i];
+         obj.style.zIndex++;
+         obj.style.zIndex = obj.style.zIndex % imgArray.length;
+      }
+   }
+</script>
+</body>
+</html>
+
+
+

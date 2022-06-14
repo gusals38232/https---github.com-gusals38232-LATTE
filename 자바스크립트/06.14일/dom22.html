@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- 
+   insertAdjacentHTML(속성,값) 
+      ; 부모를 기준으로 했으나 ... 특정한 노드를 기준으로..
+      
+      . 속성
+         - afterbegin   : 특정노드의 자식노드의 제일 첫번째 노드로 삽입
+         - afterend      : 특정노드의 바로 다음 노드로 삽입
+         - beforebegin   : 특정노드의 바로 작전 노드로 삽입
+         - beforeend      : 특정노드의 자식노드의 제일 마지막 노드로 삽입
+   
+   
+   
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <ul id="myul">
+      <li>항목 1</li>
+      <li>항목 2</li>
+      <li>항목 3</li>
+      <li>항목 4</li>
+      <li>항목 5</li>
+      <li>항목 6</li>
+   </ul>
+   <button onclick="f()">항목추가</button>
+   <script type="text/javascript">
+   
+      function f() {
+         let tag = document.getElementById('myul');
+         tag.insertAdjacentHTML("afterbegin","<li>afterbegin: 기준노드의 첫번째 노드로 삽입</li>");
+         tag.insertAdjacentHTML("afterend","<li>afterend: 기준노드의 바로 다음 노드로 삽입</li>");
+         tag.insertAdjacentHTML("beforebegin","<li>beforebegin: 기준노드의 바로 직전 노드로 삽입</li>");
+         tag.insertAdjacentHTML("beforeend","<li>beforeend: 기준노드의 자식노드의 제일 마지막 노드로 삽입</li>");
+      }
+   
+   
+   
+   
+   
+   </script>
+</body>
+</html>

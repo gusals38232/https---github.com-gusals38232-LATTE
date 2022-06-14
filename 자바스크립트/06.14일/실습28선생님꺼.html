@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- id를 똑같은거 여러가지 넣어도 첫번째 1개만 적용된다... 그러니getElementById 말고
+     class나 tagname으로쓴다 .    id.class지정없이 쓰려면 getElementByTagName('span') 이런식으로 하면 된다.  -->
+    <script type="text/javascript">
+
+                    function show() {
+                     
+                        let objArray = document.getElementsByTagName('span');
+
+                        for(i=0; i<objArray.length; i++) {
+                              
+                            let obj = objArray[i];
+                            let v = obj.style.visibility;
+
+                            if(v == 'hidden'){
+                                obj.style.visibility = 'visible';
+                            }else{
+                                obj.style.visibility = 'hidden'; 
+                            }
+                        }
+                        
+                    }
+
+    </script>
+
+
+</head>
+<body>
+
+            <h2>다음 빈 곳에 숨은 단어??
+            
+            <p style="text-decoration:underline; color:blue;" onclick="show()">>>정답보기</p> </h2>
+            <ul>
+                <hr>
+            <li>i (<span>love</span>) you</li>
+            <li>css is cascading (<span>style</span>) sheet</li>
+            <li>응답하라 (<span >1988</span>)</li>
+            </ul>
+    
+</body>
+</html>
