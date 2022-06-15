@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- 
+    .이미지를 로딩시켜 값 읽을떈 onload이벤트 함께 사용이 안정적.
+
+    왜?이미지 로딩시키는건 타이밍적인 문제 발생 될 수 있다..
+
+    let myImg = document.getElementById('myImg');
+    myImg.src = 'banana.png';
+
+    myImg.onload = function{
+    let width = myImg.width;
+    }
+        .new Image() : 비어있는 이미지 객체를 생성하는 생성자함수.
+                        이미지 객체를 생성할 수는 있지만..출력은<img>에서만 출력된다.
+ -->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+<script type="text/javascript">   
+
+</script>
+
+</head>
+<body>
+
+        <h3>new Image()로 이미지 객체생성(로딩)</h3>
+        <hr>
+        <img style="border:20px ridge wheat" src="/포켓몬/025피카츄.png" width="200" height="200" onclick="change(this)">
+</body>
+</html>

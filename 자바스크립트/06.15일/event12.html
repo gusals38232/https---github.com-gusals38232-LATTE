@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- 
+
+. 이미지를 로딩시켜서 값을 읽을때는... onload 이벤트와 함께 사용하는것이 안정적이다.
+      왜냐? 이미지를 로딩시키는 것은 백그라운드에서 처리하도록 하는데.. 프로그램은 
+      로딩이 완료된것을 확인하지 않고 다음코드를 바로 실행함으로.. 타이밍적인 문제가 발생될 수 있다.
+      
+   let myImg = document.getElementById('myImg');
+   myImg.src = 'banana.jpg'
+   
+   myImg.onload = function{
+   let width = myImg.width;
+   }
+   
+   .new Image() : 비어있는 이미지 객체를 생성하는 생성자 함수
+                     이미지객체를 생성할 수는 있지만.. 출력은 <img>에서만 출력된다.
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+   let files = ['../img/10.png','../img/1.jpg','../img/5.jpg']
+   
+   //이미지 객체를 넣어두는 배열
+   let imgs = new Array();  //imgs ---> [new Image()][new Image()][new Image()]
+   //배열에 이미지 객체 넣기
+   for (i = 0; i < files.length; i++) {
+      imgs[i] = new Image();   //이미지 객체 생성
+      imgs[i].src = files[i];   // 이미지 객체에 src설정 - 로딩지시
+   }
+   // 이미지를 로테이션 시켜보자
+   let next =1;
+   function change(img) {
+      img.src = imgs[next].src;
+      next++;
+      
+      next %= imgs.length;
+   }
+   
+</script>
+</head>
+<body>
+   <h3>new Image()로 이미지 객체 생성(로딩)</h3>
+      <hr>
+      <img alt="" src="/포켓몬/001이상해씨.png" width="200" height="300" onclick="change(this)" style="border:20px ridge wheat">
+</body>
+</html>

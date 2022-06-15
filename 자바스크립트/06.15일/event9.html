@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- 
+    oncontextmenu; 객체에서 오른쪽 마우스를 클릭했을때
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">   
+
+        document.oncontextmenu = hidden;
+        function hidden(){
+            alert("오른쪽 클릭 사용금지");
+            return false;
+        }
+
+    </script>
+
+</head>
+<body>
+        <h3>oncontextmenu에서 컨텍스트 메뉴사용금지</h3>
+        <hr>
+        마우스 오른쪽 클릭은 금지됩니다. 아무곳이나 클릭해도 컨텍스트 메뉴를 볼수없습니다. <br>
+
+        <img src='/포켓몬/팬텀.gif' >
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+   <p>이것은 <span>문장</span>입니다.</p>
+   <form>
+      <input type="text" name="s">
+      <input type="button" value="테스트" id="button">
+      <hr>
+   </form>
+   <div id="div" style="color:green;"></div>
+   
+   <script type="text/javascript">
+   
+   let div = document.getElementById("div");
+   let button = document.getElementById("button");
+   
+   //body에 캡쳐단계에서 해야할 리스너등록
+   document.body.addEventListener("click", cap, true);
+   button.addEventListener('click', cap, true);
+   document.body.addEventListener('click',bub,false);
+
+   function cap(e) {
+      let obj = e.currentTarget;      //리스너가 실행하고 있는 현재 객체
+      let tagName = obj.tagName;
+      div.innerHTML += "<br>capture단계: "+tagName+"태그"+e.type+"이벤트";
+   }
+
+   function bub(e) {
+      let obj = e.currentTarget;      //리스너가 실행하고 있는 현재 객체
+      let tagName = obj.tagName;
+      div.innerHTML += "<br>bubble단계: "+tagName+"태그"+e.type+"이벤트";
+   }
+   
+   
+</script>
+   
+</body>
+</html>

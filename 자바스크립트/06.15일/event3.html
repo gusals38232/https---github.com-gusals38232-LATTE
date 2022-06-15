@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- 
+   태그.addEventListener('이벤트 종류', 함수명, 캡쳐단계/버블단계)
+   태그.removeEventListener() 없애는거
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+      let p;
+
+      function init()
+      {
+         p = document.getElementById('p');
+         
+         p.addEventListener('mouseover', over);
+         p.addEventListener('mouseover', size);
+         p.addEventListener('mouseover', fontstyle);
+         p.addEventListener('mouseout', out);
+      }
+      //리스너함수
+      function over()
+      {
+         p.style.backgroundColor = 'orchid';
+      }
+      
+      function size()
+      {
+         p.style.fontSize = '20px';
+      }
+      
+      function fontstyle()
+      {
+         p.style.fontStyle = 'italic';
+      }
+      
+      function out()
+      {
+         p.style.backgroundColor = 'white';
+      }
+
+      function remove() {
+        p.removeEventListener('mouseover',over);
+      }
+
+</script>
+</head>
+<body onload="init()">
+
+      <h3>addEventListener()를 이용한 리스너 등록</h3>
+      <button type="button" id="remove" onclick="remove()">이벤트 제거</button>
+      <hr>
+      <p id='p'>마우스를 올리면 배경색을 orchid색으로 변경합니다.</p>
+
+</body>
+</html>

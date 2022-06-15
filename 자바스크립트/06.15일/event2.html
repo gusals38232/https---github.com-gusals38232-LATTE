@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">   
+
+                    function init() {
+                        let img = document.getElementById('img');
+                        //이벤트등록
+                        img.onmouseover = over;
+                        img.onmouseout  = out;
+                    }
+
+                    function over(){
+                        img.style.width = '310px';
+                        img.style.height = '310px';
+
+                    }
+
+                    function out() {
+                        img.style.width = '200px';
+                        img.style.height = '200px';
+                    }
+
+                    function test() {
+                        //리스너를 달아서 외부에 있는 함수를 연결시켜 등록해보세요
+                        p=document.getElementById('p');
+
+                        p.onmouseover=textSize;
+                        p.onmouseover=bgColor;
+                    }
+
+                    function textSize() {
+                        p.style.fontSize= '50px';
+                    }
+
+                    function bgColor() {
+                        p.style.backgroundColor = 'blue';
+                    }
+    </script>
+
+</head>
+<body>
+
+
+                <h3>함수에서 이벤트프로퍼트로 등록</h3>
+                <hr>
+                <img id="img" src="/자바스크립트/06.15일/One Piece Wallpaper.jpeg" width="300" height="300" onload="init()">
+                <p>문서나 이미지의 로딩이 완료된 후 마우스를 올리면 이미지가 커집니다 </p>
+                <p id="p" onclick="test()">복수의 리스너가 등록되는지 확인해 보세요</p>
+    
+</body>
+</html>

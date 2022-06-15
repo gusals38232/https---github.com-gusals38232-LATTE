@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+            function f(e) {  //객체명.속성, 객체명.메소드()
+
+                    alert(e.type);
+
+            }
+            function f2(){var p = document.getElementById('p');
+            p.onmouseover = f;
+
+            var img = document.getElementById('img');
+            img.onmouseout = function(e){
+                alert(e.type);
+            }
+        }
+
+
+           
+
+
+    </script>
+</head>
+<body onload="f2()">
+            <h3>어떤 이벤트가 발생하고 있는지 볼까요?</h3>
+            <hr>
+            <img id = 'img' src="/포켓몬/뮤.png" width="200" height="200" ><br>
+            <button onclick="f(event)">버튼을 클릭해 보세요</button>
+            <p id="p">마우스를 올려보세요</p>
+    
+</body>
+</html>

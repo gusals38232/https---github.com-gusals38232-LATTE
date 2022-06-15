@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+        <!-- 
+            스크린
+                e.screenX
+                e.screenY
+
+            브라우저를 기준으로
+                e.clientX
+                e.clientY
+
+            타깃객체를 기준으로
+                e.offsetX
+                e.offsetY    
+
+
+         -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+
+        <h3>마우스 이벤트 객체의 프로퍼티와 onmousemove</h3>
+        <hr>
+            이미지위에 마우스를 움직일 떄 onmousemove리스너가 실행되고,
+            마우스의 위치를 보여줍니다. <br>
+
+            <img src="/포켓몬/002이상해풀.png" width="800" height="500" onmousemove="where(event)">
+            <div id="div"></div>
+
+            <script type="text/javascript">   
+
+                let div = document.getElementById('div');
+                function where(e) {
+
+                    let text = "버튼 = " +e.button+ "<br>"; //버튼번호
+                    text += "스크린을 기준으로 한 좌표(screenX,screenY)= "+e.screenX+","+e.screenY+"<br>";
+                    text += "브라우저 윈도우 내의 문서출력좌표(clientX,clientY)= "+e.clientX+","+e.clientY+"<br>";
+                    text += "이벤트 일어나는 좌표(offsetX,offsetY)= "+e.offsetX+","+e.offsetY+"<br>";
+                    text += "부모객체안에서의 좌표(x,y) = "+e.x+","+e.y+"<br>";
+
+                    div.innerHTML = text;
+                }
+
+            </script>
+
+
+            
+    
+</body>
+</html>
