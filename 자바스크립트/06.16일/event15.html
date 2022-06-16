@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <!-- 
+
+            .select객체
+                        속성   설명
+                        ----------------------------
+                        
+     -->
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+      function drawImage()
+      {
+        let item = document.getElementById('fruit');
+        let img = document.getElementById('f');
+
+        f.src = item.options[item.selectedIndex].value;
+        //  let obj = document.getElementById('fruits');
+        //  let obj2 = document.getElementsByTagName('img');
+         
+        //  obj2[0].setAttribute('src', obj.value);
+      }
+
+</script>
+</head>
+<body>
+
+      <form>
+         <select id='fruits' onchange="drawImage()">
+            <option value="../img/kiwi.jpg">키위
+            <option value="../img/apple.jpg">사과
+            <option value="../img/banana.jpg">바나나
+         </select>
+         
+         <img id="f" src="../img/a.png" width="300" height="300">
+      </form>
+
+</body>
+</html>

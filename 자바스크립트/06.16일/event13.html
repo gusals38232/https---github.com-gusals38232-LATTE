@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 
+
+        라디오버튼
+            -name으로 묶여있다.
+            - 라디오버튼을 가져올때 어떻해야 하는가?
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<script type="text/javascript">   
+
+    function find() {
+
+            let city = document.getElementsByName('city'); 
+            
+            for(i = 0; i < city.length; i++)
+         {
+            if(city[i].checked == true)
+            {
+               alert('살기 좋은 도시는 ' + city[i].value + '입니다.');
+            }
+         }
+      }
+
+
+            
+
+            //체크된것을 찾기
+
+            //alert에 체크된값 출력.
+    
+</script>
+
+</head>
+<body>
+
+            <form>
+                <input type="radio" name="city" value="seoul" checked="">서울
+                <input type="radio" name="city" value="busan">부산
+                <input type="radio" name="city" value="incheon">인천
+                <input type="radio" name="city" value="kangwon">강원도 <br><br>
+
+                <input type="button" value="살기좋은도시?" onclick="find()">
+            </form>
+    
+</body>
+</html>

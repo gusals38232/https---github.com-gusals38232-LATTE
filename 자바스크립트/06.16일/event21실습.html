@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+    table { 
+       border : 1px solid blue; 
+       border-collapse : collapse; 
+       }
+    td { 
+       border : 1px solid black; 
+       width : 50px; height : 50px; 
+       padding : 0px; 
+       }
+    img{visibility:hidden;
+       width: 50px; height: 50px;
+       }
+    
+</style>
+<script type="text/javascript">
+   var select=0;
+   var img = new Image();
+   img.src="/포켓몬/057성원숭.png";
+   function set(){ 
+      for(var i=0;i<100;i++) {
+      document.images[i].onclick=moveImage; 
+      document.images[i].style.visibility = "hidden";  
+      } moveImage();
+   }
+   function moveImage() {  
+      document.images[select].src="";  
+      document.images[select].style.visibility = "hidden";
+      select = Math.floor(Math.random() * 100);
+      document.images[select].src = img.src;
+      document.images[select].style.visibility = "visible";
+   }
+
+</script>
+</head>
+<body onload="set()">
+   <h3>마우스 클릭 연습</h3>
+   <hr>
+     <!-- tr 하나의 행렬 td사이에 img넣기 -->
+   <table>
+      <tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+      <tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+      <tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+      <tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+      <tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+      <tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+      <tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+      <tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+      <tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+      <tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+   </table>
+
+   
+</body>
+</html>

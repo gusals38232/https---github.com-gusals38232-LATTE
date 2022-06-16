@@ -1,0 +1,31 @@
+<HTML>
+    <HEAD>
+        <TITLE>이미지 휠 확대</TITLE>
+    
+    <SCRIPT>
+    var count = 10;
+    function Picture()
+    {
+    count = Counting(count);
+    Resize(count);
+    return false;
+    }
+    function Counting(count){   
+        if (event.wheelDelta >= 110)
+            count++;
+        else if (event.wheelDelta <= -110)
+            count--;   
+        return count; 
+    }
+    function Resize(count){    
+        on.style.zoom = count + '0%';    
+    }
+    </SCRIPT>
+    </HEAD>
+    <BODY>
+    
+    이미지 위에서 마우스 휠을 돌려보세요..<br>
+    <img id="on" src="/포켓몬/061슈륙챙이.png" onmousewheel="Picture()">
+    </BODY>
+    </HTML>
+    

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+        체크박스
+            .그룹화 되어 있지 않다. name이 다 다르다
+            . 개별적으로 체크한다.
+     -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<script type="text/javascript">   
+
+        let sum= 0;
+        function f(obj) {
+             if(obj.checked){
+                 sum = sum + parseInt(obj.value);
+             }else{
+                sum = sum - parseInt(obj.value);
+             }
+              document.getElementById('sumtext').value = sum;
+        }
+
+       
+    
+</script>
+</head>
+<body>
+
+            <form>
+                <input type="checkbox" name="hap" value="10000" onclick="f(this)">모자1만원
+                <input type="checkbox" name="shose" value="3000" onclick="f(this)">구두 3만원
+                <input type="checkbox" name="bag" value="80000" onclick="f(this)">가방8만원 
+                
+                구매 견적가 <input type="text" id="sumtext" value="0">
+            </form>
+    
+</body>
+</html>

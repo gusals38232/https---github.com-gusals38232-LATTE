@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- 
+        onfocus : 포커스를 부여할때
+        onblur  : 포커스를 잃을때
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<script type="text/javascript">   
+    function check(obj) {
+            if(obj.value == ''){
+                //alert('이름은 필수 입력 사항입니다.');
+
+                //윈도우창에 띄우기 -실습
+                //                              파일/url, 창의이름 창의사양
+                let w = window.open('','mywin','width = 500px, height=150px, left=600px,top=300px,backgroundColor=pink');
+                w.document.open();
+                w.document.write('<html><head></head><body style = "text-align:center; width=300px; height;150px;" <h2>이름은 필수사항 입니다</h2>');
+                w.document.close();
+
+                obj.focus();
+            }
+    }
+</script>
+
+</head>
+<body onload="document.getElementById('name').focus()">
+
+        <h3>onfocus와 onblur</h3>
+        <hr>
+        <form action="">
+            이름 <input type="text" id="name" onblur="check(this)"> <br>
+            학번 <input>
+
+        </form>
+    
+</body>
+</html>

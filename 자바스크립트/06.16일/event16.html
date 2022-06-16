@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- 
+   key 관련 이벤트
+      - 종류 : onkeydown - 눌렀을때 호출되는 이벤트
+             onkeypress - enter, spanc, esc 키들과 문자키에 대해서만 호출되는 이벤트
+             onkeyup : 키에서 손을 땔 때 호출되는 이벤트
+             
+      - key 이벤트객체
+         - 속성(프로퍼티)
+            code : 눌러진 키의 이름
+            key : 눌러진 키의 문자열
+            
+            번호/방향키 : 'ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight'
+            엔터키 : 'Enter'
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+      td {width: 50px; height: 50px; border: 1px solid orchid}
+
+</style>
+<script type="text/javascript">
+
+      let tds;
+      let prevIndex = 0, index = 0;
+
+      window.onload = function ()
+      {
+         tds = document.getElementsByTagName('td');
+         tds[index].style.backgroundColor = 'orchid';
+      }
+      
+      window.onkeydown = function (e) 
+      {
+         switch (e.key)
+         {
+            case "ArrowDown" :
+                  if(index/3 >= 2) return; 
+                  index += 3;
+                  break;
+               case "ArrowUp" :
+                  if(index/3 < 1) return; 
+                  index -= 3;
+                  break;
+               case "ArrowLeft":
+                  if(index%3 == 0) return;
+                  index--;
+                  break;
+               case "ArrowRight" :
+                  if(index%3 == 2) return; 
+                  index++;
+                  break;
+         }
+         tds [index].style.backgroundColor = "orchid";
+          tds [prevIndex].style.backgroundColor = "white";
+          prevIndex = index;
+
+      }
+
+</script>
+</head>
+<body>
+
+      <h3>화살표 키로 셀 이동하기</h3>
+      <table>
+         <tr><td></td><td></td><td></td></tr>
+         <tr><td></td><td></td><td></td></tr>
+         <tr><td></td><td></td><td></td></tr>
+      </table>
+
+</body>
+</html>
