@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">   
+        //객체만들기-  생성자함수 생성
+        function WinOpenWithOption(str){
+
+            this.str = str;
+            //메소드
+            this.winOpen1=winOpen1;
+            this.winOpen2=winOpen2;
+            this.winfullOpen=fullOpen;
+        }
+
+        function winOpen1(){
+           let fe= window.open('https://www.naver.com/','네이버'); //옵션 없으면 기본값 설정
+        }
+        function winOpen1(){
+            window.open('https://www.daum.net/','다음',window=500,height=300,left=500,top=0);
+        }
+        function winOpen1(){
+            window.open('/포켓몬/084두두.png','fullscreen');
+        }
+            
+</script>
+
+</head>
+<body>
+
+    <script type="text/javascript">   
+
+        function winStart(){
+
+            btn = confirm('창을 열겠습니까?');
+            if(btn) {
+                //window.open();
+                window.open('https://www.naver.com/','네이버');
+                
+            }
+        }
+</script>
+    <p><input id="btn" type="button" value="창을 열까요?" onclick="winStart()"></p>
+</body>
+</html>
+
+
+
+<!-- 
+
+    찬용이 버전
+    <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+   
+   // 객체만들기 - 생성자함수 생성
+   function WinOpenWithOption(str) {
+      
+      this.str = str;
+      
+      //메소드
+      this.winOpen1 = winOpen1;
+      this.winOpen2 = winOpen2;
+      this.winfullOpen = fullOpen;
+      
+      
+   }
+   
+   function winOpen1() {
+      window.open('https://www.naver.com','네이버');      //옵션이 없으면 기본값으로 설정한다.
+   }
+   function winOpen2() {
+      window.open('https://www.daum.net','다음','width=500','height=300','left=500,top=0');
+   }
+   function fullOpen() {
+      window.open('../img/cat5.gif','이미지','fullscreen','width=200,height=150');
+   }
+   
+</script>
+</head>
+<body>
+   <script type="text/javascript">
+      function winStart() {
+         btn = confirm("창을 열겠습니까?");
+            let n = new WinOpenWithOption();
+         if (btn) {
+            //객체를 생성
+            
+            n.winOpen1();
+            n.winOpen2();
+         }
+         else{
+            n.winfullOpen();
+         }
+      }
+   
+   </script>
+   <p><input id="btn" type="button" value="창을 열까요?" onclick="winStart()"></p>
+</body>
+</html>
+ -->

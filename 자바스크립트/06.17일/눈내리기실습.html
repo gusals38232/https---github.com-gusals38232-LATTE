@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#123, #111);
+}
+ .snowflake {
+    --size: 1vw;
+    width: var(--size);
+    height: var(--size);
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -5vh;
+}
+ @keyframes snowfall {
+    0% {
+       transform: translate3d(var(--left-ini), 0, 0);
+   }
+    100% {
+       transform: translate3d(var(--left-end), 120vh, 0);
+   }
+}
+ .snowflake:nth-child(1) {
+    --size: 1vw;
+    --left-ini: -8vw;
+    --left-end: 3vw;
+    left: 21vw;
+    animation: snowfall 12s linear infinite;
+    animation-delay: -10s;
+}
+
+.snowflake:nth-child(2) {
+    --size: 3vw;
+    --left-ini: -15vw;
+    --left-end: 6vw;
+    left: 21vw;
+    animation: snowfall 6s linear infinite;
+    animation-delay: -8s;
+}
+
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+
+</div>
+</body>
+</html>

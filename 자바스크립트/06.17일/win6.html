@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+     <h3>이미지에 마우스를 올리고 5초간 그대로 있으면 지정된 사이트로 이동합니다.</h3>
+     <hr>
+     <img id='img' src="/포켓몬/008어니부기.png" width ="300" height="300"
+                   onmouseover="startTimer(1000)"
+                   onmouseout="cancelTimer()"><br>
+                   
+     <a href = "javascript:load('http:///www.disneyworld.com')">현재 윈도우에 URL 사이트를 로드</a>
+     
+     <script type="text/javascript">
+     
+         let timerID = null;
+         function startTimer(time){
+            
+            timerID = setTimeout("load('http://www.naver.com')",time); 
+            document.getElementById('img').title='타이머를 작동합니다....';
+         }
+         function load(url) {
+            window.location = url;
+         }     
+     
+        function cancelTimer(){
+           if(timerID !=null){
+              clearTimeout(timerID);
+           }
+        }
+     
+     </script>
+</body>
+</html>

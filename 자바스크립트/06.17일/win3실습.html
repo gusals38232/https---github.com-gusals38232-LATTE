@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        function winOpen1() {
+        let a =  window.open('http://naver.com/','네이버', 'width=400,height=550');
+        
+        
+        }
+
+        function winOpen2() {
+        let b =  window.open('http://daum.net/','다음', 'width=400,height=550');
+        
+        
+        }
+
+        
+        function winClose(){
+
+ans = confirm('창을 닫으시겠습니까?');
+if(ans) {
+    window.close();
+}
+}
+
+    </script>
+</head>
+<body>
+
+    
+    <p id="a" align = "left"><input type="button" value="네이버" onclick="winOpen1()">  </p>
+    <br>
+    <p id="b" align = "left"><input type="button" value="다음" onclick="winOpen2()">  </p>
+    <br>
+    <p id="c" align = "left"><input type="button" value="창닫기" onclick="winClose()">  </p>
+    <br>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- 
+   (1회 호출)
+   let timerID = setTimeout('호출함수',지연시간) - 설정<함수호출>
+   
+   clearTimeout(timerID) : 해제
+   
+   (반복 호출)                지연시간 후       먼저
+                          |        |
+   let timerID = setInterval('호출함수','지연시간');
+   clearInterval(timerID);   해제
+   
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+</head>
+<body>
+   <h3>오늘은 금요일..... 즐거운 시간을 보냅시다.</h3>
+   <hr>
+   <div>
+      <span id="span" style="background-color:skyblue">자바스크립트가 참 재밌습니다.자바스크립트가 참 재밌습니다.
+        자바스크립트가 참 재밌습니다.자바스크립트가 참 재밌습니다.자바스크립트가 참 재밌습니다.</span>
+   </div>
+
+   <script type="text/javascript">
+      
+    let span = document.getElementById("span");
+    let timerID = setInterval('f()',200);      //생성
+    
+    function f() {
+       let str = span.innerHTML;
+       let firstChar = str.substr(0,1);      //첫번째 문자 축출
+       let remains = str.substr(1,str.length-1);   //나머지 문자들
+       
+       str = remains + firstChar;
+       span.innerHTML = str;
+       
+    }
+    span.onclick = function (e) {
+       
+       clearInterval(timerID);            //중지
+       
+    }
+ </script>
+   
+</body>
+</html>

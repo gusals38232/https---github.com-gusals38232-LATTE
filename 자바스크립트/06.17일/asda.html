@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        function addInput(v) {
+           
+           let lcd = document.getElementById('lcd');
+           if(lcd.value == '0'){
+              lcd.value = v;
+           }else{
+              lcd.value += v; //입력문자 누적(결합)
+           }
+        }
+     
+        //계산해주는 함수
+        function calculate() {
+           let lcd = document.getElementById('lcd');
+           lcd.value = eval(lcd.value);
+        }
+        
+        //back버튼에 의해 뒤에서부터 한글자씩 지우기
+        function backward() {
+           let lcd = document.getElementById('lcd');
+           let len = lcd.value.length;   //문자열(수식) 길이값을 가져온다
+           if(len == 0){
+              return
+           }else{                  //substr(시작인덱스,끝인덱스)
+              lcd.value = lcd.value.substr(0,len-1);   //맨뒤의 한글자를 뺀 나머지글자 >>>>> 00000 0
+           }
+        }
+        //전체 지우기
+        function clearLcd() {
+           var lcd = document.getElementById('lcd');
+           lcd.value = '0';
+        }
+        
+        
+</head>
+<body>
+    
+</body>
+</html>

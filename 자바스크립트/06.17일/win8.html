@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+
+</style>
+<script type="text/javascript">
+
+      let timerID;
+
+      function startClock()
+      {
+         let clock = document.getElementById('clock');
+         timerID = setInterval('timeout(clock)', 1000)
+      }
+      
+      function timeout(obj)
+      {
+         var now = new Date();
+         
+         obj.innerHTML = now.toLocaleString();
+      }
+      
+      function controlClock()
+      {
+         if(timerID == null)
+         {
+            timerID = setInterval('timeout(clock)', 1000);
+            document.getElementById('clock').style.color = 'black';
+         }
+         else
+         {
+            clearInterval(timerID);
+            timerID = null;
+            document.getElementById('clock').style.color = 'lightgray';
+         }
+      }
+
+</script>
+</head>
+<body onload="startClock()">
+
+      <div id='clock' onclick="controlClock()"></div>
+
+</body>
+</html>
