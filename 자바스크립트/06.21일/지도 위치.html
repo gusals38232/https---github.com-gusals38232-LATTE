@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <h3>현재 위치와 지도출력</h3>
+   <hr>
+   <div id='msg'>이곳에 위치값이 출력됩니다.</div>
+   
+   <iframe
+      id= 'map'
+      width = '425'
+      height="350"
+      frameborder="0"
+      scrolling="no"
+      marginheight="0"
+      marginwidth="0"      
+   >지원되지 않습니다.ㅈㅅ</iframe><br>
+   
+   <a id='bigmaplink' target="_blank">새창에 큰지도로 보기</a>
+   
+   <script type="text/javascript">
+      
+   if(navigator.geolocation){
+      
+      navigator.geolocation.getCurrentPosition(sucess);
+      
+   }else{
+      alert("지원하지 않습니다.");
+   }
+   function sucess(position) {
+      
+      let lat = (position.coords.latitude).toPrecision(6);
+      let lon = (position.coords.longitude).toPrecision(6);
+      let acc = (position.coords.accuracy).toPrecision(6);
+      
+      let now = new Date();
+      let text = "여러분이만들어보세요";
+      document.getElementById('msg').innerHTML= text;
+      
+      // 지도를 범위지정해서 가져오기
+      map.src = "https://www.openstreetmap.org/export/embed.html?bbox="+
+            (parseFloat(lon)-0.01)+"%2C"+(parseFloat (lat)-0.01)+"%2C"+
+            (parseFloat(lon)+0.01)+"%2C"+(parseFloat (lat)+0.01);
+      
+      let maplink = document.getElementById("bigmaplink");
+      let zoom = 15;
+      maplink.href="https://www.openstreetmap.org/#map= "+zoom+"/"+"/"+lon;
+            
+      
+   }
+   </script>
+</body>
+</html>

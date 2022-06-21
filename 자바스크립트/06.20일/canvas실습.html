@@ -1,0 +1,138 @@
+<html>
+<head>
+	<title>http://www.blueb.co.kr</title>
+</head>
+<body>
+<script>
+<!--
+function lib2bwcheck(){
+	this.ver=navigator.appVersion;
+	this.agent=navigator.userAgent;
+	this.dom=document.getElementById?1:0;
+	this.opera5=this.agent.indexOf("Opera 5")>-1;
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom && !this.opera5)?1:0; 
+	this.ie6=(this.ver.indexOf("MSIE 6")>-1 && this.dom && !this.opera5)?1:0;
+	this.ie4=(document.all && !this.dom && !this.opera5)?1:0;
+	this.ie=this.ie4||this.ie5||this.ie6;
+	this.mac=this.agent.indexOf("Mac")>-1;
+	this.ns6=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie6 || this.ie5 || this.ie4 || this.ns4 || this.ns6 || this.opera5);
+	return this;
+}
+var bw=new lib2bwcheck()
+var px = bw.ns4||window.opera?"":"px";
+
+function run() {
+ var css, obj, nest, ooo;
+ if ((document.all) && (!bw.opera5)) {
+  movy = document.body.clientHeight-64;
+  movx = document.body.clientWidth-50;
+ } else {
+  movx = window.innerWidth-50;
+  movy = window.innerHeight-64;
+ }
+ if (t==maxitems) {
+	x1 = Math.round(Math.random()*movx*(sxto-sxfrom)/100+movx*sxfrom/100);
+	x2 = Math.round(Math.random()*movx*(sxto-sxfrom)/100+movx*sxfrom/100);
+	y2 = Math.round(Math.random()*movy*(syto-syfrom)/100+movy*syfrom/100);
+	if (x1==x2) x1++;
+	for (var i=0; i<maxitems; i++) {
+	  ox[i] = x1;
+	  oy[i] = movy;
+	  ds[i] = 0;
+	}
+ }
+ t = 0;
+ for (var i=0; i<maxitems; i++) {
+  if (ds[i]==0) {
+	oy[i]-=yspeed;
+	if (oy[i]<y2) {
+		oy[i]=y2; ds[i]=1;
+		sx[i] = Math.round(Math.random()*movx*(sdto-sdfrom)/100+movx*sdfrom/100);
+		sy[i] = Math.round(Math.random()*movy*(sdto-sdfrom)/100+movy*sdfrom/100);
+	}
+	ox[i] = x2 + (x1-x2)*(oy[i]-y2)/(movy-y2);
+  } else if (ds[i]<explode) {
+	ox[i] = x2 + Math.round(Math.cos((explode-ds[i])*Math.PI/(2*explode))*sx[i]);
+	oy[i] = y2 + Math.round(Math.cos((explode-ds[i])*Math.PI/(2*explode))*sy[i]);
+	ds[i]++;
+  } else {
+	if (oy[i]<movy) {
+		oy[i]+=yspeed;
+		if (sx[i]==0) ox[i]=0; else ox[i]+=Math.round(Math.random()*xspeed*sx[i]/Math.abs(sx[i]));
+	} else t++;
+  }
+  if (bw.ns4) {
+	ooo = eval("document.s"+i);
+	ooo.moveTo(ox[i], oy[i]);
+  } else {
+	obj = "s"+i; nest="";
+   	css= bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+"document.layers." +obj):0;
+	css.left = ox[i]; css.top = oy[i];
+  }
+ }
+ setTimeout("run()",tpause,"JavaScript");
+}
+
+var maxitems=30;
+var sxfrom=30;
+var sxto=60;
+var syfrom=20;
+var syto=50;
+var sdfrom=-20;
+var sdto=20;
+var yspeed=18;
+var xspeed=4;
+var explode=24;
+var pcol=Number(255).toString(16);
+var tpause=18;
+var schar="🍭　🐥　☔　🐷　🗺";
+
+var fontface = 0;
+var fontsize = "6";
+if (fontface==0) fontface = 'Arial, Helvetica, sans-serif';
+  else if (fontface==1) fontface = 'Times New Roman, serif';
+  else if (fontface==2) fontface = 'Courier New, Courier, mono';
+  else if (fontface==3) fontface = 'Georgia, Times New Roman, Times, serif';
+  else fontface = 'Verdana, Arial, Helvetica, sans-serif';
+
+var x1, x2, y2;
+var t=0;
+
+t = pcol.length;
+for (var i=0; i<6-t; i++) pcol = '0'+pcol;
+
+if (sxfrom>sxto) { t=sxto; sxto=sxfrom; sxfrom=t; }
+if (syfrom>syto) { t=syto; syto=syfrom; syfrom=t; }
+if (sdfrom>sdto) { t=sdto; sdto=sdfrom; sdfrom=t; }
+
+if ((document.all) && (!bw.opera5)) {
+  movy = document.body.clientHeight-64;
+  movx = document.body.clientWidth-50;
+} else {
+  movx = window.innerWidth-50;
+  movy = window.innerHeight-64;
+}
+
+ox = new Array();
+oy = new Array();
+sx = new Array();
+sy = new Array();
+ds = new Array();
+pa = new Array();
+
+t = maxitems;
+for (var i=0; i<maxitems; i++) {
+  if (bw.ns4) document.writeln("<layer id='s"+i+"'>");
+    else document.writeln("<div id='s"+i+"' style='position:absolute; z-index:3;'>");
+  document.writeln('<font color=#'+pcol+' face="'+fontface+'" size="'+fontsize+'">'+schar+'</font>');
+  if (bw.ns4) document.writeln("</layer>");
+    else { document.writeln("</div>");	}
+}
+
+setTimeout("run()",tpause,"JavaScript");
+//-->
+</script>
+</body>
+</html>

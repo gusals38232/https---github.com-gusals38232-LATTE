@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+            <h3>캔버스 이미지 꽉차게</h3>
+            <hr>
+            <canvas id="myCanvas" width="500" height="500" style="background-color: aliceblute;
+            border: 20px solid black">
+                지원되지 않아여
+            </canvas>
+
+            
+<script type="text/javascript">   
+        let canvas = document.getElementById('myCanvas');
+        let context = canvas.getContext('2d');
+
+        let img = new Image();
+        img.onload = function() {
+            context.drawImage(img,9,9,canvas.width, canvas.height);
+
+        }
+        img.src = "/포켓몬/054고라파덕.png";
+</script>
+
+    
+</body>
+</html>

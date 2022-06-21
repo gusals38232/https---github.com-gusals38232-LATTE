@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="init()">
+
+      <h3>마우스 이벤트와 연계한 그래픽</h3>
+      <hr>
+      <canvas
+         id='myCanvas'
+         width="1800"
+         height="800"
+         style="background-color: green; border: 20px solid #cd853f; text-align: center;">지원되지 않습니다.</canvas>
+         
+      <script type="text/javascript">
+      
+            let canvas;
+            let context;
+      
+            function init()
+            {
+               canvas = document.getElementById('myCanvas');
+               context = canvas.getContext('2d');
+               
+               context.lineWidth = 2;
+               context.strokeStyle = 'white';
+               
+               canvas.addEventListener('mousemove', move, false);   //마우스를 이동할 때
+               canvas.addEventListener('mousedown', down, false);   //마우스를 누를 때
+               canvas.addEventListener('mouseup', up, false);      //마우스를 땔 때
+               canvas.addEventListener('mouseout', out, false);   //마우스가 벗어났을 때
+            }
+            
+            let startX = 0; startY = 0;
+            let dragging = false;
+            
+            function draw(curX, curY)
+            {
+               context.beginPath();
+                 context.moveTo(startX,startY);
+                 context.lineTo(curX, curY);
+                 context.stroke();
+            }
+            
+            function move(e)
+            {
+               if(!dragging)
+               {
+                  return;
+               }
+               
+               let curX = e.offsetX;
+               let curY = e.offsetY;
+               draw(curX, curY);
+               
+               startX = curX;
+               startY = curY;
+            }
+            
+            function down(e)
+            {
+               startX = e.offsetX;
+               startY = e.offsetY;
+               dragging = true;
+            }
+            
+            function up(e)
+            {
+               dragging = false;
+            }
+            
+            function out(e)
+            {
+               dragging = false;
+            }
+      
+      </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

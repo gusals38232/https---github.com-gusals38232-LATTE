@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   body{
+      margin: 0; padding: 0;
+      background-image: url("/포켓몬/001이상해씨.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      
+   }
+   div.snow{
+    
+      position: absolute;
+      font-size: 40px;
+      color: rgb(204, 12, 12);
+      margin: 0;padding: 0}
+   
+
+
+
+</style>
+<script type="text/javascript">
+
+    
+   let snowCount = parseInt(prompt('몇 송이?'));
+   let snow = new Array(snowCount);
+   let x = new Array(snowCount);
+   let y = new Array(snowCount);
+   
+   let step = new Array(snowCount);
+   let speedOfFall = new Array(snowCount);
+   let speedOfWind = new Array(snowCount);
+   
+   function fall() {
+      
+       for(i=0; i<snow.length; i++){
+          
+       
+      y[i] += speedOfFall[i];
+      x[i] += Math.cos(speedOfWind[i]);
+            
+        //바닥까지 내려왔을때
+        if(y[i] >= window.innerHeight - 60){
+           x[i] = Math.floor(Math.random()*window.innerWidth);
+           y[i] = -40;
+        }
+           
+        
+      
+        //옆으로 빠졌을때
+        if(x[i] >= window.innerWidth - 40){
+           x[i] =  window.innerWidth - 40;
+        }else if(x[i] < -40){
+            x[i] = 50;
+        }
+      
+     snow[i].style.top  = y[i]+"px"; 
+     snow[i].style.left = x[i]+"px"; 
+      
+       }
+      setTimeout("fall()",0.00001);
+      
+   }
+
+
+
+</script>
+</head>
+<body onload="fall()">
+   <script type="text/javascript">
+      makeSnow();
+      
+      function makeSnow() {
+         
+         for(i=0; i<snow.length; i++){
+            x[i] = Math.floor(Math.random()*window.innerWidth - 40);
+            y[i] = Math.floor(Math.random()*window.innerHeight + 60);
+            
+            // 효과를 주기위한 값들 설정
+            speedOfFall[i] = Math.random()*2+2;      // y값 - 낙하크기
+            speedOfWind[i] = 1;                  // x값효과 - 최초의값으로 1로 설정
+            step[i] = Math.random()*0.1+0.05;      // x값효과
+            
+            // 각각 고유한 id를 가진 눈들을 생성한다.
+            let divtag = "<div class='snow' id='snowobj"+i+"' style='top:"+y[i]+"px;left:"+x[i]+"px'><img src='/포켓몬/057성원숭.png' width='30px' height='30px'></div>";
+            document.write(divtag);   
+            
+            // 눈을 배열에 저장
+            snow[i] = document.getElementById("snowobj"+i);
+         }   
+      }
+   
+   </script>
+</body>
+</html>
+

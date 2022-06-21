@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- 
+   1) 원본을 조절해서 그리기
+         - drawImage(이미지, 그려질위치x,그려질위치y, 그려질폭(w), 그려질높이(h));
+   2) 원본의 일부분을 조절출력할때
+         - drawImage(img, sx, st, sWidth,sHeight, dx, dy,dWith, dHeight);
+
+
+
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <h3>캔버스에 원본이미지를 조절해서 그려봅니다.</h3>
+   <hr>
+   <canvas
+      id="myCanvas"
+      width="500"
+      height="500"
+      style="background-color: aliceblue; border: 20px solid #696969"
+   ></canvas>
+   <script type="text/javascript">
+   
+   let canvas = document.getElementById('myCanvas');
+   let context = canvas.getContext('2d');
+   
+   let img = new Image();
+   img.onload = function () {
+      context.drawImage(img, 20,20, 100, 200);   // img를 캔버스에 (20,20)에 너비가 100, 높이가 200으로 그려라
+   }
+   img.src = "/포켓몬/054고라파덕.png";
+   
+   
+   let img2 = new Image();
+   img2.onload = function () {
+      context.drawImage(img2, 150,20, 300, 300);   
+   }
+   img2.src = "/포켓몬/062강챙이.png";
+   
+   
+   let img3 = new Image();
+   img3.onload = function () {
+      context.drawImage(img3, 400,300, 400, 400, 50,350,400,100);   
+   }
+   img3.src = "/포켓몬/143잠만보.png";
+   
+   
+   
+   
+   </script>
+</body>
+</html>
+

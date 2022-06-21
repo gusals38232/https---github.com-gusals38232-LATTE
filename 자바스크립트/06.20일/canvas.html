@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- 
+        그래픽 
+            - 기존에는 img태그를 이용, 플래시등을 활용... 그런데.. 자바슽크립트가 웹페이지를 자유롭게 
+            그래픽을 수행할 수 있도록 캔버스를 도입했다.
+
+        Canvas
+            -자바스크립트 코드로 웹 페이지에 자유롭게 그래픽을 구현할 수 있다.
+            -기능
+                .도형그리기
+                .글자그리기
+                .이미지그리기
+                .실시간 그래픽, 애니메이션, 게임, 지도 등을 구현할 수 있다.
+            
+            -특징
+                .웹표준
+                .매우 빠르다. - 벡터방식이 아니라.. 비트맵 방식이다
+                .2차원, 3차원 지원한다.
+            -속성
+                .width, height
+                .style
+                .등등
+                .getContext() ==> 캔버스 context가져온더, - 그리는 도구모임    
+            -구현방법
+
+            .canva.getContext('2d')
+            .context객체의 속성을 이용해서 그린다.
+
+                -beginPath(): 이전 경로를 지우고 새로 시작
+                -strokeStyle: 선의 색
+                -fillStyle : 채우기 색
+                -lineWidth : 선의 두꼐
+                -font :폰트
+                -textAlign : 텍스트 정렬방식
+                -beginPath() : 경로에 새로운 시작위치로 이동
+                -moveTo() : 경로에 새로운 시작위치로 이동
+                -lineTo() : 선을 추가
+                rect() :사각형 추가
+                arc() : 원 추가
+                -closePath():경로의 끝점과 시작점을 연결해서 닫는다.
+
+                -stroke() 외각선을 그린다
+                -fill() 내부를 그린다
+
+                -------------------------------------------------------
+                -strokeText(): ? 
+                -fellText(): 텍스트를 채워서 그린다.
+                -strokeRect(): 사각형을 선으로 바로 그린다.
+                -fillRect(): 사각형의 내부색을 채워서 그린다.
+                -fillArk() : 
+                -clearRect() 지운다
+                -clearArc() 
+
+                -drawImage() :이미지를 그린다
+
+ -->
+        
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">   
+
+    </script>
+
+    <style type="text/css">
+        #canvas1{
+            margin: 0px;
+            width: 150px;
+            height: 150px;
+            background-color: aquamarine;
+        }
+        #canvas2{
+            margin: 0px;
+            width: 150px;
+            height: 150px;
+            background-color: cadetblue;
+        }
+     </style>
+</head>
+<body>
+                <h3>캔버스 만들기</h3>
+                <hr>
+                <canvas id="canvas1">이 브라우저는 캔버스 기능 지원 안한다</canvas>
+                <canvas id="canvas2"></canvas> <br>
+                <canvas id="canvas3" width="300" height="150" style="background: mistyrose;"></canvas>
+
+</body>
+</html>

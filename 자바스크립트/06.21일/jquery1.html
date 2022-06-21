@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- 
+   
+      선택자와 함께 사용하는 함수들...
+      
+      (변경)
+      $('선택요소').html('새요소')               선택한 요소의 하위 요소들을 새요소로 변경                        
+               text('새텍스트')               선택한 요소의 텍스트를 새 텍스트로 변경
+               
+      (추가)
+      $('선택요소').append('새요소')               맨 마지막에 추가
+      $('선택요소').prepend('새요소')               맨 앞에 추가
+      $('새요소').insertBefore('요소선택')         이전 위치에 형제요소로 새요소로 추가
+      $('새요소').insertAfter('요소선택')            선택한 요소의 뒤에 형제요소 추가
+      
+      $('선택요소').remove()                     선택요소 삭제
+      
+      (속성지정)
+      $('선택요소').attr('속성')                  해당속성의 값을 반환
+      $('선택요소').attr('속성','값')               속성지정
+               .addClass('클래스명')            새클래스명 부여
+               .removeClass('클래스명')         
+               .toggleClass('클래스명')         선택요소에 해당 클래스 명이 있으면 부여하지 않고, 없으면 부여하고
+               .hasClass('클래스명')            클래스명이 있으면 true반환
+               .wrap("<div></div>")            선택요소를 <div>로 둘러싼다.
+               
+      
+      
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+   
+   $(()=>{
+      $(".theTitle").html("<a href='#'>HTML조작</a>");
+      $('.obj').text("'list2'를 'list_2'로 변경해 봅니다.");
+      $('#list').append('<li>append로 새로 추가한 list6</li>');
+      $('#list').prepend('<li>prepend로 새로 추가한 list1</li>');
+      
+      $('<li>insertBefore로 추가한 요소</li>').insertBefore($('#list li').eq(4));
+      $('<li>insertAfter로 새로 추가한 요소</li>').insertAfter($('#list li').eq(5));
+      $('#list li').eq(0).remove();
+      
+      $('#list li').eq(0).attr('class','obj2');
+      $('.obj2').css({'background-color':'yellow','border':'3px solid #000','color':'blue'});
+      $('#list li').eq(0).addClass('obj3');
+      $('.obj3').css('color','red');
+      
+   });
+   
+</script>
+</head>
+<body>
+   <div id="wrap">
+      <h2 class="theTitle">HTML조작</h2>
+      <ul id="list">
+         <li class="obj">list2</li>
+         <li>list3</li>
+         <li>list4</li>
+         <li>list5</li>
+      </ul>
+   </div>
+</body>
+</html>

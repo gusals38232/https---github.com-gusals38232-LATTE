@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- 
+        리터럴/Json표기법활용 객체생성
+
+            .키와 값 으로 쌍으로 구성된다.
+            .키는""로 처리해도 되고, 안해도 된다.
+            .값은 문자일 경우"", 숫자일 경우 따옴표없이 표기한다.
+            . (콜론)을활용해 맵핑
+            .(콤마)로 구분
+            .this 사용 불가
+            .값 으로는 ... 문자, 숫자, 배열,객체가 포함될수있다.
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+            const person = {
+                firstName :"김",
+                lastName : "민",
+                age:30,
+                tel:"010-1111-2222",
+                address: "서울시 영등포",
+                취미: ['축구','음악','배구','야구']
+
+            }
+
+            function introduce(){
+                person["lastName"] = '을동'; 
+                document.write("<h3>"+person.firstName+ person.lastName+"님이 입장하십니다</h3>");
+                document.write("<h3>"+person.firstName+ person.lastName+"님의 취미는,.</h3>");
+                for(i=0; i<person.취미.length; i++){
+                    if(i !=person.취미.length-1){
+                        document.write("<span style='color:blue'>"+person.취미[i]+"랑,</span>");
+                    }else{
+                        document.write("<span style='color:red'>"+person.취미[i]+",입니다</span>");
+                    }
+                }
+
+
+            }
+            introduce();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

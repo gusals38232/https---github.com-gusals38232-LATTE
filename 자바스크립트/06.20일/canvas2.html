@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <canvas
+      id="myCanvas" width="700px" height="500px" 
+      style="background-color: black; border-radius: 20px;"
+   ></canvas>
+   <script type="text/javascript">
+      let canvas = document.getElementById('myCanvas');
+      let context = canvas.getContext('2d');
+      
+      context.strokeStyle = "red";
+      context.fillStyle = "yellow";
+      context.lineWidth = 30;
+      
+      context.beginPath();
+      context.moveTo(120,80);
+      context.lineTo(180,300);
+      context.lineTo(400,400);
+      context.closePath();
+      
+      context.stroke();
+      context.fill();
+      
+      //글자
+      context.fillStyle = "skyblue";
+      context.font = "30px Gothic,고딕체";
+      
+      context.fillText("자바스크립트!",250,200);
+      
+      context.fillStyle = "white";
+      context.font = "40px 나눔고딕체";
+      context.fillText("재미있는 자바스크립트!",60,450);
+      
+   </script>
+</body>
+</html>

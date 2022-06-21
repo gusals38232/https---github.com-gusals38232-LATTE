@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>원그리기</h3>
+    <hr>
+    <canvas id="my" width="500" height="500" style="background-color: lightgray;
+    border:10px solid blue; border-radius: 20px ">
+
+    </canvas>
+    
+    
+<script type="text/javascript">   
+
+        let canvas = document.getElementById('my');
+        let context = canvas.getContext('2d');
+        
+        context.lineWidth = '8';
+        context.strokeStyle = 'red';
+        context.beginPath();
+        context.arc(100,120,60,30,Math.PI/2,true);
+        context.stroke();
+        
+
+        context.strokeStyle = 'green';
+        context.beginPath();
+        context.arc(200,120,60,30,Math.PI/2,true);
+        context.stroke();
+
+        context.strokeStyle = 'yellow';
+        context.beginPath();
+        context.arc(300,120,60,30,Math.PI/2,true);
+        context.stroke();
+
+        context.strokeStyle = 'black';
+        context.beginPath();
+        context.arc(150,200,60,30,Math.PI/2,true);
+        context.stroke();
+
+        context.strokeStyle = 'blue';
+        context.beginPath();
+        context.arc(250,200,60,30,Math.PI/2,true);
+        context.stroke();
+
+        context.strokeStyle = 'mistyrose';
+        context.beginPath();
+        context.arc(200,270,60,30,Math.PI/2,true);
+        context.stroke();
+
+        
+
+        
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+        .위치정보 서비스
+            - 브라우저가 자바스크립트를 통해 위도,경도,고도
+            -보안이 유지되는 경우 지원
+                .localhost
+                .웹서버없는 로컬 컴퓨터의 웹페이지
+                .https 프로토콜을 사용하는 웹 통신의 경우만 
+                
+        .서비스제공 방법
+            -window.navigator.geolocation를 통해 지원    
+            
+        .브라우저가 지원하는지 체크여부
+            if(navigator.geolocation){
+                //지원하면 실행문
+            }    
+        .geolocation객체    
+            .현재위치얻기 메소드
+                getCurrentPosition(성공했을때 실행할 콜백함수,실패콜백함수,옵션함수)
+            
+            .반복 위치추적메소드
+                watchposition()생성 ====clearWatch()- 중단
+        .position객체-위치정보
+            .coords : 현재위치를 나타는 객체
+            .timestamp : 위치파악된 시간정보객체
+            
+        .Coordinates객체    
+            .latitude : 위도의 실수값
+            .longitude: 경도
+            .altitude  : 고도
+            .accuracy  : 정밀도(미터단위)
+
+     -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">   
+
+        if(navigator.geolocation){
+            window.navigator.geolocation.getCurrentPosition(success);
+        }else{
+            alert("위치 정보 파악 불가");
+            
+        }
+
+        function success(position) {
+
+                let lat = position.coords.latitude;
+                let lon = position.coords.longitude;
+                let acc = position.coords.accuracy;
+
+                document.write(lat);
+                document.write(lon);
+
+                document.write("<h3>현재위치:위도 -"+lat.toPrecision(6)+",경도-"+lon.toPrecision(6)+"</h3>");
+                
+                
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

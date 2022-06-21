@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>원그리기</h3>
+    <hr>
+    <canvas id="my" width="500" height="500" style="background-color: lightgray;
+    border:10px solid blue; border-radius: 20px">
+
+    </canvas>
+    
+    
+<script type="text/javascript">   
+
+        let canvas = document.getElementById('my');
+        let context = canvas.getContext('2d');
+
+        context.strokeStyle = 'red';
+        context.beginPath();
+        context.arc(100,70,30,0,Math.PI/2,true);
+        context.stroke();
+
+        context.beginPath();
+        context.strokeStyle = 'blue';
+        context.arc(100,70,50,Math.PI/2,Math.PI,true);
+        context.stroke();
+
+        context.beginPath();
+        context.strokeStyle = 'green';
+        context.arc(100,70,90,Math.PI/2,Math.PI,false);
+        context.stroke();
+
+        context.beginPath();
+        for(i=0; i<20; i++){
+            context.arc(200+(i*3),80+(i*3),25,0,2*Math.PI,false);
+        }
+        context.strokeStyle='mistyrose';
+        context.stroke();
+
+        context.beginPath();
+        for(i=0; i<80; i++){
+            context.arc(200+(i*3),180+(i*3),55+(i*2),0,8*Math.PI,true);
+        }
+        context.strokeStyle='darkred';
+        context.stroke();
+
+        
+</script>
+
+    
+</body>
+</html>
