@@ -4,26 +4,83 @@
     // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
     "version": "0.2.0",
     "configurations": [
+    {
+        "name": "Attach to Chrome",
+        "port": 9222,
+        "request": "attach",
+        "type": "chrome",
+        "webRoot": "${workspaceFolder}"
+    },
+        
+      {  "configurations": [
+            {
+                "type": "java",			// 타입: 자바
+                "name": "Launch Current File",	// "현재 파일을 실행"
+                "request": "launch",		// 실행
+                "console": "internalConsole", 	//콘솔 타입을 internal로 변경
+                "mainClass": "${file}"
+            } ] }
+        
+        
         {
             "type": "java",
-            "name": "Launch helloworld",
+            "name": "Launch 하이",
             "request": "launch",
-            "mainClass": "자바.helloworld",
+            
+            "mainClass": "자바.하이",
             "projectName": "LATTE_bc008b58"
         },
         {
             "type": "java",
-            "name": "Launch ma",
+            "name": "Launch operator1",
             "request": "launch",
-            "mainClass": "ma",
+            "console": "internalConsole",
+            "mainClass": "자바.operator1",
             "projectName": "LATTE_bc008b58"
         },
-        {
-            "type": "pwa-chrome",
-            "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080/",
-            "webRoot": "${workspaceFolder}"
+                {
+                    "type": "java",
+                    "name": "Launch operator1",
+                    "request": "launch",
+                    "mainClass": "자바.operator1",
+                    "projectName": "LATTE_bc008b58"
+                },
+                {
+                    "type": "java",
+                    "name": "Launch 하이",
+                    "request": "launch",
+                    "mainClass": "자바.하이",
+                    "projectName": "LATTE_bc008b58"
+                },
+                {
+                    "type": "java",
+                    "name": "Launch 하이",
+                    "request": "launch",
+                    "mainClass": "하이",
+                    "projectName": "LATTE_bc008b58"
+                },
+                {
+                    "type": "java",
+                    "name": "Launch helloworld",
+                    "request": "launch",
+                    "mainClass": "자바.helloworld",
+                    "projectName": "LATTE_bc008b58"
+                },
+                {
+                    "type": "java",
+                    "name": "Launch ma",
+                    "request": "launch",
+                    "mainClass": "ma",
+                    "projectName": "LATTE_bc008b58"
+                },
+                {
+                    "type": "pwa-chrome",
+                    "request": "launch",
+                    "name": "Launch Chrome against localhost",
+                    "url": "http://localhost:8080/",
+                    "webRoot": "${workspaceFolder}"
+                }
+            ]
         }
-    ]
-}
+    
+
