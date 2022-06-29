@@ -1,4 +1,4 @@
-package 자바;
+package 자바.array;
 
 public class array4 {
     

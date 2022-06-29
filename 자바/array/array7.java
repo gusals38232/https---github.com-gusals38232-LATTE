@@ -1,4 +1,4 @@
-package 자바;
+package 자바.array;
 
 /* 
  * 2차원 배열 : 행,열
