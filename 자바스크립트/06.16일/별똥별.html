@@ -2,18 +2,18 @@
 <html lang="kr">
 	<head>
 	<meta charset="UTF-8">
-	<title>http://www.blueb.co.kr</title>
+	<title>별튀기기</title>
 
 <style>
 body{
   overflow: hidden;
   margin: 0;
-  background:#111111;
+  background:mistyrose;
   cursor: pointer;
 }
 
 p{
-  color: #fff;
+  color: mediumturquoise;
   position: absolute;
   left: 0;
   bottom:10px;
@@ -184,8 +184,8 @@ function render(a) {
 onResize();
 
 var gradient = ctx.createRadialGradient(0, 0, 200, 100, wh / 2, ww);
-gradient.addColorStop(0, "#010810");
-gradient.addColorStop(1, "#2a4770");
+gradient.addColorStop(0, "mistyrose");
+gradient.addColorStop(1, "lightgreen");
 
 requestAnimationFrame(render);
 </script>
